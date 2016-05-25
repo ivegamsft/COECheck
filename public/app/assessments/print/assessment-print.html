@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<div class="container-fluid">
+
+    <div class="print-break">
+        <div class="print-cover">
+            <img src="lib/img/print-cover.jpg" alt="Print Cover" class="img-responsive">
+            <h1>Azure Center of Excellence <br /> Assessment Report</h1>
+            <h2>Prepared for {{assessment.partner}} on {{date()}}</h2>
+            <h3>{{userInfo.profile.given_name}} {{userInfo.profile.family_name}}, Microsoft GSI Partner COE</h3>
+        </div>
+    </div>
+
+    <div class="print-break">
+
+        <p>The information contained in this document represents the current view of Microsoft Corporation on the issues discussed
+            as of the date of publication. Because Microsoft must respond to changing market conditions, it should not be
+            interpreted to be a commitment on the part of Microsoft, and Microsoft cannot guarantee the accuracy of any information
+            presented after the date of publication.
+        </p>
+        <p>MICROSOFT MAKES NO WARRANTIES, EXPRESS, IMPLIED OR STATUTORY, AS TO THE INFORMATION IN THIS DOCUMENT.
+        </p>
+        <p>Complying with all applicable copyright laws is the responsibility of the user. Without limiting the rights under
+            copyright, no part of this document may be reproduced, stored in or introduced into a retrieval system, or transmitted
+            in any form or by any means (electronic, mechanical, photocopying, recording, or otherwise), or for any purpose,
+            without the express written permission of Microsoft Corporation.
+        </p>
+        <p>Microsoft may have patents, patent applications, trademarks, copyrights, or other intellectual property rights covering
+            subject matter in this document. Except as expressly provided in any written license agreement from Microsoft,
+            the furnishing of this document does not give you any license to these patents, trademarks, copyrights, or other
+            intellectual property.
+        </p>
+        <p>The descriptions of other companies’ products in this document, if any, are provided only as a convenience to you.
+            Any such references should not be considered an endorsement or support by Microsoft. Microsoft cannot guarantee
+            their accuracy, and the products may change over time. Also, the descriptions are intended as brief highlights
+            to aid understanding, rather than as thorough coverage. For authoritative descriptions of these products, please
+            consult their respective manufacturers.
+        </p>
+        <p>&copy; 2015 Microsoft Corporation. All rights reserved. Any use or distribution of these materials without express
+            authorization of Microsoft Corp. is strictly prohibited.
+        </p>
+        <p>Microsoft and Windows are either registered trademarks of Microsoft Corporation in the United States and/or other
+            countries.
+        </p>
+        <p>The names of actual companies and products mentioned herein may be the trademarks of their respective owners. </p>
+
+    </div>
+
+    <div class="print-break">
+
+        <h1>COE Assessment Report for {{assessment.partner}}</h1>
+
+        <p>A Center of Excellence (COE) is a team of technical subject matter experts that help in the incubation of new technologies.
+            You will likely have many different COE teams with varying specialty areas such as IOT, Digital Media, and Data
+            Insights that reflect your business strategy as well as align to go to market initiatives. The COE group is not
+            R&D, but rather builds upon innovation to land technology to drive business opportunities. This group provides
+            technical insight from experience working with the technology and shares that knowledge with other roles and
+            individuals across the organization. The COE should focus on the most strategic customer opportunities and/or
+            strategic company initiatives, to ensure quality deliveries and to provide actionable best practices and automation
+            that can be used with subsequent deliveries. The COE is not constrained to technical presales, but rather uses
+            the technical presales experience to build the strategy and deliverables required to enhance an Azure practice
+            capability. The COE is the pivot point between R&D and mainstream solution sales.</p>
+
+        <p>The COE maturity assessment model is a way to baseline and measure the progress and provide you with roadmap for
+            improvement. The COE assessment report is a tool that is part of the solution development framework (SDF). The
+            SDF is a methodology for identifying, designing and managing offers that can be used as part of larger go to
+            market solution.</p>
+
+        <h2>Key Assessment Areas</h2>
+        <p>The assessment approach focuses on key areas that are common to most high-performing Centers of Excellence. The key
+            areas are:</p>
+        <ul>
+            <li>Readiness - activities support ongoing technical readiness across the organization. Improvement in this category
+                helps to increase delivery capabilities</li>
+            <li>Delivery - activities enhance delivery capability through reusable IP and processes. Improvement in this category
+                helps to decrease the cost of sale</li>
+            <li>Business Development - strengthen business development capabilities. Improvement in this category helps to increase
+                business revenue</li>
+        </ul>
+        <p>
+            These categories help to discover your COEs best qualities and opportunities for improvement.
+        </p>
+
+        <h2>Scoring Criteria</h2>
+        <p>The COE rating is an overall average of the scores within each section. Each section is measured on a 1-4 scale as
+            follows:
+        </p>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Rating</th>
+                    <th>Score</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="danger">Basic</td>
+                    <td>1</td>
+                    <td>No defined organization, relies on individual talent</td>
+                </tr>
+                <tr>
+                    <td class="warning">Standardized</td>
+                    <td>2</td>
+                    <td>Automation and best practices with a loosely-defined organization</td>
+                </tr>
+                <tr>
+                    <td class="info">Advanced</td>
+                    <td>3</td>
+                    <td>Automation and best practices with a well-defined organization</td>
+                </tr>
+                <tr>
+                    <td class="success">Dynamic</td>
+                    <td>4</td>
+                    <td>Automation and best practices with a well-defined organization driving continuous improvement</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+    <div>
+        <h1>Assessment Results</h1>
+        <p>The following assessment was prepared in reference to your Azure Center of Excellence (COE) maturity level</p>
+        <table class="table">
+            <tbody>
+                <tr>
+                    <td>Partner</td>
+                    <td>{{assessment.partner}}</td>
+                </tr>
+                <tr>
+                    <td>Created</td>
+                    <td>{{assessment.created}}</td>
+                </tr>
+                <tr>
+                    <td>Author</td>
+                    <td><a ng-href="mailto:{{assessment.author.userName}}">{{assessment.author.name}}</a></td>
+                </tr>
+                <tr>
+                    <td>Overall Score</td>
+                    <td>{{assessment.score.overall}}</td>
+                </tr>
+                <tr>
+                    <td>Category Scores</td>
+                    <td>Readiness</td>
+                    <td>Delivery</td>
+                    <td>Business Development</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td ng-repeat="(sectionName, sectionValues) in assessment.assessment" ng-class="{ danger: (assessment.score[sectionName] | transformScore) == 'Basic', 
+                                            warning: (assessment.score[sectionName] | transformScore) == 'Standardized', 
+                                            info: (assessment.score[sectionName] | transformScore) == 'Advanced', 
+                                            success: (assessment.score[sectionName] | transformScore) == 'Dynamic' }">
+                        {{assessment.score[sectionName] | transformScore}}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+    <div>
+
+        <h2>Readiness</h2>
+
+        <p>Readiness is a crucial part of the adoption cycle. Understanding and improving how your organization provides readiness
+            to the field will pay huge dividends by increasing quality of solutions and decreasing cost of sale. By readiness
+            we don’t just mean training, but refer to the entire process of awareness to mastery.
+        </p>
+        <p>A key part of building a readiness plan requires establishing a core team of technical subject matter experts as
+            a Center of Excellence. This COE group is an integral part of the incubation process and helping to land technology
+            offers to the field. This COE group provides focus and a center of gravity to your incubation efforts.
+        </p>
+        <p>Another key part of building an Azure practice is proactively driving readiness resources and improvement opportunities
+            to the field. This helps build delivery capabilities while rolling out technology in a controlled fashion.
+        </p>
+        <p>Once readiness is achieved and there are opportunities in the pipeline, your practice should incorporate Azure certifications.
+            Microsoft certifications are validation of a practice’s capability and increase the likelihood that customer
+            engagements will result in highly satisfied customers.
+        </p>
+        <p>As your organization learns more about the platform and builds capabilities, you will undoubtedly recognize opportunities
+            to improve the platform. Microsoft highly values this feedback, especially from our top GSI partners, and that
+            feedback shapes the services and features that are released and helps Microsoft prioritize investment areas.
+            Your feedback has a direct benefit to the services that you are incorporating into your solutions. Building a
+            readiness plan that incorporates feedback builds a continually improving organization that is well-informed.
+        </p>
+
+        <div class="row">
+
+            <div class="col-xs-6">
+
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <th>Your overall rating for readiness</th>
+                            <td>{{assessment.score.readiness | transformScore }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+
+        </div>
+
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>&nbsp;</th>
+                    <th>Basic</th>
+                    <th>Standardized</th>
+                    <th>Advanced</th>
+                    <th>Dynamic</th>
+                    <th>Your Score</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="(sectionName, sectionValues) in rubricData.values.readiness">
+                    <td><strong>{{sectionName.replace('_', ' ') | capitalize}}</strong></td>
+                    <td ng-repeat="value in sectionValues">{{value.title}}</td>
+                    <td><strong>{{formatMaturity(assessment.assessment.readiness[sectionName].value)}}</strong></td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+    <!--/readiness-->
+
+    <div>
+
+        <h2>Delivery</h2>
+
+        <p>The core focus of a Professional Services organization is project delivery. The E2E program will help you evolve
+            your practice to more efficiently harvest best practices and create a learning organization. The E2E program
+            enables your team with architecture reviews, proactive customer proposals, and architecture reviews to help mentor
+            your teams through the incubation of Azure technologies in your organization. We also help you understand the
+            importance of supporting new initiatives and defining escalation processes early to reduce churn during engagements.</p>
+
+        <div class="row">
+
+            <div class="col-xs-6">
+
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <th>Your overall rating for delivery</th>
+                            <td>{{assessment.score.delivery | transformScore }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+
+        </div>
+
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>&nbsp;</th>
+                    <th>Basic</th>
+                    <th>Standardized</th>
+                    <th>Advanced</th>
+                    <th>Dynamic</th>
+                    <th>Your Score</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="(sectionName, sectionValues) in rubricData.values.delivery">
+                    <td><strong>{{sectionName.replace('_', ' ') | capitalize}}</strong></td>
+                    <td ng-repeat="value in sectionValues">{{value.title}}</td>
+                    <td><strong>{{formatMaturity(assessment.assessment.delivery[sectionName].value)}}</strong></td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+    <!--/delivery-->
+
+    <div>
+
+        <h2>Business Development</h2>
+
+        <p>The goal of the entire program is to help you grow revenue by building on the Microsoft Azure platform. Building
+            a COE team will help increase velocity for sales opportunities. </p>
+        <p>
+            Your COE team is not an elite sales team, but rather an elite team of technical subject matter experts that participate in
+            the sales process to build field capabilities. The COE mentors field resources to build field skill and scale
+            delivery capabilities. The COE team harvests best practices from joint opportunity pursuits back into the COE
+            practice for dissemination at scale. As wins occur, the COE cultivates those wins by broadcasting them and incorporating
+            them into regular communications to the field. This constant reiteration of past success is what drives the sales
+            organization to have the confidence to propose new customer engagements. While volume of sales is certainly an
+            indicator of success, it helps to provide key lighthouse wins that serve as a shining example of your practice’s
+            capability to deliver. The E2E program will help you through the harvesting process and ensure your COE team
+            is nurturing success by making the success easy to discover and to learn from.</p>
+
+        <div class="row">
+
+            <div class="col-xs-6">
+
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <th>Your overall rating for business development</th>
+                            <td>{{assessment.score['business development'] | transformScore }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+
+        </div>
+
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>&nbsp;</th>
+                    <th>Basic</th>
+                    <th>Standardized</th>
+                    <th>Advanced</th>
+                    <th>Dynamic</th>
+                    <th>Your Score</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="(sectionName, sectionValues) in rubricData.values['business development']">
+                    <td><strong>{{sectionName.replace('_', ' ') | capitalize}}</strong></td>
+                    <td ng-repeat="value in sectionValues">{{value.title}}</td>
+                    <td><strong>{{formatMaturity(assessment.assessment['business development'][sectionName].value)}}</strong></td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+    <!--/business development-->
+
+    <div class="recommendations">
+
+        <h1>Recommendations and Next Steps</h1>
+
+        <div>
+
+            <h2>Readiness</h2>
+            <table class="table table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th>Activity</th>
+                        <th>Suggested Steps</th>
+                        <th>Resources</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="(activityName, activityValue) in assessment.assessment.readiness">
+                        <td><strong>{{activityName.replace('_', ' ') | capitalize}}</strong></td>
+                        <td>
+                            <ul>
+                                <li ng-repeat="suggested in activityValue.suggested">{{suggested.title}}</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li ng-repeat="resource in activityValue.resources">
+                                    <a ng-href="{{resource.url}}" target="_blank">{{resource.title}}</a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+        <div>
+
+            <h2>Delivery</h2>
+            <table class="table table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th>Activity</th>
+                        <th>Suggested Steps</th>
+                        <th>Resources</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="(activityName, activityValue) in assessment.assessment.delivery">
+                        <td><strong>{{activityName.replace('_', ' ') | capitalize}}</strong></td>
+                        <td>
+                            <ul>
+                                <li ng-repeat="suggested in activityValue.suggested">{{suggested.title}}</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li ng-repeat="resource in activityValue.resources">
+                                    <a ng-href="{{resource.url}}" target="_blank">{{resource.title}}</a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+        <div>
+
+            <h2>Readiness</h2>
+            <table class="table table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th>Activity</th>
+                        <th>Suggested Steps</th>
+                        <th>Resources</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="(activityName, activityValue) in assessment.assessment['business development']">
+                        <td><strong>{{activityName.replace('_', ' ') | capitalize}}</strong></td>
+                        <td>
+                            <ul>
+                                <li ng-repeat="suggested in activityValue.suggested">{{suggested.title}}</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li ng-repeat="resource in activityValue.resources">
+                                    <a ng-href="{{resource.url}}" target="_blank">{{resource.title}}</a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+    </div>
+
+</div>
+<!--/.container-fluid-->

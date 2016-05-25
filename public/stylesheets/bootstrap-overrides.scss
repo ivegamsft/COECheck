@@ -1,0 +1,43 @@
+/*#region Bootstrap Overrides */
+.navbar {
+    margin-bottom: 5px;
+    border-radius: 0;
+    border-bottom: 3px solid #005BA2;
+}
+
+.navbar-default .navbar-brand {
+    color: #FFF;
+    font-size: 22px;
+}
+
+    .navbar-default .navbar-brand:hover,
+    .navbar-default .navbar-brand:focus {
+        color: #e4e3e3;
+    }
+
+.navbar-default .navbar-nav > li > a {
+    color: #FFF;
+}
+
+    .navbar-default .navbar-nav > li > a:hover {
+        color: #e4e3e3;
+    }
+
+    .navbar-default .navbar-nav > li > a:hover,
+    .navbar-default .navbar-nav > li > a:focus {
+        color: #FFF;
+    }
+
+.table-striped > tbody > tr:nth-of-type(even) {
+    background-color: #FFF;
+}
+/*#endregion*/
+
+/* UI Bootstrap resets */
+.nav, .pagination, .carousel, .panel-title a {
+    cursor: pointer;
+}
+
+.progress {
+    height: 50px;
+}

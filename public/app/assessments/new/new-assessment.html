@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!-- Debug Div, uncomment to see a JSON doc on screen -->
+<div ng-if="debug" class="debug" style="position: absolute; top: 0; right: 0; padding: 20px; background-color: red;z-index:2;width: 400px" ng-class="{'hidden': hidden}" ng-click="hidden=!hidden">
+    <pre>{{newAssessment | json}}</pre>
+</div>
+
+<span>{{calculateAverage()}}</span>
+
+<div class="container-fluid">
+
+    <h1 ng-if="!newAssessment.partner">Create a New Assessment</h1>
+    <h1 ng-if="newAssessment.partner">Creating a New Assessment for {{newAssessment.partner}}</h1>
+    <hr>
+    
+    <div class="row partner-selection">
+
+        <div class="text-center" ng-if="loadingPartners">
+            <i class="fa fa-2x fa-refresh fa-spin"></i>&nbsp;&nbsp;Loading partner information
+        </div>
+
+        <div class="col-sm-6" ng-hide="loadingPartners">
+
+            <form name="partnerSelect">
+                <div class="form-group" >
+                    <label for="partnerName">Please select a partner</label>
+                    <input id="partnerName" name="name" type="text" class="form-control" placeholder="Type a name" autocomplete="off" ng-model="partnerTypeahead" uib-typeahead="partner as partner.title for partner in partners | filter:$viewValue | limitTo:8" typeahead-focus-first="false" typeahead-no-results="noPartner" typeahead-on-select="selectPartner($item)" typeahead-focus-on-select="false">
+                    <p class="help-block">
+                        Not seeing an existing partner name? Please <strong><a ng-click="openNewPartnerModal()">add a new partner</a></strong>
+                    </p>
+                </div>
+                <div class="form-group">
+                    <label for="assessmentNote">Comments (Optional)</label>
+                    <textarea id="assessmentNote" class="form-control" rows="5" placeholder="Assessment context, location, participants, notes, etc." ng-model="newAssessment.comment"></textarea>
+                </div>
+            </form>
+
+        </div>
+
+    </div><!--./row-->
+
+    <div ng-if="newAssessment.partner">
+        <h2>For each section below, please click to select which most closely matches the COE's existing delivery level.</h2>
+        <ul>
+            <li><strong>Readiness</strong> activities support ongoing technical readiness across the organization</li>
+            <li><strong>Delivery</strong> activities enhance delivery capability through reusable IP and processes</li>
+            <li><strong>Business Development</strong> strengthen business development capabilities</li>
+            <li>A <strong>score</strong> is determined for each assessment. Each tile has a value of 1 through 4, corresponding to the "Basic" through "Dynamic" column headers. The score is calculated by averaging the values of each answer, with the most mature score possible being a perfect 4 (averaging together all values of "4" for Dynamic)</li>
+        </ul>
+
+        <hr />
+
+    </div>
+
+    <section ng-repeat="(sectionName, sectionValues) in rubricData.values" ng-if="newAssessment.partner">
+
+        <h2 class="section-heading">{{sectionName}}</h2>
+
+        <div class="row">
+            <div class="col-sm-10 col-sm-offset-2">
+                <div class="row">
+                    <div class="col-sm-3"><h3>Basic</h3></div>
+                    <div class="col-sm-3"><h3>Standardized</h3></div>
+                    <div class="col-sm-3"><h3>Advanced</h3></div>
+                    <div class="col-sm-3"><h3>Dynamic</h3></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" ng-repeat="(groupName, groupValues) in sectionValues">
+
+            <div class="col-sm-2 option-heading">
+                <h3>{{groupName.replace('_', ' ')}}</h3>
+            </div>
+
+            <div class="col-sm-10">
+                <div class="row">
+                    <div class="col-sm-3" ng-repeat="option in groupValues">
+                        <div class="panel panel-default option"
+                             ng-click="answer(sectionName, groupName, option)"
+                             ng-class="{'active': newAssessment.assessment[sectionName][groupName] == option}">
+                            <div class="panel-body">
+                                <span>{{option.title}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div><!--./row-->
+
+        <hr />
+
+    </section>
+
+    <section ng-if="newAssessment.partner">
+
+        <h2>Please click the button to submit</h2>
+        <p>You will be automatically redirected to view your newly created assessment</p>
+
+        <a class="btn btn-default btn-lg" ng-click="cancelAssessment()">Cancel</a>
+        <a class="btn btn-success btn-lg" ng-click="submitAssessment()">Submit</a>
+
+    </section>
+
+</div>

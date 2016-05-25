@@ -1,0 +1,17 @@
+ .table-column-skinny {
+     width: 10%;
+ }
+ 
+ .recommendations {
+     td {
+         width: 20%;
+        
+        &:first-child{
+            width: 5%;
+        }
+        
+        &:last-child {
+            word-break: break-all;
+        }
+     }
+ }

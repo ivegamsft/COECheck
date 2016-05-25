@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<div class="container-fluid">
+
+    <h1>{{partnerName | capitalize}} <small>has completed <strong>{{assessments.length}}</strong> assessment<span ng-if="assessments.length != 1">s</span> <span ng-if="assessments.length > 0">between <strong>{{firstDate()}}</strong> and <strong>{{lastDate()}}</strong></span></small></h1>
+    <hr>
+
+    <div class="text-center" ng-if="loading">
+        <i class="fa fa-2x fa-refresh fa-spin"></i>&nbsp;&nbsp;Loading detailed partner data
+    </div>
+
+    <table class="table table-striped table-hover table-clickable">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Assessor</th>
+                <th>Readiness</th>
+                <th>Delivery</th>
+                <th>Business Development</th>
+                <th>Overall</th>
+                <th>Comment</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="assessment in assessments | orderBy: '-created'" ng-click="navigate(assessment.id)">
+                <td>{{formatDate(assessment.created)}}</td>
+                <td>{{assessment.author.name}}</td>
+                <td>{{assessment.score.readiness}}</td>
+                <td>{{assessment.score.delivery}}</td>
+                <td>{{assessment.score['business development']}}</td>
+                <td>{{assessment.score.overall}}</td>
+                <td>{{assessment.comment}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>

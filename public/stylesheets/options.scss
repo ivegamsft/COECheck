@@ -1,0 +1,46 @@
+/*#region Options */
+.option-heading {
+    text-transform: capitalize;
+    text-align: right;
+}
+
+.option {
+    height: 150px;
+    border-radius: 0;
+    cursor: pointer;
+    text-align: center;
+    -moz-transition: background-color ease-in-out .25s;
+    -o-transition: background-color ease-in-out .25s;
+    -webkit-transition: background-color ease-in-out .25s;
+    transition: background-color ease-in-out .25s;
+}
+
+    .option:hover,
+    .option.active {
+        background-color: #0078d7;
+        color: #FFF;
+    }
+
+    .option .panel-body {
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        top: 50%;
+        position: relative;
+    }
+
+.option-readonly {
+    cursor: default;
+    -moz-transition: none;
+    -o-transition: none;
+    -webkit-transition: none;
+    transition: none;
+}
+
+    .option-readonly:hover {
+        background-color: #FFF;
+        color: #000;
+    }
+/*#endregion*/

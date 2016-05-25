@@ -1,0 +1,1176 @@
+{
+  "version": 1.0,
+  "values": {
+    "readiness": {
+      "organizational_support": [
+        {
+          "value": 1,
+          "title": "No COE exists",
+          "suggested": "Become familiar with COE concepts",
+          "resources": [
+            {
+              "title": "Read Practice Building Through a COE-BUILDING A COE: THE WHAT, WHY & HOW",
+              "url": "https://microsoft.sharepoint.com/teams/TR22SDFWorkshop/_layouts/15/guestaccess.aspx?guestaccesstoken=IjdR%2bDiAuPusZHheWrW%2b7hwRRBjqsaeLec0V7Osy%2f0M%3d&docid=2_14a393a8d41e7426dafbf43d9d1213652"
+            }
+          ]
+        },
+        {
+          "value": 2,
+          "title": "COE exists as a loosely defined group",
+          "suggested": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed mi id urna consectetur pulvinar",
+          "resources": [
+            {
+              "title": "Document 1",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Presentation Number One",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Document 2",
+              "url": "http://www.bing.com"
+            }
+          ]
+        },
+        {
+          "value": 3,
+          "title": "COE exists as a formally-defined group with roles and responsibilities",
+          "suggested": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed mi id urna consectetur pulvinar",
+          "resources": [
+            {
+              "title": "Document 1",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Presentation Number One",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Document 2",
+              "url": "http://www.bing.com"
+            }
+          ]
+        },
+        {
+          "value": 4,
+          "title": "COE is a formally-defined, funded group with roles and responsibilities",
+          "suggested": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed mi id urna consectetur pulvinar",
+          "resources": [
+            {
+              "title": "Document 1",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Presentation Number One",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Document 2",
+              "url": "http://www.bing.com"
+            }
+          ]
+        }
+      ],
+      "training": [
+        {
+          "value": 1,
+          "title": "Individuals are responsible for their own learning resources",
+          "suggested": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed mi id urna consectetur pulvinar",
+          "resources": [
+            {
+              "title": "Document 1",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Presentation Number One",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Document 2",
+              "url": "http://www.bing.com"
+            }
+          ]
+        },
+        {
+          "value": 2,
+          "title": "Readiness resources are defined as a loose collection",
+          "suggested": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed mi id urna consectetur pulvinar",
+          "resources": [
+            {
+              "title": "Document 1",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Presentation Number One",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Document 2",
+              "url": "http://www.bing.com"
+            }
+          ]
+        },
+        {
+          "value": 3,
+          "title": "Readiness resources are well-defined",
+          "suggested": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed mi id urna consectetur pulvinar",
+          "resources": [
+            {
+              "title": "Document 1",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Presentation Number One",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Document 2",
+              "url": "http://www.bing.com"
+            }
+          ]
+        },
+        {
+          "value": 4,
+          "title": "Readiness resources are well-defined and are proactively driven to the field",
+          "suggested": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed mi id urna consectetur pulvinar",
+          "resources": [
+            {
+              "title": "Document 1",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Presentation Number One",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Document 2",
+              "url": "http://www.bing.com"
+            }
+          ]
+        }
+      ],
+      "certification": [
+        {
+          "value": 1,
+          "title": "Some individuals pursue Azure certifications",
+          "suggested": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed mi id urna consectetur pulvinar",
+          "resources": [
+            {
+              "title": "Document 1",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Presentation Number One",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Document 2",
+              "url": "http://www.bing.com"
+            }
+          ]
+        },
+        {
+          "value": 2,
+          "title": "Field is encouraged to achieve Azure certifications",
+          "suggested": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed mi id urna consectetur pulvinar",
+          "resources": [
+            {
+              "title": "Document 1",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Presentation Number One",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Document 2",
+              "url": "http://www.bing.com"
+            }
+          ]
+        },
+        {
+          "value": 3,
+          "title": "Field is mandated to achieve Microsoft Specialist: Architecting Microsoft Azure Solutions",
+          "suggested": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed mi id urna consectetur pulvinar",
+          "resources": [
+            {
+              "title": "Document 1",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Presentation Number One",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Document 2",
+              "url": "http://www.bing.com"
+            }
+          ]
+        },
+
+        {
+          "value": 4,
+          "title": "Architect roles are mandated to achieve MCSD: Azure Solutions Architect.  Delivery roles are mandated to achieve Microsoft Specialist for their discipline",
+          "suggested": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed mi id urna consectetur pulvinar",
+          "resources": [
+            {
+              "title": "Document 1",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Presentation Number One",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Document 2",
+              "url": "http://www.bing.com"
+            }
+          ]
+        }
+      ],
+      "feedback": [
+        {
+          "value": 1,
+          "title": "No feedback provided to Microsoft",
+          "suggested": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed mi id urna consectetur pulvinar",
+          "resources": [
+            {
+              "title": "Document 1",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Presentation Number One",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Document 2",
+              "url": "http://www.bing.com"
+            }
+          ]
+        },
+        {
+          "value": 2,
+          "title": "Individuals provide feedback via UserVoice",
+          "suggested": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed mi id urna consectetur pulvinar",
+          "resources": [
+            {
+              "title": "Document 1",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Presentation Number One",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Document 2",
+              "url": "http://www.bing.com"
+            }
+          ]
+        },
+        {
+          "value": 3,
+          "title": "Individuals provide feedback via UserVoice, COE participates in SDRs",
+          "suggested": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed mi id urna consectetur pulvinar",
+          "resources": [
+            {
+              "title": "Document 1",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Presentation Number One",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Document 2",
+              "url": "http://www.bing.com"
+            }
+          ]
+        },
+        {
+          "value": 4,
+          "title": "Individuals provide feedback via UserVoice, COE participates in SDRs, practice participates in Azure Advisors private Yammer network",
+          "suggested": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed mi id urna consectetur pulvinar",
+          "resources": [
+            {
+              "title": "Document 1",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Presentation Number One",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Document 2",
+              "url": "http://www.bing.com"
+            }
+          ]
+        }
+      ],
+      "roadmap": [
+        {
+          "value": 1,
+          "title": "Each business unit reviews and applies Microsoft roadmap",
+          "suggested": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed mi id urna consectetur pulvinar",
+          "resources": [
+            {
+              "title": "Document 1",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Presentation Number One",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Document 2",
+              "url": "http://www.bing.com"
+            }
+          ]
+        },
+        {
+          "value": 2,
+          "title": "COE monitors Microsoft roadmap, ensures business unit plans align with Microsoft",
+          "suggested": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed mi id urna consectetur pulvinar",
+          "resources": [
+            {
+              "title": "Document 1",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Presentation Number One",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Document 2",
+              "url": "http://www.bing.com"
+            }
+          ]
+        },
+        {
+          "value": 3,
+          "title": "COE analyzes offerings roadmap and makes business units aware of new features that will become available",
+          "suggested": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed mi id urna consectetur pulvinar",
+          "resources": [
+            {
+              "title": "Document 1",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Presentation Number One",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Document 2",
+              "url": "http://www.bing.com"
+            }
+          ]
+        },
+        {
+          "value": 4,
+          "title": "COE reviews existing application portfolio to look for ways to take advantage of future Microsoft offerings",
+          "suggested": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed mi id urna consectetur pulvinar",
+          "resources": [
+            {
+              "title": "Document 1",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Presentation Number One",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Document 2",
+              "url": "http://www.bing.com"
+            }
+          ]
+        }
+      ]
+    },
+    "delivery": {
+      "best_practices": [
+        {
+          "value": 1,
+          "title": "Ad-hoc sharing of best practices",
+          "suggested": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed mi id urna consectetur pulvinar",
+          "resources": [
+            {
+              "title": "Document 1",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Presentation Number One",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Document 2",
+              "url": "http://www.bing.com"
+            }
+          ]
+        },
+        {
+          "value": 2,
+          "title": "Community contributes to centralized best practices repository",
+          "suggested": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed mi id urna consectetur pulvinar",
+          "resources": [
+            {
+              "title": "Document 1",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Presentation Number One",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Document 2",
+              "url": "http://www.bing.com"
+            }
+          ]
+        },
+        {
+          "value": 3,
+          "title": "SME review of best practices from engagements in centralized best practices repository",
+          "suggested": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed mi id urna consectetur pulvinar",
+          "resources": [
+            {
+              "title": "Document 1",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Presentation Number One",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Document 2",
+              "url": "http://www.bing.com"
+            }
+          ]
+        },
+        {
+          "value": 4,
+          "title": "COE actively harvests best practices from engagements and adds to managed IP repository and includes in automation",
+          "suggested": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed mi id urna consectetur pulvinar",
+          "resources": [
+            {
+              "title": "Document 1",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Presentation Number One",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Document 2",
+              "url": "http://www.bing.com"
+            }
+          ]
+        }
+      ],
+      "reference_architectures": [
+        {
+          "value": 1,
+          "title": "Each business unit creates new architectures based on local experience",
+          "suggested": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed mi id urna consectetur pulvinar",
+          "resources": [
+            {
+              "title": "Document 1",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Presentation Number One",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Document 2",
+              "url": "http://www.bing.com"
+            }
+          ]
+        },
+        {
+          "value": 2,
+          "title": "COE collects and publishes best-of-breed architectures from existing portfolio",
+          "suggested": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed mi id urna consectetur pulvinar",
+          "resources": [
+            {
+              "title": "Document 1",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Presentation Number One",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Document 2",
+              "url": "http://www.bing.com"
+            }
+          ]
+        },
+        {
+          "value": 3,
+          "title": "COE enhances reference architectures based on forthcoming service capabilities",
+          "suggested": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed mi id urna consectetur pulvinar",
+          "resources": [
+            {
+              "title": "Document 1",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Presentation Number One",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Document 2",
+              "url": "http://www.bing.com"
+            }
+          ]
+        },
+        {
+          "value": 4,
+          "title": "COE proactively analyzes the potential of new Microsoft capabilities and proposes new types of applications",
+          "suggested": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed mi id urna consectetur pulvinar",
+          "resources": [
+            {
+              "title": "Document 1",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Presentation Number One",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Document 2",
+              "url": "http://www.bing.com"
+            }
+          ]
+        }
+      ],
+      "automation": [
+        {
+          "value": 1,
+          "title": "Per-project IP",
+          "suggested": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed mi id urna consectetur pulvinar",
+          "resources": [
+            {
+              "title": "Document 1",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Presentation Number One",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Document 2",
+              "url": "http://www.bing.com"
+            }
+          ]
+        },
+        {
+          "value": 2,
+          "title": "Automation assets reside in individual repositories",
+          "suggested": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed mi id urna consectetur pulvinar",
+          "resources": [
+            {
+              "title": "Document 1",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Presentation Number One",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Document 2",
+              "url": "http://www.bing.com"
+            }
+          ]
+        },
+        {
+          "value": 3,
+          "title": "Centralized repository of automation assets exists and community contributes",
+          "suggested": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed mi id urna consectetur pulvinar",
+          "resources": [
+            {
+              "title": "Document 1",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Presentation Number One",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Document 2",
+              "url": "http://www.bing.com"
+            }
+          ]
+        },
+        {
+          "value": 4,
+          "title": "Centralized repository of automation assets exists and is maintained and documented by the COE",
+          "suggested": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed mi id urna consectetur pulvinar",
+          "resources": [
+            {
+              "title": "Document 1",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Presentation Number One",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Document 2",
+              "url": "http://www.bing.com"
+            }
+          ]
+        }
+      ],
+      "architecture_review": [
+        {
+          "value": 1,
+          "title": "Architecture reviews are not mandatory",
+          "suggested": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed mi id urna consectetur pulvinar",
+          "resources": [
+            {
+              "title": "Document 1",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Presentation Number One",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Document 2",
+              "url": "http://www.bing.com"
+            }
+          ]
+        },
+        {
+          "value": 2,
+          "title": "Architecture reviews are mandatory at the start of a project",
+          "suggested": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed mi id urna consectetur pulvinar",
+          "resources": [
+            {
+              "title": "Document 1",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Presentation Number One",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Document 2",
+              "url": "http://www.bing.com"
+            }
+          ]
+        },
+        {
+          "value": 3,
+          "title": "Architecture reviews are mandatory and are revisited throughout the project",
+          "suggested": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed mi id urna consectetur pulvinar",
+          "resources": [
+            {
+              "title": "Document 1",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Presentation Number One",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Document 2",
+              "url": "http://www.bing.com"
+            }
+          ]
+        },
+        {
+          "value": 4,
+          "title": "Architecture reviews are mandatory and are revisited throughout the project and COE participates to mentor the field",
+          "suggested": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed mi id urna consectetur pulvinar",
+          "resources": [
+            {
+              "title": "Document 1",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Presentation Number One",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Document 2",
+              "url": "http://www.bing.com"
+            }
+          ]
+        }
+      ],
+      "support": [
+        {
+          "value": 1,
+          "title": "Support is ad-hoc with no defined escalation process",
+          "suggested": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed mi id urna consectetur pulvinar",
+          "resources": [
+            {
+              "title": "Document 1",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Presentation Number One",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Document 2",
+              "url": "http://www.bing.com"
+            }
+          ]
+        },
+        {
+          "value": 2,
+          "title": "Escalation process exists but is not consistently followed",
+          "suggested": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed mi id urna consectetur pulvinar",
+          "resources": [
+            {
+              "title": "Document 1",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Presentation Number One",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Document 2",
+              "url": "http://www.bing.com"
+            }
+          ]
+        },
+
+        {
+          "value": 3,
+          "title": "Escalation process is well-defined and discoverable",
+          "suggested": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed mi id urna consectetur pulvinar",
+          "resources": [
+            {
+              "title": "Document 1",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Presentation Number One",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Document 2",
+              "url": "http://www.bing.com"
+            }
+          ]
+        },
+
+        {
+          "value": 4,
+          "title": "Escalation process is well-defined and discoverable with COE participation to harvest best practices and update automation tools",
+          "suggested": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed mi id urna consectetur pulvinar",
+          "resources": [
+            {
+              "title": "Document 1",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Presentation Number One",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Document 2",
+              "url": "http://www.bing.com"
+            }
+          ]
+        }
+      ]
+    },
+    "busness development": {
+      "technical_presales": [
+        {
+          "value": 1,
+          "title": "Technical pre-sales uses available resources from bench",
+          "suggested": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed mi id urna consectetur pulvinar",
+          "resources": [
+            {
+              "title": "Document 1",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Presentation Number One",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Document 2",
+              "url": "http://www.bing.com"
+            }
+          ]
+        },
+        {
+          "value": 2,
+          "title": "Technical pre-sales uses senior team members to assist in deal pursuit",
+          "suggested": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed mi id urna consectetur pulvinar",
+          "resources": [
+            {
+              "title": "Document 1",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Presentation Number One",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Document 2",
+              "url": "http://www.bing.com"
+            }
+          ]
+        },
+        {
+          "value": 3,
+          "title": "Technical pre-sales uses a dedicated team of senior team members to assist in deal pursuit",
+          "suggested": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed mi id urna consectetur pulvinar",
+          "resources": [
+            {
+              "title": "Document 1",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Presentation Number One",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Document 2",
+              "url": "http://www.bing.com"
+            }
+          ]
+        },
+        {
+          "value": 4,
+          "title": "COE participates in joint customer engagements to help land initial offers and mentor senior field members",
+          "suggested": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed mi id urna consectetur pulvinar",
+          "resources": [
+            {
+              "title": "Document 1",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Presentation Number One",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Document 2",
+              "url": "http://www.bing.com"
+            }
+          ]
+        }
+      ],
+      "wins": [
+        {
+          "value": 1,
+          "title": "Discovery of wins and experience is based on emailing colleagues",
+          "suggested": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed mi id urna consectetur pulvinar",
+          "resources": [
+            {
+              "title": "Document 1",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Presentation Number One",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Document 2",
+              "url": "http://www.bing.com"
+            }
+          ]
+        },
+        {
+          "value": 2,
+          "title": "Wins are documented in a centralized repository",
+          "suggested": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed mi id urna consectetur pulvinar",
+          "resources": [
+            {
+              "title": "Document 1",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Presentation Number One",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Document 2",
+              "url": "http://www.bing.com"
+            }
+          ]
+        },
+        {
+          "value": 3,
+          "title": "Wins are documented in a centralized repository and easily discoverable through search and tagging",
+          "suggested": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed mi id urna consectetur pulvinar",
+          "resources": [
+            {
+              "title": "Document 1",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Presentation Number One",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Document 2",
+              "url": "http://www.bing.com"
+            }
+          ]
+        },
+        {
+          "value": 4,
+          "title": "Wins are documented in a centralized repository and easily discoverable through search and tagging and provide reference architecture diagrams",
+          "suggested": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed mi id urna consectetur pulvinar",
+          "resources": [
+            {
+              "title": "Document 1",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Presentation Number One",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Document 2",
+              "url": "http://www.bing.com"
+            }
+          ]
+        }
+      ],
+      "solution_areas": [
+        {
+          "value": 1,
+          "title": "Per-project consulting delivery",
+          "suggested": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed mi id urna consectetur pulvinar",
+          "resources": [
+            {
+              "title": "Document 1",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Presentation Number One",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Document 2",
+              "url": "http://www.bing.com"
+            }
+          ]
+        },
+        {
+          "value": 2,
+          "title": "One or more defined solution areas",
+          "suggested": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed mi id urna consectetur pulvinar",
+          "resources": [
+            {
+              "title": "Document 1",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Presentation Number One",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Document 2",
+              "url": "http://www.bing.com"
+            }
+          ]
+        },
+        {
+          "value": 3,
+          "title": "Catalog of solution areas defined with reference wins in each category",
+          "suggested": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed mi id urna consectetur pulvinar",
+          "resources": [
+            {
+              "title": "Document 1",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Presentation Number One",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Document 2",
+              "url": "http://www.bing.com"
+            }
+          ]
+        },
+        {
+          "value": 4,
+          "title": "Vertically-aligned solution areas building on a common platform to achieve scale",
+          "suggested": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed mi id urna consectetur pulvinar",
+          "resources": [
+            {
+              "title": "Document 1",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Presentation Number One",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Document 2",
+              "url": "http://www.bing.com"
+            }
+          ]
+        }
+      ],
+      "lighthouse_wins": [
+        {
+          "value": 1,
+          "title": "No Lighthouse wins",
+          "suggested": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed mi id urna consectetur pulvinar",
+          "resources": [
+            {
+              "title": "Document 1",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Presentation Number One",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Document 2",
+              "url": "http://www.bing.com"
+            }
+          ]
+        },
+        {
+          "value": 2,
+          "title": "Two or more wins the COE considers Lighthouse",
+          "suggested": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed mi id urna consectetur pulvinar",
+          "resources": [
+            {
+              "title": "Document 1",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Presentation Number One",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Document 2",
+              "url": "http://www.bing.com"
+            }
+          ]
+        },
+        {
+          "value": 3,
+          "title": "Five or more wins the COE considers Lighthouse",
+          "suggested": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed mi id urna consectetur pulvinar",
+          "resources": [
+            {
+              "title": "Document 1",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Presentation Number One",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Document 2",
+              "url": "http://www.bing.com"
+            }
+          ]
+        },
+        {
+          "value": 4,
+          "title": "Ten or more wins the COE considers Lighthouse",
+          "suggested": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed mi id urna consectetur pulvinar",
+          "resources": [
+            {
+              "title": "Document 1",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Presentation Number One",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Document 2",
+              "url": "http://www.bing.com"
+            }
+          ]
+        }
+      ],
+      "feedback": [
+        {
+          "value": 1,
+          "title": "No capture of missed opportunities or customer objections",
+          "suggested": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed mi id urna consectetur pulvinar",
+          "resources": [
+            {
+              "title": "Document 1",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Presentation Number One",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Document 2",
+              "url": "http://www.bing.com"
+            }
+          ]
+        },
+        {
+          "value": 2,
+          "title": "Missed opportunities are captured in sales pipeline reporting",
+          "suggested": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed mi id urna consectetur pulvinar",
+          "resources": [
+            {
+              "title": "Document 1",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Presentation Number One",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Document 2",
+              "url": "http://www.bing.com"
+            }
+          ]
+        },
+        {
+          "value": 3,
+          "title": "Missed opportunities are captured in sales pipeline reporting, objection handling is captured",
+          "suggested": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed mi id urna consectetur pulvinar",
+          "resources": [
+            {
+              "title": "Document 1",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Presentation Number One",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Document 2",
+              "url": "http://www.bing.com"
+            }
+          ]
+        },
+        {
+          "value": 4,
+          "title": "Objection handling is updated regularly with input from the COE, missed opportunities are captured and reviewed with COE for collateral improvement",
+          "suggested": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed mi id urna consectetur pulvinar",
+          "resources": [
+            {
+              "title": "Document 1",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Presentation Number One",
+              "url": "http://www.bing.com"
+            },
+            {
+              "title": "Document 2",
+              "url": "http://www.bing.com"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

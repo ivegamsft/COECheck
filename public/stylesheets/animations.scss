@@ -1,0 +1,19 @@
+/*#region Animations */
+
+.ng-enter {
+    -moz-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
+    -webkit-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+    opacity: 0;
+}
+
+.ng-enter-active {
+    opacity: 1;
+}
+
+
+.ng-view-container {
+    position: relative;
+}
+/*#endregion*/

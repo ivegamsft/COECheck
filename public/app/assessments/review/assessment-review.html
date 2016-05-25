@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<div ng-if="debug" class="debug" style="position: absolute; top: 0; right: 0; padding: 20px; background-color: red;z-index:2;width: 400px" ng-class="{'hidden': hidden}" ng-click="hidden=!hidden">
+    <pre>{{assessment | json}}</pre>
+</div>
+
+<div class="container-fluid">
+
+    <h1>Assessment</h1>
+    <hr>
+    
+    <!-- Interaction Buttons-->
+    <div class="btn-group btn-group-lg pull-right hidden-print" role="group" aria-label="...">
+
+        <a class="btn btn-default" ng-click="sendEmail(assessment.partner, shareUrl)">
+            <i class="glyphicon glyphicon-envelope"></i> Email
+        </a>
+
+        <!--<button type="button" class="btn btn-default">Edit</button>-->
+
+        <button type="button" class="btn btn-default" ng-click="printPage()">
+            <i class="glyphicon glyphicon-print"></i> Print
+        </button>
+
+        <button type="button" class="btn btn-danger" ng-click="deleteAssessment(assessment.id)">
+            <i class="glyphicon glyphicon-trash"></i> Delete
+        </button>
+
+    </div>
+
+    <div class="row">
+
+        <div class="col-sm-6">
+
+            <table class="table table-striped">
+                <tbody>
+                    <tr>
+                        <th>Partner</th>
+                        <td><strong>{{assessment.partner}}</strong></td>
+                    </tr>
+                    <tr>
+                        <th>Created</th>
+                        <td>{{formatDate(assessment.created)}}</td>
+                    </tr>
+                    <tr>
+                        <th>Author</th>
+                        <td><a ng-href="mailto:{{assessment.author.userName}}">{{assessment.author.name}}</a></td>
+                    </tr>
+                    <tr>
+                        <th>Overall Score</th>
+                        <td>{{assessment.score.overall | transformScore }}</td>
+                    </tr>
+                    <tr ng-if="assessment.comment">
+                        <th>Comment</th>
+                        <td>{{assessment.comment}}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+        <div class="col-sm-6">
+
+            <div class="text-center" ng-if="loading">
+                <i class="fa fa-2x fa-refresh fa-spin"></i>&nbsp;&nbsp;Loading assessment data
+            </div>
+
+        </div>
+
+    </div>
+    <!--/.row-->
+
+    <hr ng-if="sectionScores" />
+
+    <!-- Score -->
+    <section class="score" ng-if="sectionScores">
+
+        <h2 class="section-heading">Section Scores</h2>
+
+        <div class="row">
+
+            <div class="col-md-6">
+
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th ng-repeat="(sectionName, sectionValues) in assessment.assessment">{{sectionName | capitalize}}</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td ng-repeat="(sectionName, sectionValues) in assessment.assessment" ng-class="{ danger: (assessment.score[sectionName] | transformScore) == 'Basic', 
+                                            warning: (assessment.score[sectionName] | transformScore) == 'Standardized', 
+                                            info: (assessment.score[sectionName] | transformScore) == 'Advanced', 
+                                            success: (assessment.score[sectionName] | transformScore) == 'Dynamic' }">
+                                {{assessment.score[sectionName] | transformScore}}
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <hr>
+
+    <section ng-repeat="(sectionName, sectionValues) in assessment.assessment">
+
+        <h2 class="section-heading">{{sectionName}}</h2>
+
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Activity</th>
+                    <th>Response</th>
+                    <th>Maturity Level</th>
+                    <th>Suggested Steps</th>
+                    <th>Resources</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="(activityName, activityValue) in sectionValues" ng-switch="activityValue.value">
+                    <th style="text-transform:capitalize;">{{activityName.replace('_', ' ')}}</th>
+                    <td>{{activityValue.title}}</td>
+                    <td class="danger" ng-switch-when="1">Basic</td>
+                    <td class="warning" ng-switch-when="2">Standardized</td>
+                    <td class="info" ng-switch-when="3">Advanced</td>
+                    <td class="success" ng-switch-when="4">Dynamic</td>
+                    <td ng-switch-default>&nbsp;</td>
+                    <td>
+                        <ul>
+                            <li ng-repeat="suggested in activityValue.suggested">{{suggested.title}}</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li ng-repeat="resource in activityValue.resources">
+                                <a ng-href="{{resource.url}}" target="_blank">{{resource.title}}</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <hr />
+
+    </section>
+
+</div>
