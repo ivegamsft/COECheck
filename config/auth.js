@@ -4,7 +4,7 @@ var passport = require('passport');
 var config = {
 
     // The app id you get from the registration portal
-    audience: process.env.AAD_AUDIENCE_ID,
+    audience: process.env.AAD_CLIENT_ID,
 
     // Passport will use this URL to fetch the token validation information from Azure AD
     identityMetadata: 'https://login.microsoftonline.com/common/v2.0/.well-known/openid-configuration'
