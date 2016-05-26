@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <div class="container-fluid">
 
-    <h1>Partners</h1>
+    <h1>Groups</h1>
     <hr>
     <div class="row">
 
-        <div class="col-sm-2" ng-repeat="partner in partners | orderBy:'title'" ng-click="navigate(partner.title)">
+        <div class="col-sm-2" ng-repeat="group in groups | orderBy:'title'" ng-click="navigate(group.title)">
             <div class="panel panel-default option">
                 <div class="panel-body">
-                    <span class="ng-binding">{{partner.title}}</span>
+                    <span class="ng-binding">{{group.title}}</span>
                 </div>
             </div>
         </div>
@@ -16,7 +16,7 @@
     </div>
 
     <div class="text-center" ng-if="loading">
-        <i class="fa fa-2x fa-refresh fa-spin"></i>&nbsp;&nbsp;Loading partner data
+        <i class="fa fa-2x fa-refresh fa-spin"></i>&nbsp;&nbsp;Loading group data
     </div>
 
 </div>

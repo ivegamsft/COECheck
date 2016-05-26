@@ -5,8 +5,8 @@
         .module('app')
         .controller('AdminController', AdminController);
 
-    AdminController.$inject = ['$scope', '$log', '$uibModal', 'PartnerFactory', 'AssessmentFactory'];
-    function AdminController($scope, $log, $uibModal, PartnerFactory, AssessmentFactory) {
+    AdminController.$inject = ['$scope', '$log', '$uibModal', 'GroupFactory', 'AssessmentFactory'];
+    function AdminController($scope, $log, $uibModal, GroupFactory, AssessmentFactory) {
         var vm = this;
 
 
@@ -25,33 +25,33 @@
         $scope.openParterNewModal = function(e) {
                 
             var modalInstance = $uibModal.open({
-                templateUrl: '/app/layout/modal/partner-new/partner-new.modal.html',
-                controller: 'PartnerNewModalController',
+                templateUrl: '/app/layout/modal/group-new/group-new.modal.html',
+                controller: 'GroupNewModalController',
                 size: 'sm'
             });
 
-            modalInstance.result.then(function(newPartner) {
-                $scope.partners.push(newPartner);
+            modalInstance.result.then(function(newGroup) {
+                $scope.groups.push(newGroup);
             }, function() {
                 $log.info('Modal dismissed at: ' + new Date());
             });
 
         };
 
-        $scope.editPartner = function(partner) {
+        $scope.editGroup = function(group) {
 
             var modalInstance = $uibModal.open({
-                templateUrl: '/app/layout/modal/partner-edit/partner-edit.modal.html',
-                controller: 'PartnerEditModalController',
+                templateUrl: '/app/layout/modal/group-edit/group-edit.modal.html',
+                controller: 'GroupEditModalController',
                 size: 'sm',
                 resolve: {
-                    partner: function() {
-                        return partner;
+                    group: function() {
+                        return group;
                     }
                 }
             });
 
-            modalInstance.result.then(function(newPartner) {
+            modalInstance.result.then(function(newGroup) {
 
             }, function() {
                 $log.info('Modal dismissed at: ' + new Date());
@@ -59,25 +59,25 @@
 
         };
 
-        $scope.deletePartner = function(deletedPartner) {
+        $scope.deleteGroup = function(deletedGroup) {
 
             // pop confirmation window
-            if (confirm("Are you sure you would like to delete the partner " + deletedPartner.title + "?") === true) {
+            if (confirm("Are you sure you would like to delete the group " + deletedGroup.title + "?") === true) {
 
-                // delete a partner
-                PartnerFactory.deletePartner(deletedPartner.id).then(function(result) {
+                // delete a group
+                GroupFactory.deleteGroup(deletedGroup.id).then(function(result) {
 
                     if (result === true) {
-                        // partner was succesfully deleted
+                        // group was succesfully deleted
                         // remove from scope array
 
-                        // loop through the array of partners and splice out the newly deleted partner
-                        $scope.partners.forEach(function(partner, index) {
+                        // loop through the array of groups and splice out the newly deleted group
+                        $scope.groups.forEach(function(group, index) {
 
-                            if (partner.id == deletedPartner.id) {
+                            if (group.id == deletedGroup.id) {
 
-                                // remove deleted partner from the scope array
-                                $scope.partners.splice(index, 1);
+                                // remove deleted group from the scope array
+                                $scope.groups.splice(index, 1);
 
                             }
 
@@ -85,7 +85,7 @@
 
                     }
                     else {
-                        console.log('There was a problem deleting partner ' + deletedPartner.id);
+                        console.log('There was a problem deleting group ' + deletedGroup.id);
                     }
 
                 });
@@ -98,8 +98,8 @@
             return moment(date).calendar();
         };
         
-        $scope.navigatePartner = function (title) {
-            document.location.href = '#/partners/' + title;
+        $scope.navigateGroup = function (title) {
+            document.location.href = '#/groups/' + title;
         };
         
         $scope.navigateAssessment = function (id) {
@@ -108,23 +108,23 @@
 
         function getData() {
 
-            getPartners();
+            getGroups();
             getAssessments();
 
         }
 
-        function getPartners() {
+        function getGroups() {
 
-            $scope.loadingPartners = true;
+            $scope.loadingGroups = true;
 
-            // get all Partners
-            PartnerFactory.getData().then(function(results) {
+            // get all Groups
+            GroupFactory.getData().then(function(results) {
 
                 // store data in scope
-                $scope.partners = results;
+                $scope.groups = results;
 
                 // hide loading indicator
-                $scope.loadingPartners = false;
+                $scope.loadingGroups = false;
 
             });
 

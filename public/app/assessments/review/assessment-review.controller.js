@@ -23,8 +23,8 @@
 
         }
 
-        $scope.sendEmail = function(partnerName, url) {
-            var link = "mailto:?subject=COE Assessment for " + escape(partnerName) + "&body=Assessment is available at " + escape(url);
+        $scope.sendEmail = function(groupName, url) {
+            var link = "mailto:?subject=COE Assessment for " + escape(groupName) + "&body=Assessment is available at " + escape(url);
             $window.location.href = link;
         };
 

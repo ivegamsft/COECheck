@@ -9,7 +9,7 @@ var config = {
     database: require('../config/data').db
 };
 
-/* GET partners. */
+/* GET Groups. */
 router.get('/', passport.authenticate('oauth-bearer', { session: false }), function (req, res) {
 
     var querySpec = {
@@ -21,25 +21,31 @@ router.get('/', passport.authenticate('oauth-bearer', { session: false }), funct
     };
 
     // query for all databases
-    client.queryDatabases(querySpec).toArray(function (err, database) {
+    client.queryDatabases(querySpec).toArray(function (error, database) {
+
+        if (error) return console.error(error);
 
         var collectionsQuerySpec = {
             query: 'SELECT * FROM root r WHERE r.id=@id',
             parameters: [{
                 name: '@id',
-                value: 'Partners'
+                value: 'Groups'
             }]
         };
 
         // query for all collections in the database
-        client.queryCollections(database[0]._self, collectionsQuerySpec).toArray(function (err, collections) {
+        client.queryCollections(database[0]._self, collectionsQuerySpec).toArray(function (error, collections) {
+
+            if (error) return console.error(error);
 
             var docsQuerySpec = {
                 query: 'SELECT * FROM r'
             };
 
             // query for all documents in the collection
-            client.queryDocuments(collections[0]._self, docsQuerySpec).toArray(function (err, docs) {
+            client.queryDocuments(collections[0]._self, docsQuerySpec).toArray(function (error, docs) {
+
+                if (error) return console.error(error);
 
                 // return all documents to the client as JSON 
                 res.json(docs);
@@ -52,42 +58,44 @@ router.get('/', passport.authenticate('oauth-bearer', { session: false }), funct
 
 });
 
-/* POST new partner*/
+/* POST new Group*/
 router.post('/', passport.authenticate('oauth-bearer', { session: false }), function (req, res) {
 
     // definie database and column links
     var dbLink = 'dbs/' + config.database;
-    var collLink = dbLink + '/colls/' + 'Partners';
+    var collLink = dbLink + '/colls/' + 'Groups';
 
     // create a document to upload
     var documentDefinition = {
-        "title": req.body.partnerName,
-        "type": "Partner"
+        "title": req.body.groupName,
+        "type": "Group"
     };
 
     // upload new document to DocDB via SDK
-    client.createDocument(collLink, documentDefinition, function (err, doc) {
-        if (err) {
-            console.log(err);
+    client.createDocument(collLink, documentDefinition, function (error, doc) {
+        
+        if (error) {
+            console.log(error);
         }
         else {
             // return new document back
             res.send(doc);
         }
+        
     });
 
 });
 
-/* EDIT a partner*/
+/* EDIT a group*/
 router.put('/', passport.authenticate('oauth-bearer', { session: false }), function (req, res) {
 
     // define a link to the document
-    var colLink = 'dbs/' + config.database + '/colls/' + 'Partners';
+    var colLink = 'dbs/' + config.database + '/colls/' + 'Groups';
 
     // pass updated document to the upsert method
-    client.upsertDocument(colLink, req.body, function (err, doc) {
+    client.upsertDocument(colLink, req.body, function (error, doc) {
 
-        if (err) {
+        if (error) {
             console.log('There was an error with the upsert on ' + req.body.id);
             res.send(false);
         }
@@ -100,16 +108,16 @@ router.put('/', passport.authenticate('oauth-bearer', { session: false }), funct
 
 });
 
-/* DELETE a partner*/
+/* DELETE a Group */
 router.delete('/', passport.authenticate('oauth-bearer', { session: false }), function (req, res) {
 
     // define document link
-    var docLink = 'dbs/' + config.database + '/colls/' + 'Partners' + '/docs/' + req.body.id;
+    var docLink = 'dbs/' + config.database + '/colls/' + 'Groups' + '/docs/' + req.body.id;
 
     // delete document
-    client.deleteDocument(docLink, function (err, doc) {
-        if (err) {
-            console.log(err);
+    client.deleteDocument(docLink, function (error, doc) {
+        if (error) {
+            console.log(error);
             // return false for a failed delete
             res.send(false);
         }
@@ -121,12 +129,12 @@ router.delete('/', passport.authenticate('oauth-bearer', { session: false }), fu
 
 });
 
-// GET all assessments for a given partner
+// GET all assessments for a given group
 router.get('/:name/assessments', passport.authenticate('oauth-bearer', { session: false }), function (req, res) {
 
     // define a query
     var querySpec = {
-        query: 'SELECT * FROM root r WHERE r.partner=@name AND r.deleted=false ORDER BY r.created DESC',
+        query: 'SELECT * FROM root r WHERE r.group=@name AND r.deleted=false ORDER BY r.created DESC',
         parameters: [{
             name: '@name',
             value: req.params.name
@@ -137,9 +145,9 @@ router.get('/:name/assessments', passport.authenticate('oauth-bearer', { session
     var colLink = 'dbs/' + config.database + '/colls/' + 'Assessments';
 
     // query for documents
-    client.queryDocuments(colLink, querySpec).toArray(function (err, docs) {
+    client.queryDocuments(colLink, querySpec).toArray(function (error, docs) {
 
-        if (err) {
+        if (error) {
             res.send(false);
         }
         else {

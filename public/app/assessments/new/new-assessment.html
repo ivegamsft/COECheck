@@ -8,24 +8,24 @@
 
 <div class="container-fluid">
 
-    <h1 ng-if="!newAssessment.partner">Create a New Assessment</h1>
-    <h1 ng-if="newAssessment.partner">Creating a New Assessment for {{newAssessment.partner}}</h1>
+    <h1 ng-if="!newAssessment.group">Create a New Assessment</h1>
+    <h1 ng-if="newAssessment.group">Creating a New Assessment for {{newAssessment.group}}</h1>
     <hr>
     
-    <div class="row partner-selection">
+    <div class="row group-selection">
 
-        <div class="text-center" ng-if="loadingPartners">
-            <i class="fa fa-2x fa-refresh fa-spin"></i>&nbsp;&nbsp;Loading partner information
+        <div class="text-center" ng-if="loadingGroups">
+            <i class="fa fa-2x fa-refresh fa-spin"></i>&nbsp;&nbsp;Loading group information
         </div>
 
-        <div class="col-sm-6" ng-hide="loadingPartners">
+        <div class="col-sm-6" ng-hide="loadingGroups">
 
-            <form name="partnerSelect">
+            <form name="groupSelect">
                 <div class="form-group" >
-                    <label for="partnerName">Please select a partner</label>
-                    <input id="partnerName" name="name" type="text" class="form-control" placeholder="Type a name" autocomplete="off" ng-model="partnerTypeahead" uib-typeahead="partner as partner.title for partner in partners | filter:$viewValue | limitTo:8" typeahead-focus-first="false" typeahead-no-results="noPartner" typeahead-on-select="selectPartner($item)" typeahead-focus-on-select="false">
+                    <label for="groupName">Please select a group</label>
+                    <input id="groupName" name="name" type="text" class="form-control" placeholder="Type a name" autocomplete="off" ng-model="groupTypeahead" uib-typeahead="group as group.title for group in groups | filter:$viewValue | limitTo:8" typeahead-focus-first="false" typeahead-no-results="noGroup" typeahead-on-select="selectGroup($item)" typeahead-focus-on-select="false">
                     <p class="help-block">
-                        Not seeing an existing partner name? Please <strong><a ng-click="openNewPartnerModal()">add a new partner</a></strong>
+                        Not seeing an existing group name? Please <strong><a ng-click="openNewGroupModal()">add a new group</a></strong>
                     </p>
                 </div>
                 <div class="form-group">
@@ -38,7 +38,7 @@
 
     </div><!--./row-->
 
-    <div ng-if="newAssessment.partner">
+    <div ng-if="newAssessment.group">
         <h2>For each section below, please click to select which most closely matches the COE's existing delivery level.</h2>
         <ul>
             <li><strong>Readiness</strong> activities support ongoing technical readiness across the organization</li>
@@ -51,7 +51,7 @@
 
     </div>
 
-    <section ng-repeat="(sectionName, sectionValues) in rubricData.values" ng-if="newAssessment.partner">
+    <section ng-repeat="(sectionName, sectionValues) in rubricData.values" ng-if="newAssessment.group">
 
         <h2 class="section-heading">{{sectionName}}</h2>
 
@@ -92,7 +92,7 @@
 
     </section>
 
-    <section ng-if="newAssessment.partner">
+    <section ng-if="newAssessment.group">
 
         <h2>Please click the button to submit</h2>
         <p>You will be automatically redirected to view your newly created assessment</p>

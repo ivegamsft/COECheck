@@ -15,14 +15,14 @@
                     templateUrl: 'app/login/login.html',
                     controller: 'LoginController'
                 })
-                .when('/partners', {
-                    templateUrl: 'app/partners/partners.html',
-                    controller: 'PartnersController',
+                .when('/groups', {
+                    templateUrl: 'app/groups/groups.html',
+                    controller: 'GroupsController',
                     requireADLogin: true
                 })
-                .when('/partners/:name', {
-                    templateUrl: 'app/partners/partner/partner.html',
-                    controller: 'PartnerController',
+                .when('/groups/:name', {
+                    templateUrl: 'app/groups/group/group.html',
+                    controller: 'GroupController',
                     requireADLogin: true
                 })
                 .when('/assessments/new', {

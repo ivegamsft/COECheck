@@ -3,10 +3,10 @@
 
     angular
         .module('app')
-        .controller('PartnersController', PartnersController);
+        .controller('GroupsController', GroupsController);
 
-    PartnersController.$inject = ['$scope', '$location', '$log', 'PartnerFactory', 'AssessmentFactory'];
-    function PartnersController($scope, $location, $log, PartnerFactory, AssessmentFactory) {
+    GroupsController.$inject = ['$scope', '$location', '$log', 'GroupFactory', 'AssessmentFactory'];
+    function GroupsController($scope, $location, $log, GroupFactory, AssessmentFactory) {
         var vm = this;
 
         activate();
@@ -14,12 +14,12 @@
         ////////////////
 
         $scope.navigate = function(name) {
-            document.location.href = '#/partners/' + name;
+            document.location.href = '#/groups/' + name;
         }
 
         function activate() {
 
-            $log.info('PartnersController Activated');
+            $log.info('GroupsController Activated');
             getData();
 
         }
@@ -29,10 +29,10 @@
             // show loading indicator
             $scope.loading = true;
 
-            PartnerFactory.getData().then(function(results) {
+            GroupFactory.getData().then(function(results) {
 
                 // store the results in the scope
-                $scope.partners = results;
+                $scope.groups = results;
 
                 // hide loading indicator
                 $scope.loading = false;

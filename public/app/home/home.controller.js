@@ -5,14 +5,14 @@
         .module('app')
         .controller('HomeController', HomeController);
 
-    HomeController.$inject = ['$scope', '$location', '$log', 'PartnerFactory', 'AssessmentFactory'];
-    function HomeController($scope, $location, $log, PartnerFactory, AssessmentFactory) {
+    HomeController.$inject = ['$scope', '$location', '$log', 'AssessmentFactory'];
+    function HomeController($scope, $location, $log, AssessmentFactory) {
         var vm = this;
 
         activate();
 
         ////////////////
-        
+
         $scope.formatDate = function (date) {
             return moment(date).calendar();
         };
@@ -30,12 +30,12 @@
         }
 
         function getData() {
-            
+
             // show loading indicator
             $scope.loading = true;
 
             AssessmentFactory.getMyAssessments($scope.userInfo.profile.upn).then(function (results) {
-                
+
                 // store the results in the scope
                 $scope.assessments = results;
 

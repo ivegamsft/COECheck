@@ -8,15 +8,15 @@
 
         <div class="col-sm-4">
 
-            <h2>Partners <i class="fa fa-refresh fa-spin" ng-if="loadingPartners"></i></h2>
+            <h2>Groups <i class="fa fa-refresh fa-spin" ng-if="loadingGroups"></i></h2>
 
             <p>
-                <a class="btn btn-default" role="button" ng-click="openParterNewModal()">
-                    <i class="glyphicon glyphicon-plus"></i> Add a New Partner
+                <a class="btn btn-default" role="button" ng-click="openGroupNewModal()">
+                    <i class="glyphicon glyphicon-plus"></i> Add a New Group
                 </a>
             </p>
 
-            <table class="table table-striped table-hover table-clickable" ng-if="!loadingPartners">
+            <table class="table table-striped table-hover table-clickable" ng-if="!loadingGroups">
                 <thead>
                     <tr>
                         <th>Name</th>
@@ -25,13 +25,13 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr ng-repeat="partner in partners | orderBy:'title' ">
-                        <td ng-click="navigatePartner(partner.title)">{{partner.title}}</td>
+                    <tr ng-repeat="group in groups | orderBy:'title' ">
+                        <td ng-click="navigateGroup(group.title)">{{group.title}}</td>
                         <td class="table-column-skinny">
-                            <a ng-click="editPartner(partner)"><i class="glyphicon glyphicon-pencil"></i></a>
+                            <a ng-click="editGroup(group)"><i class="glyphicon glyphicon-pencil"></i></a>
                         </td>
                         <td class="table-column-skinny">
-                            <a ng-click="deletePartner(partner)"><i class="glyphicon glyphicon-trash"></i></a>
+                            <a ng-click="deleteGroup(group)"><i class="glyphicon glyphicon-trash"></i></a>
                         </td>
                     </tr>
                 </tbody>
@@ -53,14 +53,14 @@
                 <table class="table table-striped table-hover table-clickable">
                     <thead>
                         <tr>
-                            <th>Partner</th>
+                            <th>Group</th>
                             <th>Assessment Date</th>
                             <th>Performed By</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr ng-repeat="assessment in assessments | orderBy: '-created'" ng-click="navigateAssessment(assessment.id)">
-                            <td>{{assessment.partner}}</td>
+                            <td>{{assessment.group}}</td>
                             <td>{{formatDate(assessment.created)}}</td>
                             <td>{{assessment.author.name}}</td>
                         </tr>

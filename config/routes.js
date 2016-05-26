@@ -1,7 +1,7 @@
 module.exports = function (app) {
 
     app.use('/api/assessments', require('../routes/assessments'));
-    app.use('/api/partners', require('../routes/partners'));
+    app.use('/api/groups', require('../routes/groups'));
     app.use('/api/schema', require('../routes/schema'));
 
     // Use the API routes from above, & use /static for serving html & js

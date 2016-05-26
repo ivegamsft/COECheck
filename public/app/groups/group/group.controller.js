@@ -3,10 +3,10 @@
 
     angular
         .module('app')
-        .controller('PartnerController', PartnerController);
+        .controller('GroupController', GroupController);
 
-    PartnerController.$inject = ['$scope', '$location', '$log', '$routeParams', 'PartnerFactory', 'AssessmentFactory'];
-    function PartnerController($scope, $location, $log, $routeParams, PartnerFactory, AssessmentFactory) {
+    GroupController.$inject = ['$scope', '$location', '$log', '$routeParams', 'GroupFactory', 'AssessmentFactory'];
+    function GroupController($scope, $location, $log, $routeParams, GroupFactory, AssessmentFactory) {
         var vm = this;
 
         activate();
@@ -15,7 +15,7 @@
 
         function activate() {
 
-            $log.info('PartnerController Activated');
+            $log.info('GroupController Activated');
             getData();
 
         }
@@ -45,13 +45,13 @@
             // show loading indicator
             $scope.loading = true;
 
-            // get partner's name
-            $scope.partnerName = $routeParams.name;
+            // get group's name
+            $scope.groupName = $routeParams.name;
             
             // create an array for assessment data
             $scope.assessments = [];
             
-            PartnerFactory.getAssessments($scope.partnerName).then(function(results) {
+            GroupFactory.getAssessments($scope.groupName).then(function(results) {
 
                 // store the results in the scope
                 $scope.assessments = results;

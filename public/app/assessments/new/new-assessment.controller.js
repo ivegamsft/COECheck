@@ -5,8 +5,8 @@
         .module('app')
         .controller('NewAssessmentController', NewAssessmentController);
 
-    NewAssessmentController.$inject = ['$scope', '$window', '$location', '$log', 'PartnerFactory', 'SchemaFactory', 'AssessmentFactory', '$uibModal'];
-    function NewAssessmentController($scope, $window, $location, $log, PartnerFactory, SchemaFactory, AssessmentFactory, $uibModal) {
+    NewAssessmentController.$inject = ['$scope', '$window', '$location', '$log', 'GroupFactory', 'SchemaFactory', 'AssessmentFactory', '$uibModal'];
+    function NewAssessmentController($scope, $window, $location, $log, GroupFactory, SchemaFactory, AssessmentFactory, $uibModal) {
             var vm = this;
 
 
@@ -86,31 +86,31 @@
 
             }
 
-            $scope.selectPartner = function (partner) {
-                $scope.newAssessment.partner = partner.title;
+            $scope.selectGroup = function (group) {
+                $scope.newAssessment.group = group.title;
             }
 
-            $scope.selectPartnerNew = function () {
+            $scope.selectGroupNew = function () {
                 alert('Coming Soon');
-            }
+            };
 
-            $scope.$watch('partnerTypeahead', function (val) {
-                if (val == "") {
+            $scope.$watch('groupTypeahead', function (val) {
+                if (val === "") {
                     setupNewAssessmentObject();
                 }
             });
 
-            $scope.openNewPartnerModal = function () {
+            $scope.openNewGroupModal = function () {
 
                 var modalInstance = $uibModal.open({
-                    templateUrl: '/app/layout/modal/partner-new/partner-new.modal.html',
-                    controller: 'PartnerNewModalController',
+                    templateUrl: '/app/layout/modal/group-new/group-new.modal.html',
+                    controller: 'GroupNewModalController',
                     size: 'sm'
                 });
 
-                modalInstance.result.then(function (newPartner) {
-                    $scope.newAssessment.partner = newPartner.title;
-                    $scope.partnerTypeahead = newPartner.title
+                modalInstance.result.then(function (newGroup) {
+                    $scope.newAssessment.group = newGroup.title;
+                    $scope.groupTypeahead = newGroup.title
                 }, function () {
                     $log.info('Modal dismissed at: ' + new Date());
                 });
@@ -119,16 +119,16 @@
 
             function getData() {
 
-                $scope.loadingPartners = true;
+                $scope.loadingGroups = true;
 
-                // get all Partners
-                PartnerFactory.getData().then(function (results) {
+                // get all Groups
+                GroupFactory.getData().then(function (results) {
                 
                     // store data in scope
-                    $scope.partners = results;
+                    $scope.groups = results;
 
                     // hide loading indicator
-                    $scope.loadingPartners = false;
+                    $scope.loadingGroups = false;
 
                 });
             
