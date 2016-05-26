@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<div ng-if="debug" class="debug" style="position: absolute; top: 0; right: 0; padding: 20px; background-color: red;z-index:2;width: 650px" ng-class="{'hidden': hidden}" ng-click="hidden=!hidden">
+<div ng-if="debug" class="debug" style="position: absolute; top: 0; right: 0; padding: 20px; background-color: red;z-index:2;width: 650px"
+    ng-class="{'hidden': hidden}" ng-click="hidden=!hidden">
     <pre>{{userInfo | json}}</pre>
 </div>
 
@@ -35,6 +36,9 @@
                             <td>{{assessment.group}}</td>
                             <td>{{formatDate(assessment.created)}}</td>
                             <td>{{assessment.author.name}}</td>
+                        </tr>
+                        <tr ng-click="navigate('new')" ng-if="assessments.length === 0">
+                            <td colspan="3" class="text-center">It does not appear that you have completed any assessments</td>
                         </tr>
                     </tbody>
                 </table>

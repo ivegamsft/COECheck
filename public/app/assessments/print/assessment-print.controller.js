@@ -18,7 +18,7 @@
 
             $log.info('AssessmentPrintController activated');
 
-            //getData();
+            getData();
 
         }
 

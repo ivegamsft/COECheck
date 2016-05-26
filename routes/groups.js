@@ -134,7 +134,7 @@ router.get('/:name/assessments', passport.authenticate('oauth-bearer', { session
 
     // define a query
     var querySpec = {
-        query: 'SELECT * FROM root r WHERE r.group=@name AND r.deleted=false ORDER BY r.created DESC',
+        query: 'SELECT * FROM r WHERE r["group"]=@name AND r.deleted=false ORDER BY r.created DESC',
         parameters: [{
             name: '@name',
             value: req.params.name

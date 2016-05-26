@@ -8,7 +8,7 @@
         <i class="fa fa-2x fa-refresh fa-spin"></i>&nbsp;&nbsp;Loading detailed group data
     </div>
 
-    <table class="table table-striped table-hover table-clickable">
+    <table class="table table-striped table-hover table-clickable" ng-if="!loading">
         <thead>
             <tr>
                 <th>Date</th>
@@ -29,6 +29,9 @@
                 <td>{{assessment.score['business development']}}</td>
                 <td>{{assessment.score.overall}}</td>
                 <td>{{assessment.comment}}</td>
+            </tr>
+            <tr ng-click="navigate('new')" ng-if="assessments.length === 0">
+                <td colspan="7" class="text-center">It does not appear that any assessments have been completed for {{groupName | capitalize}}</td>
             </tr>
         </tbody>
     </table>
