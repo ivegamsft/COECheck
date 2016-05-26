@@ -1,14 +1,11 @@
 {
-  "name": "webapplication",
-  "version": "0.0.0",
+  "name": "coecheck-spa",
+  "version": "1.0.0",
+  "description": "SPA for COECheck",
   "private": true,
+  "author": "Steven Follis",
   "scripts": {
     "start": "node ./bin/www"
-  },
-  "description": "WebApplication",
-  "author": {
-    "name": "Steven",
-    "email": ""
   },
   "dependencies": {
     "angular": "^1.4.8",
@@ -23,6 +20,5 @@
     "jquery": "^2.1.4",
     "moment": "^2.10.6",
     "ng-fx": "^2.0.4"
-  },
-  "devDependencies": {}
+  }
 }
