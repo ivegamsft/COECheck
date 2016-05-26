@@ -5,6 +5,9 @@ var _ = require('lodash/string');
 
 // setup DocDB
 var client = require('../config/data').docDbClient();
+var config = {
+    database: require('../config/data').db
+};
 
 /* GET partners. */
 router.get('/', passport.authenticate('oauth-bearer', { session: false }), function (req, res) {
@@ -13,7 +16,7 @@ router.get('/', passport.authenticate('oauth-bearer', { session: false }), funct
         query: 'SELECT * FROM root r WHERE r.id=@id',
         parameters: [{
             name: '@id',
-            value: process.env.DOCUMENTDB_DATABASE
+            value: config.database
         }]
     };
 
@@ -53,7 +56,7 @@ router.get('/', passport.authenticate('oauth-bearer', { session: false }), funct
 router.post('/', passport.authenticate('oauth-bearer', { session: false }), function (req, res) {
 
     // definie database and column links
-    var dbLink = 'dbs/' + process.env.DOCUMENTDB_DATABASE;
+    var dbLink = 'dbs/' + config.database;
     var collLink = dbLink + '/colls/' + 'Partners';
 
     // create a document to upload
@@ -79,7 +82,7 @@ router.post('/', passport.authenticate('oauth-bearer', { session: false }), func
 router.put('/', passport.authenticate('oauth-bearer', { session: false }), function (req, res) {
 
     // define a link to the document
-    var colLink = 'dbs/' + process.env.DOCUMENTDB_DATABASE + '/colls/' + 'Partners';
+    var colLink = 'dbs/' + config.database + '/colls/' + 'Partners';
 
     // pass updated document to the upsert method
     client.upsertDocument(colLink, req.body, function (err, doc) {
@@ -101,7 +104,7 @@ router.put('/', passport.authenticate('oauth-bearer', { session: false }), funct
 router.delete('/', passport.authenticate('oauth-bearer', { session: false }), function (req, res) {
 
     // define document link
-    var docLink = 'dbs/' + process.env.DOCUMENTDB_DATABASE + '/colls/' + 'Partners' + '/docs/' + req.body.id;
+    var docLink = 'dbs/' + config.database + '/colls/' + 'Partners' + '/docs/' + req.body.id;
 
     // delete document
     client.deleteDocument(docLink, function (err, doc) {
@@ -131,7 +134,7 @@ router.get('/:name/assessments', passport.authenticate('oauth-bearer', { session
     };
 
     // define collection link
-    var colLink = 'dbs/' + process.env.DOCUMENTDB_DATABASE + '/colls/' + 'Assessments';
+    var colLink = 'dbs/' + config.database + '/colls/' + 'Assessments';
 
     // query for documents
     client.queryDocuments(colLink, querySpec).toArray(function (err, docs) {

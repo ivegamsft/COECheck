@@ -4,12 +4,15 @@ var passport = require('passport');
 
 // setup DocDB
 var client = require('../config/data').docDbClient();
+var config = {
+    database: require('../config/data').db
+};
 
 /* GET rubric */
 router.get('/', passport.authenticate('oauth-bearer', { session: false }), function (req, res) {
 
     // define database and column links
-    var dbLink = 'dbs/' + process.env.DOCUMENTDB_DATABASE;
+    var dbLink = 'dbs/' + config.database;
     var collLink = dbLink + '/colls/' + 'Schema';
 
     // define a schema spec

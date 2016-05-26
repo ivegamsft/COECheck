@@ -4,12 +4,15 @@ var passport = require('passport');
 
 // setup DocDB
 var client = require('../config/data').docDbClient();
+var config = {
+    database: require('../config/data').db
+};
 
 /* GET assessments */
 router.get('/', passport.authenticate('oauth-bearer', { session: false }), function (req, res) {
 
     // define a link to the collection
-    var collLink = 'dbs/' + process.env.DOCUMENTDB_DATABASE + '/colls/' + 'Assessments';
+    var collLink = 'dbs/' + config.database + '/colls/' + 'Assessments';
 
     // create a query
     var docsQuerySpec = {
@@ -30,7 +33,7 @@ router.get('/', passport.authenticate('oauth-bearer', { session: false }), funct
 router.get('/:id', passport.authenticate('oauth-bearer', { session: false }), function (req, res) {
 
     // define a link to the document
-    var docLink = 'dbs/' + process.env.DOCUMENTDB_DATABASE + '/colls/' + 'Assessments' + '/docs/' + req.params.id;
+    var docLink = 'dbs/' + config.database + '/colls/' + 'Assessments' + '/docs/' + req.params.id;
 
     // read document
     client.readDocument(docLink, function (err, doc) {
@@ -51,7 +54,7 @@ router.get('/:id', passport.authenticate('oauth-bearer', { session: false }), fu
 router.post('/my', passport.authenticate('oauth-bearer', { session: false }), function (req, res) {
 
     // define a link to the collection
-    var collLink = 'dbs/' + process.env.DOCUMENTDB_DATABASE + '/colls/' + 'Assessments';
+    var collLink = 'dbs/' + config.database + '/colls/' + 'Assessments';
 
     // create a query
     var docsQuerySpec = {
@@ -74,7 +77,7 @@ router.post('/', passport.authenticate('oauth-bearer', { session: false }), func
     var documentData = req.body;
 
     // define a link to the collection
-    var collLink = 'dbs/' + process.env.DOCUMENTDB_DATABASE + '/colls/' + 'Assessments';
+    var collLink = 'dbs/' + config.database + '/colls/' + 'Assessments';
 
 
     // create a new document
@@ -91,8 +94,8 @@ router.post('/', passport.authenticate('oauth-bearer', { session: false }), func
 router.delete('/:id', passport.authenticate('oauth-bearer', { session: false }), function (req, res) {
 
     // define a link to the document
-    var colLink = 'dbs/' + process.env.DOCUMENTDB_DATABASE + '/colls/' + 'Assessments';
-    var docLink = 'dbs/' + process.env.DOCUMENTDB_DATABASE + '/colls/' + 'Assessments' + '/docs/' + req.params.id;
+    var colLink = 'dbs/' + config.database + '/colls/' + 'Assessments';
+    var docLink = 'dbs/' + config.database + '/colls/' + 'Assessments' + '/docs/' + req.params.id;
 
     // read document
     client.readDocument(docLink, function (err, doc) {
