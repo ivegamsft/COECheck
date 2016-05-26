@@ -32,7 +32,7 @@
                 $log.error('XHR Failed for getAssessments.' + error.data);
             }
 
-        };
+        }
 
         function getMyAssessments(upn) {
 
@@ -48,7 +48,7 @@
                 $log.error('XHR Failed for getAssessments.' + error.data);
             }
 
-        };
+        }
 
         function getAssessment(id) {
 
@@ -64,7 +64,7 @@
                 $log.error('XHR Failed for getAssessment.' + error.data);
             }
 
-        };
+        }
 
         function createAssessment(data) {
 

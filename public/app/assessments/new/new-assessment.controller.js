@@ -67,7 +67,7 @@
 
             $scope.cancelAssessment = function () {
                 $window.location = '/#/home';
-            }
+            };
 
             $scope.calculateAverage = function () {
             
@@ -84,11 +84,11 @@
 
                 });
 
-            }
+            };
 
             $scope.selectGroup = function (group) {
                 $scope.newAssessment.group = group.title;
-            }
+            };
 
             $scope.selectGroupNew = function () {
                 alert('Coming Soon');
@@ -110,7 +110,7 @@
 
                 modalInstance.result.then(function (newGroup) {
                     $scope.newAssessment.group = newGroup.title;
-                    $scope.groupTypeahead = newGroup.title
+                    $scope.groupTypeahead = newGroup.title;
                 }, function () {
                     $log.info('Modal dismissed at: ' + new Date());
                 });
@@ -184,7 +184,7 @@
                     // push all values to the array to calculate an overall score
                     if (groupValue.value >= 0) {
                         sectionAnswers.push(groupValue.value);
-                    };
+                    }
 
                 });
 
@@ -215,7 +215,7 @@
                         // push all values to the array to calculate an overall score
                         if (groupValue.value >= 0) {
                             overallAnswers.push(groupValue.value);
-                        };
+                        }
 
                     });
 
@@ -238,7 +238,7 @@
 
                 if ($location.search().debug) {
                     $scope.debug = true;
-                    console.info('Debug mode initiated')
+                    console.info('Debug mode initiated');
                 }
 
             }

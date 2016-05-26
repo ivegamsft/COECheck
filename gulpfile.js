@@ -5,6 +5,7 @@ var sourcemaps = require('gulp-sourcemaps');
 var uglify = require('gulp-uglify');
 var zip = require('gulp-zip');
 var imagemin = require('gulp-imagemin');
+var jshint = require('gulp-jshint');
 
 var del = require('del');
 var fs = require('fs');
@@ -26,14 +27,18 @@ var paths = {
 
 // Scripts
 gulp.task('scripts', function () {
+    
     // Minify and copy all JavaScript (except vendor scripts)
     // with sourcemaps all the way down
     return gulp.src(paths.scripts)
+        .pipe(jshint())
+        .pipe(jshint.reporter('default'))
         .pipe(sourcemaps.init())
         .pipe(uglify())
         .pipe(concat('app.js'))
         .pipe(sourcemaps.write())
         .pipe(gulp.dest('./public/lib/js'));
+        
 });
 
 // Rerun the task when a file changes
@@ -59,7 +64,7 @@ gulp.task('zip', ['imagemin', 'sass', 'scripts'], function () {
         '!typings',
         '!_package',
         '!gulpfile.js'];
-    
+
     //add exclusion patterns for all dev dependencies
     var packageJSON = JSON.parse(fs.readFileSync(path.join(__dirname, 'package.json'), 'utf8'));
     var devDeps = packageJSON.devDependencies;

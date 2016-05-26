@@ -15,7 +15,7 @@
 
         $scope.navigate = function(name) {
             document.location.href = '#/groups/' + name;
-        }
+        };
 
         function activate() {
 

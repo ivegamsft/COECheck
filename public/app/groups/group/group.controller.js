@@ -22,23 +22,23 @@
 
         $scope.navigate = function(id) {
             document.location.href = '#/assessments/' + id;
-        }
+        };
 
         $scope.formatDate = function(date) {
             return moment(date).calendar();
-        }
+        };
 
         $scope.firstDate = function() {
             if ($scope.assessments.length > 0) {
                 return $scope.formatDate($scope.assessments.slice(-1)[0].created);
             }
-        }
+        };
 
         $scope.lastDate = function() {
             if ($scope.assessments.length > 0) {
                 return $scope.formatDate($scope.assessments[0].created);
             }
-        }
+        };
 
         function getData() {
                 

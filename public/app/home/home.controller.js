@@ -50,7 +50,7 @@
 
             if ($location.search().debug) {
                 $scope.debug = true;
-                console.info('Debug mode initiated')
+                console.info('Debug mode initiated');
             }
 
         }
