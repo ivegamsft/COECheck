@@ -20,7 +20,7 @@ require('./config/auth')(app);
 app.use(express.Router());
 
 // Configure Application Insights
-require('./config/appInsights');
+require('./config/appInsights')(app);
 
 // Start Server
 var port = process.env.port || 1337;

@@ -1,23 +1,40 @@
-(function() {
+(function () {
 	'use strict';
 
-	angular.module('app', [
-		
-		// Angular Modules
-		'ngAnimate',
-		'ngRoute',
+	// Manually bootstrap the application
+	angular.element(document).ready(function () {
 
-		// Vendor Modules
-        'AdalAngular',
-		'ui.bootstrap',
-        'ApplicationInsightsModule',
-        //'ng-fx'
-	
-		// Custom Modules
-		'app.auth',
-        'app.routes',
-		'app.settings'
-		
-	]);
-	
+		// Query the environemt endpoint to retrieve values needed for Angular constants
+		$.getJSON('api/environment', function (data) {
+
+			// Create an Angular constant from the returned configuration data		
+			angular
+				.module('app')
+				.constant('environment', data);
+
+			// Manually initiate the application bootstrap process
+			angular
+				.bootstrap(document, ['app']);
+
+		});
+
+	});
+
+	angular
+		.module('app', [
+
+			// Angular Modules
+			'ngAnimate',
+			'ngRoute',
+
+			// Vendor Modules
+			'AdalAngular',
+			'ui.bootstrap',
+			'ApplicationInsightsModule',
+			//'ng-fx'
+
+			// Custom Modules
+
+		]);
+
 })();

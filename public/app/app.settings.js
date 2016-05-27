@@ -2,11 +2,24 @@
     'use strict';
 
     angular
-        .module('app.settings', [])
-        .config(['applicationInsightsServiceProvider', function (applicationInsightsServiceProvider) {
-            
-            var options = { applicationName: 'app' };
-            applicationInsightsServiceProvider.configure('adeb09ea-93a3-456c-9624-6d089d538fd2', options);
+        .module('app')
+        .config(['applicationInsightsServiceProvider', 'environment', function (applicationInsightsServiceProvider, environment) {
+
+            console.log('Beginning settings');
+
+            // If an AppInsights Telemetry Key is returned in the environment constant then configure the AppInsights service
+            if (environment.appinsights_instrumentationkey !== null) {
+
+                console.log('Setting up Application Insights');
+
+                // Define options
+                var options = { applicationName: 'app' };
+
+                // Use the Provider to setup the service with our telemetry key
+                applicationInsightsServiceProvider
+                    .configure(environment.appinsights_instrumentationkey, options);
+
+            }
 
         }]);
 
