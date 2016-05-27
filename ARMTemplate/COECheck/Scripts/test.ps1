@@ -1,0 +1,1 @@
+Write-Host(node ConfigureDocDb\ConfigureDocDb.js)

@@ -1,0 +1,156 @@
+﻿{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "appName": {
+      "type": "string",
+      "minLength": 1
+    },
+    "aadClientId": {
+      "type": "string",
+      "minLength": 1,
+      "metadata": {
+        "defaultValue": "00000000-0000-0000-0000-000000000000"
+      }
+    }
+  },
+  "variables": {
+    "appName": "[concat(parameters('appName'), substring(uniqueString(resourceGroup().id), 0, 3))]",
+    "repoURL": "https://github.com/GSIAzureCOE/COECheck.git",
+    "repoBranch": "master"
+  },
+  "resources": [
+    {
+      "name": "[variables('appName')]",
+      "type": "Microsoft.Web/serverfarms",
+      "location": "[resourceGroup().location]",
+      "apiVersion": "2014-06-01",
+      "dependsOn": [ ],
+      "tags": {
+        "displayName": "AppServicePlan"
+      },
+      "properties": {
+        "name": "[variables('appName')]",
+        "sku": "Basic",
+        "workerSize": "Small",
+        "numberOfWorkers": 1
+      }
+    },
+    {
+      "name": "[variables('appName')]",
+      "type": "Microsoft.Web/sites",
+      "location": "[resourceGroup().location]",
+      "apiVersion": "2015-08-01",
+      "dependsOn": [
+        "[concat('Microsoft.Web/serverfarms/', variables('appName'))]"
+      ],
+      "tags": {
+        "[concat('hidden-related:', resourceGroup().id, '/providers/Microsoft.Web/serverfarms/', variables('appName'))]": "Resource",
+        "displayName": "WebApp"
+      },
+      "properties": {
+        "name": "[variables('appName')]",
+        "serverFarmId": "[resourceId('Microsoft.Web/serverfarms/', variables('appName'))]"
+      },
+      "resources": [
+        {
+          "apiVersion": "2015-08-01",
+          "name": "appsettings",
+          "type": "config",
+          "dependsOn": [
+            "[resourceId('Microsoft.Web/Sites', variables('appName'))]",
+            "[concat('Microsoft.DocumentDB/databaseAccounts/', variables('appName'))]"
+          ],
+          "properties": {
+            "WEBSITE_NODE_DEFAULT_VERSION": "5.4.0",
+            "DOCUMENTDB_ENDPOINT": "[reference(concat('Microsoft.DocumentDb/databaseAccounts/', variables('appName'))).documentEndpoint]",
+            "DOCUMENTDB_PRIMARY_KEY": "[listKeys(resourceId('Microsoft.DocumentDb/databaseAccounts', variables('appName')), '2015-04-08').primaryMasterKey]",
+            "AAD_CLIENT_ID": "[parameters('aadClientId')]"
+          },
+          "tags": {
+            "displayName": "Configuration"
+          }
+        },
+        {
+          "apiVersion": "2015-08-01",
+          "name": "logs",
+          "type": "config",
+          "dependsOn": [
+            "[resourceId('Microsoft.Web/Sites', variables('appName'))]"
+          ],
+          "properties": {
+            "applicationLogs": {
+              "fileSystem": {
+                "level": "Verbose"
+              }
+            },
+            "httpLogs": {
+              "fileSystem": {
+                "retentionInMb": 40,
+                "enabled": true
+              }
+            },
+            "failedRequestsTracing": {
+              "enabled": true
+            },
+            "detailedErrorMessages": {
+              "enabled": false
+            }
+          },
+          "tags": {
+            "displayName": "Logging"
+          }
+        },
+        {
+          "apiVersion": "2015-08-01",
+          "name": "web",
+          "type": "sourceControls",
+          "dependsOn": [
+            "[resourceId('Microsoft.Web/Sites', variables('appName'))]"
+          ],
+          "properties": {
+            "RepoUrl": "[variables('repoURL')]",
+            "branch": "[variables('repoBranch')]",
+            "IsManualIntegration": true
+          },
+          "tags": {
+            "displayName": "Deployment"
+          }
+        }
+      ]
+    },
+    {
+      "name": "[variables('appName')]",
+      "type": "Microsoft.Storage/storageAccounts",
+      "location": "[resourceGroup().location]",
+      "apiVersion": "2015-06-15",
+      "dependsOn": [ ],
+      "tags": {
+        "displayName": "StorageAccount"
+      },
+      "properties": {
+        "accountType": "Standard_LRS"
+      }
+    },
+    {
+      "apiVersion": "2015-04-08",
+      "type": "Microsoft.DocumentDB/databaseAccounts",
+      "name": "[variables('appName')]",
+      "location": "[resourceGroup().location]",
+      "properties": {
+        "name": "[variables('appName')]",
+        "databaseAccountOfferType": "Standard",
+        "consistencyPolicy": {
+          "defaultConsistencyLevel": "Session",
+          "maxStalenessPrefix": 100,
+          "maxIntervalInSeconds": 5
+        }
+      },
+      "tags": {
+        "displayName": "DocumentDBAccount"
+      }
+    }
+  ],
+  "outputs": {
+  }
+}

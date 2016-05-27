@@ -1,0 +1,22 @@
+[
+  {
+    "title": "IOT",
+    "id": "11e847d0-d83b-52db-38d7-8bd6ab6f87c8",
+    "type": "Group"
+  },
+  {
+    "title": "Big Data & Analytics",
+    "id": "b1ed64d2-8971-d006-b7c5-9410a75bad5a",
+    "type": "Group"
+  },
+  {
+    "title": "Infrastructure",
+    "id": "229823ce-2510-e6a9-62b8-770a675265e9",
+    "type": "Group"
+  },
+  {
+    "title": "Modern Applications",
+    "id": "229223ce-2510-e6a9-62b8-770a975265e9",
+    "type": "Group"
+  }
+]

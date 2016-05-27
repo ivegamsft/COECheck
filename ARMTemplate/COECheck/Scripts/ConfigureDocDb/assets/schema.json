@@ -1,0 +1,2344 @@
+[
+  {
+    "version": 1,
+    "values": {
+      "readiness": {
+        "organizational_support": [
+          {
+            "value": 1,
+            "title": "No COE exists",
+            "suggested": [
+              {
+                "title": "Become familiar with COE concepts."
+              },
+              {
+                "title": "Define, document and share a common COE vocabulary."
+              },
+              {
+                "title": "Identify and establish a COE lead."
+              },
+              {
+                "title": "Start building a core virtual COE team made up of the most senior solution architects."
+              },
+              {
+                "title": "Consider creating a community e-mail alias to begin sharing content."
+              }
+            ],
+            "resources": [
+              {
+                "title": "Read Practice Building Through a COE-BUILDING A COE: THE WHAT, WHY & HOW",
+                "url": "https://microsoft.sharepoint.com/teams/TR22SDFWorkshop/_layouts/15/guestaccess.aspx?guestaccesstoken=IjdR%2bDiAuPusZHheWrW%2b7hwRRBjqsaeLec0V7Osy%2f0M%3d&docid=2_14a393a8d41e7426dafbf43d9d1213652"
+              },
+              {
+                "title": "How to Build More Impactful Centers of Excellence",
+                "url": "http://www.industryweek.com/operations/how-build-more-impactful-centers-excellence"
+              },
+              {
+                "title": "Centers of Excellence Revisited",
+                "url": "https://agileelements.wordpress.com/2014/04/01/centers-of-excellence-revisited/"
+              }
+            ]
+          },
+          {
+            "value": 2,
+            "title": "COE exists as a loosely-defined group",
+            "suggested": [
+              {
+                "title": "Identify and establish a COE lead."
+              },
+              {
+                "title": "Define, document and share the COE's mission statement."
+              },
+              {
+                "title": "Create a basic central repository to start sharing IP (code samples, reference architecture, case studies, etc.)"
+              },
+              {
+                "title": "Begin defining roles and responsibilities for the COE team."
+              },
+              {
+                "title": "Work to identify joint engagement and Lighthouse opportunities."
+              },
+              {
+                "title": "Begin capturing wins, losses and retrospectives in a basic central location (OneNote notebook, etc.)"
+              }
+            ],
+            "resources": [
+              {
+                "title": "Read Practice Building Through a COE-BUILDING A COE: THE WHAT, WHY & HOW",
+                "url": "https://microsoft.sharepoint.com/teams/TR22SDFWorkshop/_layouts/15/guestaccess.aspx?guestaccesstoken=IjdR%2bDiAuPusZHheWrW%2b7hwRRBjqsaeLec0V7Osy%2f0M%3d&docid=2_14a393a8d41e7426dafbf43d9d1213652"
+              },
+              {
+                "title": "How to Build More Impactful Centers of Excellence",
+                "url": "http://www.industryweek.com/operations/how-build-more-impactful-centers-excellence"
+              },
+              {
+                "title": "Centers of Excellence Revisited",
+                "url": "https://agileelements.wordpress.com/2014/04/01/centers-of-excellence-revisited/"
+              }
+            ]
+          },
+          {
+            "value": 3,
+            "title": "COE exists as a formally-defined group with roles and responsibilities",
+            "suggested": [
+              {
+                "title": "Educate organization on the role of the COE."
+              },
+              {
+                "title": "Schedule hackathons and other training events to scale Azure knowledge."
+              },
+              {
+                "title": "Create or continue to build portfolio of Azure IP (code samples, reference architecture, case studies, etc.)"
+              },
+              {
+                "title": "Consider expanding COE to pre-sales and marketing roles."
+              }
+            ],
+            "resources": [
+              {
+                "title": "Read Practice Building Through a COE-BUILDING A COE: THE WHAT, WHY & HOW",
+                "url": "https://microsoft.sharepoint.com/teams/TR22SDFWorkshop/_layouts/15/guestaccess.aspx?guestaccesstoken=IjdR%2bDiAuPusZHheWrW%2b7hwRRBjqsaeLec0V7Osy%2f0M%3d&docid=2_14a393a8d41e7426dafbf43d9d1213652"
+              },
+              {
+                "title": "How to Build More Impactful Centers of Excellence",
+                "url": "http://www.industryweek.com/operations/how-build-more-impactful-centers-excellence"
+              },
+              {
+                "title": "Centers of Excellence Revisited",
+                "url": "https://agileelements.wordpress.com/2014/04/01/centers-of-excellence-revisited/"
+              },
+              {
+                "title": "Run a Good Workshop",
+                "url": "http://scottberkun.com/2013/run-a-good-workshop/"
+              },
+              {
+                "title": "Hackathon Guide",
+                "url": "https://hackathon.guide/"
+              }
+            ]
+          },
+          {
+            "value": 4,
+            "title": "COE is a formally-defined, funded group with roles and responsibilities",
+            "suggested": [
+              {
+                "title": "Continue to recruit COE team and expand IP portfolio."
+              },
+              {
+                "title": "Consider creating COE \"sub-groups\" that focus on specific technologies or verticals."
+              },
+              {
+                "title": "Expand COE to include other disciplines including sales, marketing, HR, business development and finance to drive different elements, recruit and manage the COE across domains."
+              }
+            ],
+            "resources": [
+              {
+                "title": "Read Practice Building Through a COE-BUILDING A COE: THE WHAT, WHY & HOW",
+                "url": "https://microsoft.sharepoint.com/teams/TR22SDFWorkshop/_layouts/15/guestaccess.aspx?guestaccesstoken=IjdR%2bDiAuPusZHheWrW%2b7hwRRBjqsaeLec0V7Osy%2f0M%3d&docid=2_14a393a8d41e7426dafbf43d9d1213652"
+              },
+              {
+                "title": "How to Build More Impactful Centers of Excellence",
+                "url": "http://www.industryweek.com/operations/how-build-more-impactful-centers-excellence"
+              },
+              {
+                "title": "Centers of Excellence Revisited",
+                "url": "https://agileelements.wordpress.com/2014/04/01/centers-of-excellence-revisited/"
+              },
+              {
+                "title": "What is Continuous Improvement?",
+                "url": "http://leankit.com/learn/kanban/continuous-improvement/"
+              }
+            ]
+          }
+        ],
+        "training": [
+          {
+            "value": 1,
+            "title": "Individuals are responsible for their own learning resources",
+            "suggested": [
+              {
+                "title": "Familiarize yourself with Azure training resources available for free through Microsoft."
+              },
+              {
+                "title": "Identify the most senior Azure technical resources and recruit them to hold brownbag and other training sessions."
+              },
+              {
+                "title": "Identify recent Azure projects and harvest them for training material (reference architecture, code samples, etc.)"
+              },
+              {
+                "title": "Create a basic central location for sharing Azure training material (OneNote notebook, etc.)"
+              },
+              {
+                "title": "Start integrating with learning management system."
+              }
+            ],
+            "resources": [
+              {
+                "title": "Microsoft Virtual Academy Self-Paced Azure Training",
+                "url": "https://mva.microsoft.com/training-topics/cloud-app-development"
+              },
+              {
+                "title": "edX Azure Resources",
+                "url": "https://www.edx.org/course?search_query=Azure"
+              },
+              {
+                "title": "Azure on Channel 9",
+                "url": "https://channel9.msdn.com/Azure"
+              },
+              {
+                "title": "Microsoft Partner Network (MPN) YouTube Channel",
+                "url": "https://www.youtube.com/channel/UCcnIa5hfAKZxGxOhR5UTSDw"
+              },
+              {
+                "title": "Microsoft Partner Learning Paths",
+                "url": "https://mspartnerlp.mspartner.microsoft.com/LearningPath"
+              },
+              {
+                "title": "Run a Good Workshop",
+                "url": "http://scottberkun.com/2013/run-a-good-workshop/"
+              },
+              {
+                "title": "Hackathon Guide",
+                "url": "https://hackathon.guide/"
+              }
+            ]
+          },
+          {
+            "value": 2,
+            "title": "Readiness resources are defined as a loose collection",
+            "suggested": [
+              {
+                "title": "Create an advanced central repository for sharing Azure training material (Sharepoint site, etc.)"
+              },
+              {
+                "title": "Organize training resources using categories, tagging, search, etc."
+              },
+              {
+                "title": "Begin defining formalized processes for introducing, maintaining and sunsetting Azure training material."
+              },
+              {
+                "title": "As appropriate, incentivize training through career growth, small bonuses and other rewards."
+              }
+            ],
+            "resources": [
+              {
+                "title": "Microsoft Virtual Academy Self-Paced Azure Training",
+                "url": "https://mva.microsoft.com/training-topics/cloud-app-development"
+              },
+              {
+                "title": "edX Azure Resources",
+                "url": "https://www.edx.org/course?search_query=Azure"
+              },
+              {
+                "title": "Azure on Channel 9",
+                "url": "https://channel9.msdn.com/Azure"
+              },
+              {
+                "title": "Microsoft Partner Network (MPN) YouTube Channel",
+                "url": "https://www.youtube.com/channel/UCcnIa5hfAKZxGxOhR5UTSDw"
+              },
+              {
+                "title": "Microsoft Partner Learning Paths",
+                "url": "https://mspartnerlp.mspartner.microsoft.com/LearningPath"
+              }
+            ]
+          },
+          {
+            "value": 3,
+            "title": "Readiness resources are well-defined",
+            "suggested": [
+              {
+                "title": "Define and share formal processes for introducing, maintaining and sunsetting Azure training material."
+              },
+              {
+                "title": "Begin creating technology and vertical-specific Azure training material."
+              },
+              {
+                "title": "Ensure that the field is familiar with how to locate, utilize and share Azure training material."
+              },
+              {
+                "title": "Encourage the field to submit Azure training material for review."
+              },
+              {
+                "title": "Define and share rules for sharing Azure training material with external parties."
+              }
+            ],
+            "resources": [
+              {
+                "title": "Microsoft Virtual Academy Self-Paced Azure Training",
+                "url": "https://mva.microsoft.com/training-topics/cloud-app-development"
+              },
+              {
+                "title": "edX Azure Resources",
+                "url": "https://www.edx.org/course?search_query=Azure"
+              },
+              {
+                "title": "Azure on Channel 9",
+                "url": "https://channel9.msdn.com/Azure"
+              },
+              {
+                "title": "Microsoft Partner Network (MPN) YouTube Channel",
+                "url": "https://www.youtube.com/channel/UCcnIa5hfAKZxGxOhR5UTSDw"
+              },
+              {
+                "title": "Microsoft Partner Learning Paths",
+                "url": "https://mspartnerlp.mspartner.microsoft.com/LearningPath"
+              },
+              {
+                "title": "7 Tips for Creating Effective eLearning Assessments to Measure Online Training",
+                "url": "http://elearningindustry.com/7-tips-create-effective-elearning-assessments-measure-online-training"
+              }
+            ]
+          },
+          {
+            "value": 4,
+            "title": "Readiness resources are well-defined and are proactively driven to the field",
+            "suggested": [
+              {
+                "title": "Continue to build repository of training material."
+              },
+              {
+                "title": "Encourage the field to submit Azure training material for review."
+              },
+              {
+                "title": "As appropriate, share Azure training material (blog posts, videos, etc.) with external parties to showcase experience."
+              },
+              {
+                "title": "Regularly present new material at internal events to bring visibility to training resources."
+              }
+            ],
+            "resources": [
+              {
+                "title": "Microsoft Virtual Academy Self-Paced Azure Training",
+                "url": "https://mva.microsoft.com/training-topics/cloud-app-development"
+              },
+              {
+                "title": "edX Azure Resources",
+                "url": "https://www.edx.org/course?search_query=Azure"
+              },
+              {
+                "title": "Azure on Channel 9",
+                "url": "https://channel9.msdn.com/Azure"
+              },
+              {
+                "title": "Microsoft Partner Network (MPN) YouTube Channel",
+                "url": "https://www.youtube.com/channel/UCcnIa5hfAKZxGxOhR5UTSDw"
+              },
+              {
+                "title": "Microsoft Partner Learning Paths",
+                "url": "https://mspartnerlp.mspartner.microsoft.com/LearningPath"
+              },
+              {
+                "title": "7 Tips for Creating Effective eLearning Assessments to Measure Online Training",
+                "url": "http://elearningindustry.com/7-tips-create-effective-elearning-assessments-measure-online-training"
+              },
+              {
+                "title": "What is Continuous Improvement?",
+                "url": "http://leankit.com/learn/kanban/continuous-improvement/"
+              }
+            ]
+          }
+        ],
+        "certification": [
+          {
+            "value": 1,
+            "title": "Some individuals pursue Azure certifications",
+            "suggested": [
+              {
+                "title": "Familiarize yourself with Azure certification resources available for free through Microsoft."
+              },
+              {
+                "title": "Create an internal e-mail alias to share certification experiences, tips/tricks, etc."
+              },
+              {
+                "title": "Appropriately recognize those that have achieved certification."
+              },
+              {
+                "title": "As appropriate, cover certification testing fees as part of training investment."
+              }
+            ],
+            "resources": [
+              {
+                "title": "Azure Certifications",
+                "url": "https://www.microsoft.com/en-us/learning/azure-certification.aspx"
+              },
+              {
+                "title": "Azure Certification Resources on Yammer",
+                "url": "https://www.yammer.com/msuspartner/#/threads/inGroup?type=in_group&feedId=4337205"
+              }
+            ]
+          },
+          {
+            "value": 2,
+            "title": "Field is encouraged to achieve Azure certifications",
+            "suggested": [
+              {
+                "title": "Schedule informal brownbags and create certification study groups led by those that have already achieved certification."
+              },
+              {
+                "title": "Encourage those that have already achieved basic certification to pursue MCSA and MCSD certification."
+              },
+              {
+                "title": "Internally share certification statistics (by group, region, role, etc.) via a central scoreboard (Excel, PowerBI, etc.)"
+              },
+              {
+                "title": "As appropriate, incentivize certification through career growth, small bonuses and other rewards."
+              },
+              {
+                "title": "Encourage healthy competition between groups and regions to drive certification."
+              }
+            ],
+            "resources": [
+              {
+                "title": "Azure Certifications",
+                "url": "https://www.microsoft.com/en-us/learning/azure-certification.aspx"
+              },
+              {
+                "title": "Azure Certification Resources on Yammer",
+                "url": "https://www.yammer.com/msuspartner/#/threads/inGroup?type=in_group&feedId=4337205"
+              },
+              {
+                "title": "How Gamification Drives Business Objectives",
+                "url": "http://www.cio.com/article/2376149/collaboration-software/how-gamification-drives-business-objectives.html"
+              },
+              {
+                "title": "Run a Good Workshop",
+                "url": "http://scottberkun.com/2013/run-a-good-workshop/"
+              }
+            ]
+          },
+          {
+            "value": 3,
+            "title": "Field is mandated to achieve Microsoft Specialist: Architecting Microsoft Azure Solutions",
+            "suggested": [
+              {
+                "title": "Create a virtual team within the COE dedicated to driving certification."
+              },
+              {
+                "title": "Continue to build and share central repository of certification resources."
+              },
+              {
+                "title": "Actively encourage those that have achieved basic certification and MCSA to pursue MCSD."
+              },
+              {
+                "title": "Encourage healthy competition between groups and regions to drive certification."
+              },
+              {
+                "title": "Work with marketing to drive public awareness of field certification."
+              },
+              {
+                "title": "Incentivize specialists to mentor and encourage others to achieve certification."
+              }
+            ],
+            "resources": [
+              {
+                "title": "Azure Certifications",
+                "url": "https://www.microsoft.com/en-us/learning/azure-certification.aspx"
+              },
+              {
+                "title": "Azure Certification Resources on Yammer",
+                "url": "https://www.yammer.com/msuspartner/#/threads/inGroup?type=in_group&feedId=4337205"
+              },
+              {
+                "title": "How Gamification Drives Business Objectives",
+                "url": "http://www.cio.com/article/2376149/collaboration-software/how-gamification-drives-business-objectives.html"
+              }
+            ]
+          },
+          {
+            "value": 4,
+            "title": "Architect roles are mandated to achieve MCSD: Azure Solutions Architect; delivery roles are mandated to achieve Microsoft Specialist for their discipline",
+            "suggested": [
+              {
+                "title": "Continue to build and share central repository of certification resources."
+              },
+              {
+                "title": "Actively encourage those that have achieved MCSA to pursue MCSD."
+              },
+              {
+                "title": "Encourage healthy competition between groups to drive certification."
+              },
+              {
+                "title": "Begin including MCSA/MCSD certification in job postings."
+              },
+              {
+                "title": "Work with marketing to drive public awareness of field certification."
+              },
+              {
+                "title": "Begin looking into other Microsoft certification programs (Linux on Azure, Office 365, etc.) to continue to build knowledge/practice."
+              }
+            ],
+            "resources": [
+              {
+                "title": "Azure Certifications",
+                "url": "https://www.microsoft.com/en-us/learning/azure-certification.aspx"
+              },
+              {
+                "title": "Azure Certification Resources on Yammer",
+                "url": "https://www.yammer.com/msuspartner/#/threads/inGroup?type=in_group&feedId=4337205"
+              },
+              {
+                "title": "How Gamification Drives Business Objectives",
+                "url": "http://www.cio.com/article/2376149/collaboration-software/how-gamification-drives-business-objectives.html"
+              },
+              {
+                "title": "Linux on Azure Certification",
+                "url": "https://www.microsoft.com/en-us/learning/mcsa-linux-azure-certification.aspx"
+              },
+              {
+                "title": "Office 365 Certifications",
+                "url": "https://www.microsoft.com/en-us/learning/office365-certification.aspx"
+              },
+              {
+                "title": "Hire a Certified Professional",
+                "url": "https://www.microsoft.com/en-us/learning/hire-a-certified-professional.aspx"
+              },
+              {
+                "title": "What is Continuous Improvement?",
+                "url": "http://leankit.com/learn/kanban/continuous-improvement/"
+              }
+            ]
+          }
+        ],
+        "feedback": [
+          {
+            "value": 1,
+            "title": "No feedback provided to Microsoft",
+            "suggested": [
+              {
+                "title": "Familiarize yourself with and educate teams on available Microsoft feedback channels."
+              },
+              {
+                "title": "Begin sharing feedback through UserVoice channels and/or directly with the Microsoft COE team."
+              },
+              {
+                "title": "Create a basic central location for sharing feedback (e-mail alias, OneNote notebook, etc.) with the COE."
+              }
+            ],
+            "resources": [
+              {
+                "title": "Azure Feedback Portal",
+                "url": "https://feedback.azure.com/forums/34192--general-feedback"
+              },
+              {
+                "title": "Microsoft Answers Community",
+                "url": "http://answers.microsoft.com/"
+              }
+            ]
+          },
+          {
+            "value": 2,
+            "title": "Individuals provide feedback via UserVoice",
+            "suggested": [
+              {
+                "title": "Ensure that both internal and Microsoft feedback channel information is readily available."
+              },
+              {
+                "title": "Actively encourage individuals to participate in UserVoice forums."
+              },
+              {
+                "title": "Create an advanced central tool (Yammer, etc.) for sharing feedback with the COE."
+              },
+              {
+                "title": "Identify appropriate client solutions/projects and begin participating in SDRs."
+              },
+              {
+                "title": "Encourage field to make gathering Azure-related feedback part of project reviews where appropriate."
+              }
+            ],
+            "resources": [
+              {
+                "title": "Azure Feedback Portal",
+                "url": "https://feedback.azure.com/forums/34192--general-feedback"
+              },
+              {
+                "title": "Microsoft Answers Community",
+                "url": "http://answers.microsoft.com/"
+              },
+              {
+                "title": "Deploying a Successful Enterprise Social Network",
+                "url": "https://blogs.office.com/2012/06/04/deploying-a-successful-enterprise-social-network-best-practices-from-the-field/"
+              }
+            ]
+          },
+          {
+            "value": 3,
+            "title": "Individuals provide feedback via UserVoice, COE participates in SDRs",
+            "suggested": [
+              {
+                "title": "Continue to evolve feedback sharing channels and processes."
+              },
+              {
+                "title": "Request access to the Azure Advisors private Yammer network."
+              }
+            ],
+            "resources": [
+              {
+                "title": "Azure Feedback Portal",
+                "url": "https://feedback.azure.com/forums/34192--general-feedback"
+              },
+              {
+                "title": "Microsoft Answers Community",
+                "url": "http://answers.microsoft.com/"
+              },
+              {
+                "title": "Azure Advisors Private Yammer Network",
+                "url": "http://aka.ms/azureadvisors"
+              }
+            ]
+          },
+          {
+            "value": 4,
+            "title": "Individuals provide feedback via UserVoice, COE participates in SDRs, practice participates in Azure Advisors private Yammer network",
+            "suggested": [
+              {
+                "title": "Continue to evolve feedback sharing channels and processes."
+              },
+              {
+                "title": "Use Stack Overflow to help answer questions and for added involvement with Microsoft product groups as they monitor the forums."
+              },
+              {
+                "title": "Work with the Microsoft COE and your CSA to participate in internal product group mailing lists and Yammer channels."
+              }
+            ],
+            "resources": [
+              {
+                "title": "Azure Feedback Portal",
+                "url": "https://feedback.azure.com/forums/34192--general-feedback"
+              },
+              {
+                "title": "Microsoft Answers Community",
+                "url": "http://answers.microsoft.com/"
+              },
+              {
+                "title": "Azure Advisors Private Yammer Network",
+                "url": "http://aka.ms/azureadvisors"
+              },
+              {
+                "title": "Azure on Stack Overflow",
+                "url": "http://stackoverflow.com/questions/tagged/azure"
+              },
+              {
+                "title": "What is Continuous Improvement?",
+                "url": "http://leankit.com/learn/kanban/continuous-improvement/"
+              }
+            ]
+          }
+        ],
+        "roadmap": [
+          {
+            "value": 1,
+            "title": "Each business unit reviews and applies Microsoft roadmap",
+            "suggested": [
+              {
+                "title": "Regularly monitor the Azure roadmap."
+              },
+              {
+                "title": "Schedule brownbag sessions to share upcoming Azure updates with field teams."
+              },
+              {
+                "title": "Share upcoming Azure updates with field teams through e-mail and social channels (e-mail distrubtion list, Yammer, etc.)"
+              },
+              {
+                "title": "Work closely with business units to ensure that plans align with the Azure roadmap."
+              }
+            ],
+            "resources": [
+              {
+                "title": "Azure Roadmap",
+                "url": "https://www.microsoft.com/en-us/server-cloud/roadmap/"
+              },
+              {
+                "title": "Azure Blog",
+                "url": "https://azure.microsoft.com/en-us/blog"
+              },
+              {
+                "title": "Deploying a Successful Enterprise Social Network",
+                "url": "https://blogs.office.com/2012/06/04/deploying-a-successful-enterprise-social-network-best-practices-from-the-field/"
+              },
+              {
+                "title": "Run a Good Workshop",
+                "url": "http://scottberkun.com/2013/run-a-good-workshop/"
+              }
+            ]
+          },
+          {
+            "value": 2,
+            "title": "COE monitors Microsoft roadmap, ensures business unit plans align with Microsoft",
+            "suggested": [
+              {
+                "title": "Have regular meetings with Microsoft teams (COE, partner, account, etc.) to review Azure roadmap and updates."
+              },
+              {
+                "title": "Regularly update offers and solutions against the Azure roadmap."
+              },
+              {
+                "title": "Regularly update automation assets, best practices and reference architectures against the Azure roadmap."
+              },
+              {
+                "title": "Work with the Microsoft COE and your CSA to obtain access to internal NDA roadmaps."
+              },
+              {
+                "title": "Request access to the Azure Advisors private Yammer group."
+              },
+              {
+                "title": "Communicate with Microsoft product groups through the Microsoft COE and your CSA to get information on upcoming features and services."
+              }
+            ],
+            "resources": [
+              {
+                "title": "Azure Roadmap",
+                "url": "https://www.microsoft.com/en-us/server-cloud/roadmap/"
+              },
+              {
+                "title": "Azure Blog",
+                "url": "https://azure.microsoft.com/en-us/blog"
+              },
+              {
+                "title": "Azure Advisors Private Yammer Network",
+                "url": "http://aka.ms/azureadvisors"
+              }
+            ]
+          },
+          {
+            "value": 3,
+            "title": "COE analyzes offerings roadmap and makes business units aware of new features that will become available",
+            "suggested": [
+              {
+                "title": "Schedule quarterly Azure update reviews with internal account teams, field and project leads."
+              },
+              {
+                "title": "Review current and past projects and discuss how you would of done them differently based on the Azure roadmap."
+              },
+              {
+                "title": "Regularly update offers and solutions against the Azure roadmap."
+              },
+              {
+                "title": "Regularly update automation assets, best practices and reference architectures against the Azure roadmap."
+              },
+              {
+                "title": "Work with the Microsoft COE and your CSA to obtain access to internal NDA roadmaps."
+              },
+              {
+                "title": "Request access to the Azure Advisors private Yammer group."
+              },
+              {
+                "title": "Communicate with Microsoft product groups through the Microsoft COE and your CSA to get information on upcoming features and services."
+              }
+            ],
+            "resources": [
+              {
+                "title": "Azure Roadmap",
+                "url": "https://www.microsoft.com/en-us/server-cloud/roadmap/"
+              },
+              {
+                "title": "Azure Blog",
+                "url": "https://azure.microsoft.com/en-us/blog"
+              },
+              {
+                "title": "Azure Advisors Private Yammer Network",
+                "url": "http://aka.ms/azureadvisors"
+              }
+            ]
+          },
+          {
+            "value": 4,
+            "title": "COE reviews existing application portfolio to look for ways to take advantage of future Microsoft offerings",
+            "suggested": [
+              {
+                "title": "Monitor other Microsoft products and services roadmaps."
+              },
+              {
+                "title": "Work with Microsoft EPG and PEAT to create a case study around a Lighthouse win."
+              },
+              {
+                "title": "Work with Microsoft product groups through the Microsoft COE and your CSA to integrate private preview features in a customer solution."
+              },
+              {
+                "title": "Regularly update offers and solutions against the Azure roadmap."
+              },
+              {
+                "title": "Regularly update automation assets, best practices and reference architectures against the Azure roadmap."
+              },
+              {
+                "title": "Work with the Microsoft COE and your CSA to obtain access to internal NDA roadmaps."
+              },
+              {
+                "title": "Request access to the Azure Advisors private Yammer group."
+              },
+              {
+                "title": "Communicate with Microsoft product groups through the Microsoft COE and your CSA to get information on upcoming features and services."
+              }
+            ],
+            "resources": [
+              {
+                "title": "Office 365 Roadmap",
+                "url": "http://fasttrack.office.com/roadmap"
+              },
+              {
+                "title": "Windows Embedded Roadmap",
+                "url": "https://www.microsoft.com/windowsembedded/en-us/product-lifecycles.aspx"
+              },
+              {
+                "title": "Azure Roadmap",
+                "url": "https://www.microsoft.com/en-us/server-cloud/roadmap/"
+              },
+              {
+                "title": "Azure Blog",
+                "url": "https://azure.microsoft.com/en-us/blog"
+              },
+              {
+                "title": "Azure Advisors Private Yammer Network",
+                "url": "http://aka.ms/azureadvisors"
+              },
+              {
+                "title": "What is Continuous Improvement?",
+                "url": "http://leankit.com/learn/kanban/continuous-improvement/"
+              }
+            ]
+          }
+        ]
+      },
+      "delivery": {
+        "best_practices": [
+          {
+            "value": 1,
+            "title": "Ad-hoc sharing of best practices",
+            "suggested": [
+              {
+                "title": "Refer to and share free Microsoft resources as a foundation for building a library of best practices."
+              },
+              {
+                "title": "Review past projects/solutions to identify and harvest best practices."
+              },
+              {
+                "title": "Establish a central repository for sharing best practices (Sharepoint site, wiki, etc.)"
+              },
+              {
+                "title": "Schedule informal brownbag sessions with field teams to share and discuss best practices."
+              },
+              {
+                "title": "Ensure that the field is aware of and is actively encouraged to use and contribute to the best practices repository."
+              }
+            ],
+            "resources": [
+              {
+                "title": "Cloud Design Patterns",
+                "url": "https://msdn.microsoft.com/en-us/library/dn568099.aspx"
+              },
+              {
+                "title": "Azure Web Development Best Practices",
+                "url": "http://www.asp.net/aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/web-development-best-practices"
+              },
+              {
+                "title": "Best Practices for Developing ARM Templates",
+                "url": "https://azure.microsoft.com/en-us/documentation/articles/best-practices-resource-manager-design-templates/"
+              },
+              {
+                "title": "Run a Good Workshop",
+                "url": "http://scottberkun.com/2013/run-a-good-workshop/"
+              }
+            ]
+          },
+          {
+            "value": 2,
+            "title": "Community contributes to centralized best practices repository",
+            "suggested": [
+              {
+                "title": "Organize best practices using categories, tagging, search, etc."
+              },
+              {
+                "title": "Establish a regular candence for reviewing, updating and sunsetting best practices."
+              },
+              {
+                "title": "Regularly review Azure roadmap and update best practices accordingly."
+              },
+              {
+                "title": "As appropriate, incentivize contributions of best practices through career growth, small bonsues and other rewards."
+              }
+            ],
+            "resources": [
+              {
+                "title": "Cloud Design Patterns",
+                "url": "https://msdn.microsoft.com/en-us/library/dn568099.aspx"
+              },
+              {
+                "title": "Azure Web Development Best Practices",
+                "url": "http://www.asp.net/aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/web-development-best-practices"
+              },
+              {
+                "title": "Best Practices for Developing ARM Templates",
+                "url": "https://azure.microsoft.com/en-us/documentation/articles/best-practices-resource-manager-design-templates/"
+              },
+              {
+                "title": "Azure Roadmap",
+                "url": "https://www.microsoft.com/en-us/server-cloud/roadmap/"
+              }
+            ]
+          },
+          {
+            "value": 3,
+            "title": "SME review of best practices from engagements in centralized best practices repository",
+            "suggested": [
+              {
+                "title": "Establish a virtual team within the COE dedicated to managing best practices."
+              },
+              {
+                "title": "Update existing automation assets (scripts, ARM templates, etc.) to reflect documented best practices."
+              },
+              {
+                "title": "Proactively educate field teams on best practices through workshops and joint engagement."
+              },
+              {
+                "title": "Actively encourage field teams to use best practices repository as part of project reviews."
+              },
+              {
+                "title": "Jointly engage with field teams to observe, identify and harvest best practices \"from the trenches\"."
+              }
+            ],
+            "resources": [
+              {
+                "title": "Cloud Design Patterns",
+                "url": "https://msdn.microsoft.com/en-us/library/dn568099.aspx"
+              },
+              {
+                "title": "Azure Web Development Best Practices",
+                "url": "http://www.asp.net/aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/web-development-best-practices"
+              },
+              {
+                "title": "Best Practices for Developing ARM Templates",
+                "url": "https://azure.microsoft.com/en-us/documentation/articles/best-practices-resource-manager-design-templates/"
+              },
+              {
+                "title": "Azure Roadmap",
+                "url": "https://www.microsoft.com/en-us/server-cloud/roadmap/"
+              },
+              {
+                "title": "Run a Good Workshop",
+                "url": "http://scottberkun.com/2013/run-a-good-workshop/"
+              }
+            ]
+          },
+          {
+            "value": 4,
+            "title": "COE actively harvests best practices from engagements and adds to managed IP repository and includes in automation",
+            "suggested": [
+              {
+                "title": "Continue to build library of best practices through research and regular communication with field teams."
+              },
+              {
+                "title": "Create automation workflows to collect, review and publish best practices."
+              },
+              {
+                "title": "Package best practices into reusable libraries and share through internal package management (Nuget, etc.)"
+              },
+              {
+                "title": "Consider creating vertical best practices (compliance, IoT, 3rd party libraries, etc.)"
+              },
+              {
+                "title": "As appropriate, work with marketing to share best practices through blog posts, community engagement, etc. to drive public awareness of deep Azure experience."
+              }
+            ],
+            "resources": [
+              {
+                "title": "Cloud Design Patterns",
+                "url": "https://msdn.microsoft.com/en-us/library/dn568099.aspx"
+              },
+              {
+                "title": "Azure Web Development Best Practices",
+                "url": "http://www.asp.net/aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/web-development-best-practices"
+              },
+              {
+                "title": "Best Practices for Developing ARM Templates",
+                "url": "https://azure.microsoft.com/en-us/documentation/articles/best-practices-resource-manager-design-templates/"
+              },
+              {
+                "title": "Azure Roadmap",
+                "url": "https://www.microsoft.com/en-us/server-cloud/roadmap/"
+              },
+              {
+                "title": "What is Continuous Improvement?",
+                "url": "http://leankit.com/learn/kanban/continuous-improvement/"
+              }
+            ]
+          }
+        ],
+        "reference_architectures": [
+          {
+            "value": 1,
+            "title": "Each business unit creates new architectures based on local experience",
+            "suggested": [
+              {
+                "title": "Refer to and share free Microsoft resources as a foundation for building a reference architecture library."
+              },
+              {
+                "title": "Review past solutions/projects to identify and harvest reference architecture."
+              },
+              {
+                "title": "Create a basic central location for sharing reference architecture (OneNote notebook, etc.)"
+              },
+              {
+                "title": "Schedule informational brownbags with field teams to share and discuss reference architecture."
+              }
+            ],
+            "resources": [
+              {
+                "title": "Azure Quickstart Templates",
+                "url": "https://azure.microsoft.com/en-us/documentation/templates/"
+              },
+              {
+                "title": "Application Architecture on Microsoft Azure",
+                "url": "https://azure.microsoft.com/en-us/documentation/articles/architecture-overview/"
+              },
+              {
+                "title": "Microsoft Azure Architecture Guides",
+                "url": "https://www.microsoft.com/en-us/download/details.aspx?id=35764"
+              },
+              {
+                "title": "Cloud Design Patterns",
+                "url": "https://msdn.microsoft.com/en-us/library/dn568099.aspx"
+              },
+              {
+                "title": "Run a Good Workshop",
+                "url": "http://scottberkun.com/2013/run-a-good-workshop/"
+              }
+            ]
+          },
+          {
+            "value": 2,
+            "title": "COE collects and publishes best-of-breed architectures from existing portfolio",
+            "suggested": [
+              {
+                "title": "Establish an advanced central repository for sharing reference architecture (Sharepoint, VSTS/Github repository, etc.)"
+              },
+              {
+                "title": "Organize reference architecture using categories, search, tagging, etc."
+              },
+              {
+                "title": "Define, publish and share style guidelines and a template for creating reference architecture."
+              },
+              {
+                "title": "Ensure that the field is aware of and is actively encouraged to use and contribute to the reference architecture repository."
+              },
+              {
+                "title": "Establish a regular cadence for reviewing, updating and sunsetting reference architecture."
+              },
+              {
+                "title": "Regularly review Azure roadmap and update reference architecture accordingly."
+              },
+              {
+                "title": "As appropriate, incentivize contribution of reference architecture through career growth, small bonuses and other rewards."
+              }
+            ],
+            "resources": [
+              {
+                "title": "Azure Quickstart Templates",
+                "url": "https://azure.microsoft.com/en-us/documentation/templates/"
+              },
+              {
+                "title": "Application Architecture on Microsoft Azure",
+                "url": "https://azure.microsoft.com/en-us/documentation/articles/architecture-overview/"
+              },
+              {
+                "title": "Microsoft Azure Architecture Guides",
+                "url": "https://www.microsoft.com/en-us/download/details.aspx?id=35764"
+              },
+              {
+                "title": "Cloud Design Patterns",
+                "url": "https://msdn.microsoft.com/en-us/library/dn568099.aspx"
+              },
+              {
+                "title": "Azure Roadmap",
+                "url": "https://www.microsoft.com/en-us/server-cloud/roadmap/"
+              }
+            ]
+          },
+          {
+            "value": 3,
+            "title": "COE enhances reference architectures based on forthcoming service capabilities",
+            "suggested": [
+              {
+                "title": "Continue to build reference architecture repository through research and regular communication with field teams."
+              },
+              {
+                "title": "Update existing automation assets (scripts, ARM templates, etc.) to reflect reference architecture."
+              },
+              {
+                "title": "Create a virtual team within the COE dedicated to managing reference architecture."
+              },
+              {
+                "title": "Encourage field teams to use the reference architecture repository as part of their project reviews."
+              },
+              {
+                "title": "Work with the Microsoft COE and your CSA to build reference architecture based on your key solution areas and upcoming Azure features and services."
+              }
+            ],
+            "resources": [
+              {
+                "title": "Azure Quickstart Templates",
+                "url": "https://azure.microsoft.com/en-us/documentation/templates/"
+              },
+              {
+                "title": "Application Architecture on Microsoft Azure",
+                "url": "https://azure.microsoft.com/en-us/documentation/articles/architecture-overview/"
+              },
+              {
+                "title": "Microsoft Azure Architecture Guides",
+                "url": "https://www.microsoft.com/en-us/download/details.aspx?id=35764"
+              },
+              {
+                "title": "Cloud Design Patterns",
+                "url": "https://msdn.microsoft.com/en-us/library/dn568099.aspx"
+              },
+              {
+                "title": "Azure Roadmap",
+                "url": "https://www.microsoft.com/en-us/server-cloud/roadmap/"
+              }
+            ]
+          },
+          {
+            "value": 4,
+            "title": "COE proactively analyzes the potential of new Microsoft capabilities and proposes new types of applications",
+            "suggested": [
+              {
+                "title": "Continue to build reference architecture repository through research and regular communication with field teams."
+              },
+              {
+                "title": "Encapsulate reference architecture into reusable libraries and share through internal package management (Nuget, etc.)"
+              },
+              {
+                "title": "Create automation workflows to collect, review and publish reference architecture."
+              },
+              {
+                "title": "Consider creating vertical reference architecture."
+              },
+              {
+                "title": "As appropriate, work with marketing to share reference architecture through blog posts, community engagement, etc. to drive public awareness of deep Azure experience."
+              }
+            ],
+            "resources": [
+              {
+                "title": "Azure Quickstart Templates",
+                "url": "https://azure.microsoft.com/en-us/documentation/templates/"
+              },
+              {
+                "title": "Application Architecture on Microsoft Azure",
+                "url": "https://azure.microsoft.com/en-us/documentation/articles/architecture-overview/"
+              },
+              {
+                "title": "Microsoft Azure Architecture Guides",
+                "url": "https://www.microsoft.com/en-us/download/details.aspx?id=35764"
+              },
+              {
+                "title": "Cloud Design Patterns",
+                "url": "https://msdn.microsoft.com/en-us/library/dn568099.aspx"
+              },
+              {
+                "title": "Azure Roadmap",
+                "url": "https://www.microsoft.com/en-us/server-cloud/roadmap/"
+              },
+              {
+                "title": "What is Continuous Improvement?",
+                "url": "http://leankit.com/learn/kanban/continuous-improvement/"
+              }
+            ]
+          }
+        ],
+        "automation": [
+          {
+            "value": 1,
+            "title": "Per-project IP",
+            "suggested": [
+              {
+                "title": "Review and share information on Azure automation options (Azure Automation, Powershell DSC, ARM templates, etc.) with field teams."
+              },
+              {
+                "title": "Refer to and share free Microsoft automation assets as a foundation for building a library of automation assets."
+              },
+              {
+                "title": "Review past solutions/projects to identify and harvest automation assets."
+              },
+              {
+                "title": "Create a basic central repository to share automation assets (file share, VSTS/Github repository, etc.)"
+              },
+              {
+                "title": "Schedule informational brownbags to share and discuss automation options."
+              }
+            ],
+            "resources": [
+              {
+                "title": "Azure Automation",
+                "url": "https://azure.microsoft.com/en-us/services/automation/"
+              },
+              {
+                "title": "Azure Automation DSC",
+                "url": "https://azure.microsoft.com/en-us/documentation/articles/automation-dsc-overview/"
+              },
+              {
+                "title": "Azure Script Center",
+                "url": "https://azure.microsoft.com/en-us/documentation/scripts/"
+              },
+              {
+                "title": "Authoring ARM Templates",
+                "url": "https://azure.microsoft.com/en-us/documentation/articles/resource-group-authoring-templates/"
+              },
+              {
+                "title": "Azure Quickstart Templates",
+                "url": "https://azure.microsoft.com/en-us/documentation/templates/"
+              },
+              {
+                "title": "Run a Good Workshop",
+                "url": "http://scottberkun.com/2013/run-a-good-workshop/"
+              },
+              {
+                "title": "ARM Template Visualization (Armviz)",
+                "url": "http://armviz.io/"
+              }
+            ]
+          },
+          {
+            "value": 2,
+            "title": "Automation assets reside in individual repositories",
+            "suggested": [
+              {
+                "title": "Establish an advanced central repository for sharing automation assets (VSTS/Github repository, etc.)"
+              },
+              {
+                "title": "Organize automation assets using categories, search, tagging, etc."
+              },
+              {
+                "title": "Ensure that the field is aware of and is actively encouraged to use and contribute to the automation asset repository."
+              },
+              {
+                "title": "Establish a regular cadence for reviewing, updating and sunsetting automation assets."
+              },
+              {
+                "title": "Regularly review Azure roadmap and update automation assets accordingly."
+              }
+            ],
+            "resources": [
+              {
+                "title": "Azure Automation",
+                "url": "https://azure.microsoft.com/en-us/services/automation/"
+              },
+              {
+                "title": "Azure Automation DSC",
+                "url": "https://azure.microsoft.com/en-us/documentation/articles/automation-dsc-overview/"
+              },
+              {
+                "title": "Azure Script Center",
+                "url": "https://azure.microsoft.com/en-us/documentation/scripts/"
+              },
+              {
+                "title": "Authoring ARM Templates",
+                "url": "https://azure.microsoft.com/en-us/documentation/articles/resource-group-authoring-templates/"
+              },
+              {
+                "title": "Azure Quickstart Templates",
+                "url": "https://azure.microsoft.com/en-us/documentation/templates/"
+              },
+              {
+                "title": "ARM Template Visualization (Armviz)",
+                "url": "http://armviz.io/"
+              },
+              {
+                "title": "Azure Roadmap",
+                "url": "https://www.microsoft.com/en-us/server-cloud/roadmap/"
+              }
+            ]
+          },
+          {
+            "value": 3,
+            "title": "Centralized repository of automation assets exists and community contributes",
+            "suggested": [
+              {
+                "title": "Continue to build library of automation assets through research and regular communication with field teams."
+              },
+              {
+                "title": "Establish a virtual team within the COE dedicated to managing automation assets."
+              },
+              {
+                "title": "Proactively create new automation assets by reviewing past projects and identifying opportunities for automation."
+              },
+              {
+                "title": "Encourage projects teams to hold regular automation reviews to identify opportunities for automation and create related assets."
+              },
+              {
+                "title": "Regularly review Azure roadmap and update automation assets accordingly."
+              }
+            ],
+            "resources": [
+              {
+                "title": "Azure Automation",
+                "url": "https://azure.microsoft.com/en-us/services/automation/"
+              },
+              {
+                "title": "Azure Automation DSC",
+                "url": "https://azure.microsoft.com/en-us/documentation/articles/automation-dsc-overview/"
+              },
+              {
+                "title": "Azure Script Center",
+                "url": "https://azure.microsoft.com/en-us/documentation/scripts/"
+              },
+              {
+                "title": "Authoring ARM Templates",
+                "url": "https://azure.microsoft.com/en-us/documentation/articles/resource-group-authoring-templates/"
+              },
+              {
+                "title": "Azure Quickstart Templates",
+                "url": "https://azure.microsoft.com/en-us/documentation/templates/"
+              },
+              {
+                "title": "ARM Template Visualization (Armviz)",
+                "url": "http://armviz.io/"
+              },
+              {
+                "title": "Azure Roadmap",
+                "url": "https://www.microsoft.com/en-us/server-cloud/roadmap/"
+              }
+            ]
+          },
+          {
+            "value": 4,
+            "title": "Centralized repository of automation assets exists and is maintained and documented by the COE",
+            "suggested": [
+              {
+                "title": "Continue to build library of automation assets through research and regular communication with field teams."
+              },
+              {
+                "title": "Break automation assets down into smaller, reusable blocks to accelerate creation of future automation assets."
+              },
+              {
+                "title": "Create workflows to help automate the collection, review and publishing of automation assets."
+              },
+              {
+                "title": "As appropriate, work with marketing to share automation assets through blog posts, open source contributions, etc. to drive public awareness of deep Azure experience."
+              }
+            ],
+            "resources": [
+              {
+                "title": "Azure Automation",
+                "url": "https://azure.microsoft.com/en-us/services/automation/"
+              },
+              {
+                "title": "Azure Automation DSC",
+                "url": "https://azure.microsoft.com/en-us/documentation/articles/automation-dsc-overview/"
+              },
+              {
+                "title": "Azure Script Center",
+                "url": "https://azure.microsoft.com/en-us/documentation/scripts/"
+              },
+              {
+                "title": "Authoring ARM Templates",
+                "url": "https://azure.microsoft.com/en-us/documentation/articles/resource-group-authoring-templates/"
+              },
+              {
+                "title": "Azure Quickstart Templates",
+                "url": "https://azure.microsoft.com/en-us/documentation/templates/"
+              },
+              {
+                "title": "ARM Template Visualization (Armviz)",
+                "url": "http://armviz.io/"
+              },
+              {
+                "title": "Azure Roadmap",
+                "url": "https://www.microsoft.com/en-us/server-cloud/roadmap/"
+              },
+              {
+                "title": "What is Continuous Improvement?",
+                "url": "http://leankit.com/learn/kanban/continuous-improvement/"
+              }
+            ]
+          }
+        ],
+        "architecture_review": [
+          {
+            "value": 1,
+            "title": "Architecture reviews are not mandatory",
+            "suggested": [
+              {
+                "title": "Define and ensure that field teams are aware of the purpose and nature of architecture reviews."
+              },
+              {
+                "title": "Refer to free Microsoft resources for guidance on running effective architecture reviews."
+              },
+              {
+                "title": "Take advantage of partner advisory hours through your MPN subscription to support architecture reviews."
+              },
+              {
+                "title": "Conduct practice architecture reviews on past projects/solutions."
+              },
+              {
+                "title": "Mandate that some form of architecture review is required at the beginning of all projects."
+              },
+              {
+                "title": "Encourage field teams to \"cross-pollinate\" where possible and observe architecture reviews from other projects/teams."
+              }
+            ],
+            "resources": [
+              {
+                "title": "Cloud Design Patterns",
+                "url": "https://msdn.microsoft.com/en-us/library/dn568099.aspx"
+              },
+              {
+                "title": "Security Development Lifecycle",
+                "url": "https://www.microsoft.com/en-us/sdl/default.aspx"
+              },
+              {
+                "title": "Guidelines for Design and Code Reviews",
+                "url": "https://msdn.microsoft.com/en-us/library/ms182019(v=vs.100).aspx"
+              },
+              {
+                "title": "MSPNP Azure Architecture Guidance",
+                "url": "https://github.com/mspnp/azure-guidance"
+              },
+              {
+                "title": "Software Estimation: Demystifying the Black Art",
+                "url": "http://www.amazon.com/Software-Estimation-Demystifying-Developer-Practices/dp/0735605351"
+              }
+            ]
+          },
+          {
+            "value": 2,
+            "title": "Architecture reviews are mandatory at the start of a project",
+            "suggested": [
+              {
+                "title": "Encourage field teams to use best practice and reference architecture repositories as resources for architecture reviews."
+              },
+              {
+                "title": "Actively educate field teams on best practices and patterns for architecture reviews."
+              },
+              {
+                "title": "Through observation and discussions with field teams, begin creating a basic architecture review \"playbook\" (wiki, etc.)"
+              },
+              {
+                "title": "Encourage field teams to establish architecture review checkpoints (i.e., at the beginning of each sprint)."
+              },
+              {
+                "title": "Encourage field teams to capture and provide feedback collected during architecture reviews to the COE."
+              }
+            ],
+            "resources": [
+              {
+                "title": "Cloud Design Patterns",
+                "url": "https://msdn.microsoft.com/en-us/library/dn568099.aspx"
+              },
+              {
+                "title": "Security Development Lifecycle",
+                "url": "https://www.microsoft.com/en-us/sdl/default.aspx"
+              },
+              {
+                "title": "Guidelines for Design and Code Reviews",
+                "url": "https://msdn.microsoft.com/en-us/library/ms182019(v=vs.100).aspx"
+              },
+              {
+                "title": "MSPNP Azure Architecture Guidance",
+                "url": "https://github.com/mspnp/azure-guidance"
+              },
+              {
+                "title": "Software Estimation: Demystifying the Black Art",
+                "url": "http://www.amazon.com/Software-Estimation-Demystifying-Developer-Practices/dp/0735605351"
+              }
+            ]
+          },
+          {
+            "value": 3,
+            "title": "Architecture reviews are mandatory and are revisited throughout the project",
+            "suggested": [
+              {
+                "title": "Schedule brownbags and workshops with field teams using actual project IP to continue to build architecture review skills."
+              },
+              {
+                "title": "When possible, participate in field architecture reviews to observe and suggest improvements."
+              },
+              {
+                "title": "Build and actively share an architecture review \"playbook\" to be used as a guide by field teams."
+              }
+            ],
+            "resources": [
+              {
+                "title": "Cloud Design Patterns",
+                "url": "https://msdn.microsoft.com/en-us/library/dn568099.aspx"
+              },
+              {
+                "title": "Security Development Lifecycle",
+                "url": "https://www.microsoft.com/en-us/sdl/default.aspx"
+              },
+              {
+                "title": "Guidelines for Design and Code Reviews",
+                "url": "https://msdn.microsoft.com/en-us/library/ms182019(v=vs.100).aspx"
+              },
+              {
+                "title": "MSPNP Azure Architecture Guidance",
+                "url": "https://github.com/mspnp/azure-guidance"
+              },
+              {
+                "title": "Software Estimation: Demystifying the Black Art",
+                "url": "http://www.amazon.com/Software-Estimation-Demystifying-Developer-Practices/dp/0735605351"
+              },
+              {
+                "title": "Run a Good Workshop",
+                "url": "http://scottberkun.com/2013/run-a-good-workshop/"
+              }
+            ]
+          },
+          {
+            "value": 4,
+            "title": "Architecture reviews are mandatory and are revisited throughout the project and COE participates to mentor the field",
+            "suggested": [
+              {
+                "title": "Schedule brownbags and workshops with field teams using actual project IP to continue to build architecture review skills."
+              },
+              {
+                "title": "Build and actively share an architecture review \"playbook\" with field teams."
+              },
+              {
+                "title": "Use observations and feedback collected from field architecture reviews to continuously improve best practices and reference architecture."
+              }
+            ],
+            "resources": [
+              {
+                "title": "Cloud Design Patterns",
+                "url": "https://msdn.microsoft.com/en-us/library/dn568099.aspx"
+              },
+              {
+                "title": "Security Development Lifecycle",
+                "url": "https://www.microsoft.com/en-us/sdl/default.aspx"
+              },
+              {
+                "title": "Guidelines for Design and Code Reviews",
+                "url": "https://msdn.microsoft.com/en-us/library/ms182019(v=vs.100).aspx"
+              },
+              {
+                "title": "MSPNP Azure Architecture Guidance",
+                "url": "https://github.com/mspnp/azure-guidance"
+              },
+              {
+                "title": "Software Estimation: Demystifying the Black Art",
+                "url": "http://www.amazon.com/Software-Estimation-Demystifying-Developer-Practices/dp/0735605351"
+              },
+              {
+                "title": "Run a Good Workshop",
+                "url": "http://scottberkun.com/2013/run-a-good-workshop/"
+              },
+              {
+                "title": "What is Continuous Improvement?",
+                "url": "http://leankit.com/learn/kanban/continuous-improvement/"
+              }
+            ]
+          }
+        ],
+        "support": [
+          {
+            "value": 1,
+            "title": "Support is ad-hoc with no defined escalation process",
+            "suggested": [
+              {
+                "title": "Ensure that field teams are aware of technical resources that are available to them for free through Microsoft."
+              },
+              {
+                "title": "Familiarize yourself with Microsoft support options available through your MPN subscription."
+              },
+              {
+                "title": "Create, share and monitor a basic support channel (e-mail alias, etc.)"
+              },
+              {
+                "title": "Create and share a basic repository of common support issues (OneNote notebook, etc.) with field teams."
+              },
+              {
+                "title": "Define and share a basic escalation process."
+              }
+            ],
+            "resources": [
+              {
+                "title": "Azure Documentation",
+                "url": "https://azure.microsoft.com/en-us/documentation/"
+              },
+              {
+                "title": "How Fastly Builds Support",
+                "url": "https://www.fastly.com/blog/how-fastly-builds-support-part-3"
+              },
+              {
+                "title": "10 Best Practices to Improve Customer Support",
+                "url": "https://www.desk.com/success-center/customer-support-best-practices"
+              },
+              {
+                "title": "13 Ways to Develop Your Company's Help Desk Best Practices",
+                "url": "http://www.business.com/customer-service/13-ways-to-develop-your-companys-help-desk-best-practices/"
+              }
+            ]
+          },
+          {
+            "value": 2,
+            "title": "Escalation process exists but is not consistently followed",
+            "suggested": [
+              {
+                "title": "Formalize and ensure that the escalation process is easily discoverable."
+              },
+              {
+                "title": "Create a central, searchable and easily discoverable support repository (Sharepoint site, wiki, etc.)"
+              },
+              {
+                "title": "Create an internal community site (Yammer, etc.) where field teams can ask and answer support questions."
+              },
+              {
+                "title": "Appropriately enforce the escalation process and encourage field teams to first refer to support sites/tools before escalating."
+              }
+            ],
+            "resources": [
+              {
+                "title": "How Fastly Builds Support",
+                "url": "https://www.fastly.com/blog/how-fastly-builds-support-part-3"
+              },
+              {
+                "title": "Deploying a Successful Enterprise Social Network",
+                "url": "https://blogs.office.com/2012/06/04/deploying-a-successful-enterprise-social-network-best-practices-from-the-field/"
+              },
+              {
+                "title": "10 Best Practices to Improve Customer Support",
+                "url": "https://www.desk.com/success-center/customer-support-best-practices"
+              },
+              {
+                "title": "13 Ways to Develop Your Company's Help Desk Best Practices",
+                "url": "http://www.business.com/customer-service/13-ways-to-develop-your-companys-help-desk-best-practices/"
+              }
+            ]
+          },
+          {
+            "value": 3,
+            "title": "Escalation process is well-defined and discoverable",
+            "suggested": [
+              {
+                "title": "Introduce tools and workflows to help triage and automate the processing of support requests."
+              },
+              {
+                "title": "Establish a regular cadence for reviewing, updating and sunsetting support topics."
+              },
+              {
+                "title": "Regularly review Azure documentation to update Azure support topics."
+              },
+              {
+                "title": "Establish a virtual team within the COE responsible for mainintaing support materials and processes."
+              },
+              {
+                "title": "Encourage field specialists to participate in technology-specific virtual support teams (e-mail aliases, Yammer, etc.)"
+              },
+              {
+                "title": "Encourage field to provide feedback to help continuously improve support materials and processes."
+              }
+            ],
+            "resources": [
+              {
+                "title": "How Fastly Builds Support",
+                "url": "https://www.fastly.com/blog/how-fastly-builds-support-part-3"
+              },
+              {
+                "title": "Deploying a Successful Enterprise Social Network",
+                "url": "https://blogs.office.com/2012/06/04/deploying-a-successful-enterprise-social-network-best-practices-from-the-field/"
+              },
+              {
+                "title": "10 Best Practices to Improve Customer Support",
+                "url": "https://www.desk.com/success-center/customer-support-best-practices"
+              },
+              {
+                "title": "13 Ways to Develop Your Company's Help Desk Best Practices",
+                "url": "http://www.business.com/customer-service/13-ways-to-develop-your-companys-help-desk-best-practices/"
+              }
+            ]
+          },
+          {
+            "value": 4,
+            "title": "Escalation process is well-defined and discoverable with COE participation to harvest best practices and update automation tools",
+            "suggested": [
+              {
+                "title": "Continue to review and update support materials and processes based on Azure roadmap and field feedback."
+              },
+              {
+                "title": "Establish and publish support SLAs."
+              },
+              {
+                "title": "Encourage field teams to submit support content for review."
+              },
+              {
+                "title": "Automate the collection of field feedback to help continuously improve support materials and processes."
+              }
+            ],
+            "resources": [
+              {
+                "title": "How Fastly Builds Support",
+                "url": "https://www.fastly.com/blog/how-fastly-builds-support-part-3"
+              },
+              {
+                "title": "Build your SLA with these five points in mind",
+                "url": "http://www.techrepublic.com/article/build-your-sla-with-these-five-points-in-mind/"
+              },
+              {
+                "title": "10 Best Practices to Improve Customer Support",
+                "url": "https://www.desk.com/success-center/customer-support-best-practices"
+              },
+              {
+                "title": "13 Ways to Develop Your Company's Help Desk Best Practices",
+                "url": "http://www.business.com/customer-service/13-ways-to-develop-your-companys-help-desk-best-practices/"
+              },
+              {
+                "title": "What is Continuous Improvement?",
+                "url": "http://leankit.com/learn/kanban/continuous-improvement/"
+              }
+            ]
+          }
+        ]
+      },
+      "business development": {
+        "technical_presales": [
+          {
+            "value": 1,
+            "title": "Technical pre-sales uses available resources from bench",
+            "suggested": [
+              {
+                "title": "Take advantage of Microsoft resources (SureStep, Azure Everywhere, etc.)"
+              },
+              {
+                "title": "Familiarize yourself with consumption economics/sales (OpEx over CapEx)."
+              },
+              {
+                "title": "Meet with the Microsoft COE team to learn about the Microsoft Sales Process (MSP) and Microsoft Consumption Process (MCP)."
+              },
+              {
+                "title": "Meet with pre-sales teams to identify most common customer asks."
+              },
+              {
+                "title": "Based on key solution areas, organize loosely-defined virtual teams of senior technical resources to assist in deal pursuit."
+              },
+              {
+                "title": "Create an e-mail alias that pre-sales teams can use to easily engage with the COE."
+              },
+              {
+                "title": "Set up a basic central location (OneNote notebook, etc.) for cataloging pre-sales activities, learnings and best practices "
+              }
+            ],
+            "resources": [
+              {
+                "title": "Cloud SureStep Overview",
+                "url": "https://mspartner.microsoft.com/en/us/pages/solutions/cloud-surestep/cloud-surestep-overview.aspx"
+              },
+              {
+                "title": "Digital Partner of Record Program",
+                "url": "https://mspartner.microsoft.com/en/us/Pages/Membership/Digital-Partner-of-Record.aspx#Overview"
+              },
+              {
+                "title": "Technical Presales and Deployment Services",
+                "url": "https://mspartner.microsoft.com/en/us/Pages/Support/partner-advisory-hours.aspx"
+              },
+              {
+                "title": "Consumption Economics Book",
+                "url": "http://www.amazon.com/Consumption-Economics-New-Rules-Tech/dp/0984213031"
+              },
+              {
+                "title": "Public Cloud, Microsoft Azure Deployment Planning Services (AZDPS)",
+                "url": "http://planningservices.partners.extranet.microsoft.com/en/AZDPS/pages/default.aspx"
+              },
+              {
+                "title": "Partner Marketing Center Campaign Finder",
+                "url": "https://readytogo.microsoft.com/global/Pages/CampaignFinder.aspx"
+              }
+            ]
+          },
+          {
+            "value": 2,
+            "title": "Technical pre-sales uses senior team members to assist in deal pursuit",
+            "suggested": [
+              {
+                "title": "Review previous cloud projects and collaborate with business development, pre-sales and other teams to begin creating sales readiness materials."
+              },
+              {
+                "title": "Schedule regular brownbags and workshops to keep pre-sales teams updated on recent Azure developments, trends and offers."
+              },
+              {
+                "title": "Based on key solution areas, organize well-defined teams of dedicated senior techincal resources to assist with deal pursuit."
+              },
+              {
+                "title": "Create an advanced central repository for cataloging pre-sales activities, learnings and best practices."
+              },
+              {
+                "title": "Regularly conduct practice calls with pre-sales teams to to continuously improve readiness."
+              },
+              {
+                "title": "Begin jointly engaging with pre-sales team."
+              }
+            ],
+            "resources": [
+              {
+                "title": "Azure Roadmap",
+                "url": "https://www.microsoft.com/en-us/server-cloud/roadmap/"
+              },
+              {
+                "title": "Azure Partner Readiness Catalog",
+                "url": "https://azurepartnerreadinesscatalog.azurewebsites.net/"
+              },
+              {
+                "title": "Public Cloud, Microsoft Azure Deployment Planning Services (AZDPS)",
+                "url": "http://planningservices.partners.extranet.microsoft.com/en/AZDPS/pages/default.aspx"
+              },
+              {
+                "title": "Run a Good Workshop",
+                "url": "http://scottberkun.com/2013/run-a-good-workshop/"
+              }
+            ]
+          },
+          {
+            "value": 3,
+            "title": "Technical pre-sales uses a dedicated team of senior team members to assist in deal pursuit",
+            "suggested": [
+              {
+                "title": "Create a virtual team within the COE dedicated to assisting with pre-sales."
+              },
+              {
+                "title": "Finalize and share sales readiness materials with pre-sales teams."
+              },
+              {
+                "title": "Expand CRM tools to include codes that can be used to track COE influence/engagement."
+              },
+              {
+                "title": "Continue to update pre-sales best practices repository based on Azure roadmap and regular collaboration with pre-sales team."
+              },
+              {
+                "title": "Jointly engage regularly with pre-sales teams in both pre-sales and post-sales activities."
+              }
+            ],
+            "resources": [
+              {
+                "title": "Azure Roadmap",
+                "url": "https://www.microsoft.com/en-us/server-cloud/roadmap/"
+              },
+              {
+                "title": "Azure Partner Readiness Catalog",
+                "url": "https://azurepartnerreadinesscatalog.azurewebsites.net/"
+              },
+              {
+                "title": "Public Cloud, Microsoft Azure Deployment Planning Services (AZDPS)",
+                "url": "http://planningservices.partners.extranet.microsoft.com/en/AZDPS/pages/default.aspx"
+              }
+            ]
+          },
+          {
+            "value": 4,
+            "title": "COE participates in joint customer engagements to help land initial offers and mentor senior field members",
+            "suggested": [
+              {
+                "title": "Consider expanding the COE to include pre-sales roles."
+              },
+              {
+                "title": "Continue to update pre-sales best practices repository based on Azure roadmap and regular collaboration with pre-sales team."
+              },
+              {
+                "title": "Continue to create and update sales readiness materials based on Azure roadmap and regular collaboration with pre-sales team."
+              },
+              {
+                "title": "Encourage open communication between pre-sales and COE through internal social channels (Yammer, etc.)"
+              }
+            ],
+            "resources": [
+              {
+                "title": "Azure Roadmap",
+                "url": "https://www.microsoft.com/en-us/server-cloud/roadmap/"
+              },
+              {
+                "title": "Azure Partner Readiness Catalog",
+                "url": "https://azurepartnerreadinesscatalog.azurewebsites.net/"
+              },
+              {
+                "title": "Deploying a Successful Enterprise Social Network",
+                "url": "https://blogs.office.com/2012/06/04/deploying-a-successful-enterprise-social-network-best-practices-from-the-field/"
+              },
+              {
+                "title": "What is Continuous Improvement?",
+                "url": "http://leankit.com/learn/kanban/continuous-improvement/"
+              }
+            ]
+          }
+        ],
+        "wins": [
+          {
+            "value": 1,
+            "title": "Discovery of wins and experience is based on emailing colleagues",
+            "suggested": [
+              {
+                "title": "Create and share the definition of a win."
+              },
+              {
+                "title": "Identify key metrics used to classify wins (consumption, etc.)"
+              },
+              {
+                "title": "Review project portfolio to identify previous wins."
+              },
+              {
+                "title": "Begin cataloging wins in a basic central repository (Excel spreadsheet, etc.)"
+              },
+              {
+                "title": "Create an e-mail alias that teams can use to submit wins."
+              },
+              {
+                "title": "Share wins through a distribution list and communicate to appropriate stakeholders."
+              }
+            ],
+            "resources": [
+              {
+                "title": "Partner University: Business School",
+                "url": "https://mspartner.microsoft.com/en/us/Pages/Training/Business-school.aspx"
+              },
+              {
+                "title": "Harnessing \"Marquee Customers\"",
+                "url": "http://www.bloomberg.com/bw/stories/2006-11-06/harnessing-marquee-customers-businessweek-business-news-stock-market-and-financial-advice"
+              }
+            ]
+          },
+          {
+            "value": 2,
+            "title": "Wins are documented in a centralized repository",
+            "suggested": [
+              {
+                "title": "Organize wins in a central, searchable repository (Sharepoint site, etc.)"
+              },
+              {
+                "title": "Define and share style guidelines and a template (narrative, key metrics, etc.) for sharing wins."
+              },
+              {
+                "title": "As appropriate, share customer success stories both internally with other accounts and externally through trade events and marketing materials."
+              },
+              {
+                "title": "Regularly update best practices and reference architecture repository based on experiences from wins."
+              }
+            ],
+            "resources": [
+              {
+                "title": "Partner University: Business School",
+                "url": "https://mspartner.microsoft.com/en/us/Pages/Training/Business-school.aspx"
+              },
+              {
+                "title": "Harnessing \"Marquee Customers\"",
+                "url": "http://www.bloomberg.com/bw/stories/2006-11-06/harnessing-marquee-customers-businessweek-business-news-stock-market-and-financial-advice"
+              }
+            ]
+          },
+          {
+            "value": 3,
+            "title": "Wins are documented in a centralized repository and easily discoverable through search and tagging",
+            "suggested": [
+              {
+                "title": "Actively encourage teams to document and submit wins for review and publishing."
+              },
+              {
+                "title": "Create a virtual team within the COE dedicated to managing and promoting wins throughout the organization."
+              },
+              {
+                "title": "Work with marketing to group wins that target common technologies and verticals into \"campaigns\" that showcase solution value and team experience."
+              },
+              {
+                "title": "Continue to regularly update best practices and reference architecture repository based on experiences from wins."
+              },
+              {
+                "title": "Foster an environment where marquee wins are celebrated and common knowledge of wins is part of the group DNA."
+              }
+            ],
+            "resources": [
+              {
+                "title": "Partner University: Business School",
+                "url": "https://mspartner.microsoft.com/en/us/Pages/Training/Business-school.aspx"
+              },
+              {
+                "title": "Harnessing \"Marquee Customers\"",
+                "url": "http://www.bloomberg.com/bw/stories/2006-11-06/harnessing-marquee-customers-businessweek-business-news-stock-market-and-financial-advice"
+              }
+            ]
+          },
+          {
+            "value": 4,
+            "title": "Wins are documented in a centralized repository and easily discoverable through search and tagging and provide reference architecture diagrams",
+            "suggested": [
+              {
+                "title": "Use tools such as Excel and PowerBI to help identify common win factors, adjust target metrics (consumption, etc.) and make other delivery changes."
+              },
+              {
+                "title": "Establish a cadence for identifying and including new wins prominently in the repository and archiving older wins."
+              },
+              {
+                "title": "Continue to regularly update best practices and reference architecture repository based on experiences from wins."
+              },
+              {
+                "title": "When appropriate, incentivize wins through career growth, small bonuses and other rewards."
+              }
+            ],
+            "resources": [
+              {
+                "title": "Partner University: Business School",
+                "url": "https://mspartner.microsoft.com/en/us/Pages/Training/Business-school.aspx"
+              },
+              {
+                "title": "Harnessing \"Marquee Customers\"",
+                "url": "http://www.bloomberg.com/bw/stories/2006-11-06/harnessing-marquee-customers-businessweek-business-news-stock-market-and-financial-advice"
+              },
+              {
+                "title": "What is Continuous Improvement?",
+                "url": "http://leankit.com/learn/kanban/continuous-improvement/"
+              }
+            ]
+          }
+        ],
+        "solution_areas": [
+          {
+            "value": 1,
+            "title": "Per-project consulting delivery",
+            "suggested": [
+              {
+                "title": "Create and share the definition of a solution area."
+              },
+              {
+                "title": "Review portfolio of solutions and past projects to identify top five solution areas."
+              },
+              {
+                "title": "Collaborate with business development, marketing, sales and field teams to brainstorm and further define top five solution areas."
+              },
+              {
+                "title": "Create a basic central location to collect notes and ideas on solution areas (OneNote notebook, etc.)"
+              }
+            ],
+            "resources": [
+              {
+                "title": "Partner University: Business School",
+                "url": "https://mspartner.microsoft.com/en/us/Pages/Training/Business-school.aspx"
+              }
+            ]
+          },
+          {
+            "value": 2,
+            "title": "One or more defined solution areas",
+            "suggested": [
+              {
+                "title": "Expand and continue to define solution areas by associating best practices, reference architectures and wins."
+              },
+              {
+                "title": "Work with business development, marketing, sales and field teams to create and share solution area readiness materials."
+              },
+              {
+                "title": "Create a central, searchable repository for sharing solution area readiness materials (Sharepoint site, VSTS/Github repository, etc.)"
+              },
+              {
+                "title": "Work with business development, marketing and sales teams to ensure that efforts are aligned with solution areas."
+              }
+            ],
+            "resources": [
+              {
+                "title": "Partner University: Business School",
+                "url": "https://mspartner.microsoft.com/en/us/Pages/Training/Business-school.aspx"
+              }
+            ]
+          },
+          {
+            "value": 3,
+            "title": "Catalog of solution areas defined with reference wins in each category",
+            "suggested": [
+              {
+                "title": "Regularly review project portfolio and collaborate with business development, sales and field teams to expand and update solution areas."
+              },
+              {
+                "title": "Create virtual teams within the COE that are dedicated to top solution areas."
+              },
+              {
+                "title": "Focus development of offers, solutions and other assets around solution areas."
+              },
+              {
+                "title": "Working with business development, marketing and sales, continue to develop marketing and readiness materials that showcase top solution areas."
+              }
+            ],
+            "resources": [
+              {
+                "title": "Partner University: Business School",
+                "url": "https://mspartner.microsoft.com/en/us/Pages/Training/Business-school.aspx"
+              }
+            ]
+          },
+          {
+            "value": 4,
+            "title": "Vertically-aligned solution areas building on a common platform to achieve scale",
+            "suggested": [
+              {
+                "title": "Regularly review project portfolio and collaborate with business development, sales and field teams to expand and update solution areas."
+              },
+              {
+                "title": "Emphasize solution areas through blog posts, community engagement, etc. to drive public awareness of deep Azure experience."
+              },
+              {
+                "title": "Regularly update solution area readiness materials based on the Azure roadmap and collaboration with business development, marketing, sales and field teams."
+              }
+            ],
+            "resources": [
+              {
+                "title": "Partner University: Business School",
+                "url": "https://mspartner.microsoft.com/en/us/Pages/Training/Business-school.aspx"
+              },
+              {
+                "title": "Azure Roadmap",
+                "url": "https://www.microsoft.com/en-us/server-cloud/roadmap/"
+              },
+              {
+                "title": "What is Continuous Improvement?",
+                "url": "http://leankit.com/learn/kanban/continuous-improvement/"
+              }
+            ]
+          }
+        ],
+        "lighthouse_wins": [
+          {
+            "value": 1,
+            "title": "No Lighthouse wins",
+            "suggested": [
+              {
+                "title": "Create and share the definition and purpose of a Lighthouse win."
+              },
+              {
+                "title": "Review past project portfolio to identify initial set of Lighthouse wins."
+              },
+              {
+                "title": "Create an basic, central location for collecting notes and information on Lighthouse wins (OneNote notebook, etc.)"
+              },
+              {
+                "title": "Identify and collect Lighthouse win assets (narrative, architecture, etc.) to begin to build reference and training materials."
+              },
+              {
+                "title": "Put together a list of potential Lighthouse deals that are in the works or possibilities to pursue."
+              }
+            ],
+            "resources": [
+              {
+                "title": "Partner University: Business School",
+                "url": "https://mspartner.microsoft.com/en/us/Pages/Training/Business-school.aspx"
+              },
+              {
+                "title": "Harnessing \"Marquee Customers\"",
+                "url": "http://www.bloomberg.com/bw/stories/2006-11-06/harnessing-marquee-customers-businessweek-business-news-stock-market-and-financial-advice"
+              }
+            ]
+          },
+          {
+            "value": 2,
+            "title": "Two or more wins the COE considers Lighthouse",
+            "suggested": [
+              {
+                "title": "Collaborate regularly with business development, sales and field teams to identify potential Lighthouse wins."
+              },
+              {
+                "title": "Create a central, searchable repository for cataloging Lighthouse wins (Sharepoint site, etc.)"
+              },
+              {
+                "title": "Build readiness assets and workshops around Lighthouse wins."
+              }
+            ],
+            "resources": [
+              {
+                "title": "Partner University: Business School",
+                "url": "https://mspartner.microsoft.com/en/us/Pages/Training/Business-school.aspx"
+              },
+              {
+                "title": "Harnessing \"Marquee Customers\"",
+                "url": "http://www.bloomberg.com/bw/stories/2006-11-06/harnessing-marquee-customers-businessweek-business-news-stock-market-and-financial-advice"
+              }
+            ]
+          },
+          {
+            "value": 3,
+            "title": "Five or more wins the COE considers Lighthouse",
+            "suggested": [
+              {
+                "title": "Collaborate regularly with business development, sales and field teams to identify potential Lighthouse wins."
+              },
+              {
+                "title": "Create a virtual team within the COE dedicated to identifying and sharing Lighthouse wins."
+              },
+              {
+                "title": "Expand Lighthouse wins to specific verticals."
+              }
+            ],
+            "resources": [
+              {
+                "title": "Partner University: Business School",
+                "url": "https://mspartner.microsoft.com/en/us/Pages/Training/Business-school.aspx"
+              },
+              {
+                "title": "Harnessing \"Marquee Customers\"",
+                "url": "http://www.bloomberg.com/bw/stories/2006-11-06/harnessing-marquee-customers-businessweek-business-news-stock-market-and-financial-advice"
+              }
+            ]
+          },
+          {
+            "value": 4,
+            "title": "Ten or more wins the COE considers Lighthouse",
+            "suggested": [
+              {
+                "title": "Collaborate regularly with business development, sales and field teams to identiy potential Lighthouse wins."
+              },
+              {
+                "title": "Regularly review and rotate new Lightouse wins and old Lighthouse wins out of repository."
+              },
+              {
+                "title": "Emphasize Lighthouse wins through blog posts, community engagement and marketing materials to drive public awareness."
+              }
+            ],
+            "resources": [
+              {
+                "title": "Partner University: Business School",
+                "url": "https://mspartner.microsoft.com/en/us/Pages/Training/Business-school.aspx"
+              },
+              {
+                "title": "Harnessing \"Marquee Customers\"",
+                "url": "http://www.bloomberg.com/bw/stories/2006-11-06/harnessing-marquee-customers-businessweek-business-news-stock-market-and-financial-advice"
+              },
+              {
+                "title": "What is Continuous Improvement?",
+                "url": "http://leankit.com/learn/kanban/continuous-improvement/"
+              }
+            ]
+          }
+        ],
+        "feedback": [
+          {
+            "value": 1,
+            "title": "No capture of missed opportunities or customer objections",
+            "suggested": [
+              {
+                "title": "Encourage sales teams to record missed opportunities using existing sales pipeline tools."
+              },
+              {
+                "title": "Enagage with sales teams to understand top missed opportunity \"pain points\"."
+              },
+              {
+                "title": "Engage with customers directly to understand why they decided to not accept offers."
+              }
+            ],
+            "resources": [
+              {
+                "title": "How to set up a Sales Tracking Process",
+                "url": "http://www.inc.com/guides/small-business-sales-tracking.html"
+              },
+              {
+                "title": "Partner University: Business School",
+                "url": "https://mspartner.microsoft.com/en/us/Pages/Training/Business-school.aspx"
+              }
+            ]
+          },
+          {
+            "value": 2,
+            "title": "Missed opportunities are captured in sales pipeline reporting",
+            "suggested": [
+              {
+                "title": "Encourage sales teams to actively elicit and capture customer objections."
+              },
+              {
+                "title": "Collaborate closely with sales teams to understand customer objections."
+              },
+              {
+                "title": "Encourage sales teams to provide information on losses and customer objections via an e-mail alias."
+              },
+              {
+                "title": "Organize customer objections in a basic, searchable repository (Excel spreadsheet, etc.)"
+              },
+              {
+                "title": "Analyze customer objections to identify top areas for improvement."
+              }
+            ],
+            "resources": [
+              {
+                "title": "How to set up a Sales Tracking Process",
+                "url": "http://www.inc.com/guides/small-business-sales-tracking.html"
+              },
+              {
+                "title": "Partner University: Business School",
+                "url": "https://mspartner.microsoft.com/en/us/Pages/Training/Business-school.aspx"
+              },
+              {
+                "title": "Turn Objections into Sales Opportunities",
+                "url": "http://www.entrepreneur.com/article/76434"
+              }
+            ]
+          },
+          {
+            "value": 3,
+            "title": "Missed opportunities are captured in sales pipeline reporting, objection handling is captured",
+            "suggested": [
+              {
+                "title": "Create and share a searchable repository to support sales enablement with various value/benefit statements."
+              },
+              {
+                "title": "Regularly monitor various competitors and update offers and sales readiness appropriately."
+              },
+              {
+                "title": "Regularly share market movement information with leadership team."
+              },
+              {
+                "title": "Encourage sales team to actively use sales enablement repository."
+              }
+            ],
+            "resources": [
+              {
+                "title": "How to set up a Sales Tracking Process",
+                "url": "http://www.inc.com/guides/small-business-sales-tracking.html"
+              },
+              {
+                "title": "Partner University: Business School",
+                "url": "https://mspartner.microsoft.com/en/us/Pages/Training/Business-school.aspx"
+              },
+              {
+                "title": "Turn Objections into Sales Opportunities",
+                "url": "http://www.entrepreneur.com/article/76434"
+              },
+              {
+                "title": "Sales Enablement Best Practices",
+                "url": "https://www.knowledgetree.com/sales-enablement-best-practices/"
+              }
+            ]
+          },
+          {
+            "value": 4,
+            "title": "Objection handling is updated regularly with input from the COE, missed opportunities are captured and reviewed with COE for collateral improvement",
+            "suggested": [
+              {
+                "title": "Perform regular market assessments to identify key opportunities."
+              },
+              {
+                "title": "Seek early wins from customers driving new solutions."
+              },
+              {
+                "title": "Actively monitor competitors and provide detailed exception handling to sales to clearly articulate value/benefit."
+              },
+              {
+                "title": "Create a competitive analysis team or process to proactively address market/customer objections."
+              }
+            ],
+            "resources": [
+              {
+                "title": "How to set up a Sales Tracking Process",
+                "url": "http://www.inc.com/guides/small-business-sales-tracking.html"
+              },
+              {
+                "title": "Partner University: Business School",
+                "url": "https://mspartner.microsoft.com/en/us/Pages/Training/Business-school.aspx"
+              },
+              {
+                "title": "Turn Objections into Sales Opportunities",
+                "url": "http://www.entrepreneur.com/article/76434"
+              },
+              {
+                "title": "Sales Enablement Best Practices",
+                "url": "https://www.knowledgetree.com/sales-enablement-best-practices/"
+              },
+              {
+                "title": "What is Continuous Improvement?",
+                "url": "http://leankit.com/learn/kanban/continuous-improvement/"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "id": "52b42c67-5cf1-9df8-2229-dac0cd219e6d",
+    "type": "Schema"
+  }]

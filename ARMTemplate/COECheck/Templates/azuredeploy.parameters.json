@@ -1,0 +1,12 @@
+﻿{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "appName": {
+            "value": "coecheck"
+        },
+        "aadClientId": {
+            "value": "0c979fac-8467-46b0-8711-2856ebfde62b"
+        }
+    }
+}
