@@ -300,4 +300,6 @@ jspm_packages
 # Optional REPL history
 .node_repl_history
 
+# Custom
 _package
+azuredeploy.parameters.json
