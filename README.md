@@ -28,6 +28,7 @@ The following resources will be deployed:
 * Web App
 * Storage Account
 * DocumentDB Account
+* Application Insights
 
 Note: The App Service Plan is configure to use a Basic app. Feel free to scale that down to Shared or Free after deployment.  If you attempt to deploy as a Shared or Free, you may run into an [issue](https://github.com/Azure/azure-sdk-for-node/issues/1740)
 

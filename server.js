@@ -24,6 +24,6 @@ require('./config/appInsights')(app);
 
 // Start Server
 var port = process.env.port || 1337;
-var server = app.listen(port, function() {
+var server = app.listen(port, function () {
 	console.log('COECheck app listening at on port ', port);
 });
