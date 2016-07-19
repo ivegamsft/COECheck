@@ -21,7 +21,7 @@ The COECheck tool was created to aid in the regular evaluation of Azure practice
 
 ## Step 2: Deploy ARM Template
 
-An ARM Template is provided to scaffold out all Azure resources necessary for setting up COECheck. 
+An ARM Template is provided in the `_ARMTemplate` folder to scaffold out all Azure resources necessary for setting up COECheck. 
 
 The following resources will be deployed:
 * App Service Plan
@@ -30,15 +30,23 @@ The following resources will be deployed:
 * DocumentDB Account
 * Application Insights
 
-Note: The App Service Plan is configure to use a Basic app. Feel free to scale that down to Shared or Free after deployment.  If you attempt to deploy as a Shared or Free, you may run into an [issue](https://github.com/Azure/azure-sdk-for-node/issues/1740)
+The template uses two parameters for deployment:
 
-1. Use the Client ID from the first step as the parameter "`aadClientId`". This will store the ID in an environmentable variable, used by the application to establish authentication.
-2. Once deployed, add the web app's URL (example `https://coecheckz3c.azurewebsites.net/`) to "Reply URL" list in your Azure AD Application configuration window.
+`appName` is a name that will be used across all of the resources. Suggested: "coecheck" or "contosocoecheck". Since this name needs to be globally unique, the parameter is consumed by a variable in the ARM Template that adds some random characters to the end.  Please feel free to adjust the variable's behavior in the template to tweak the naming scheme of the resources.
 
-## Step 3: Setup DocumentDB
+`aadClientId` is the Client ID from the previous Step 1 section. This will store the ID in an environmental variable, used by the application to establish authentication with your AzureAD Application.
 
-The ARM Template only created the DocumentDB Account.  
+Once deployed, add the web app's URL (for example `https://coecheckz3c.azurewebsites.net/`) to "Reply URL" list in your Azure AD Application configuration window.
 
-TODO: Add script and instructions
+> Note: The App Service Plan is configured to use a Basic app. Feel free to scale that down to Shared or Free after deployment.  If you attempt to deploy as a Shared or Free, you may run into an [issue](https://github.com/Azure/azure-sdk-for-node/issues/1740)
 
-## Customization 
+
+## Troubleshooting
+
+1. The ARM Template failed upon deployment
+
+    [Response]
+
+2. The app did not deploy from github
+
+    [Response]
