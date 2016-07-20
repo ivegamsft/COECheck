@@ -11,63 +11,75 @@ var config = {
 /* GET assessments */
 router.get('/', passport.authenticate('oauth-bearer', { session: false }), function (req, res) {
 
-    // define a link to the collection
+    // Define a link to the collection
     var collLink = 'dbs/' + config.database + '/colls/' + 'Assessments';
 
-    // create a query
+    // Create a query
     var docsQuerySpec = {
         query: 'SELECT * FROM r WHERE r.deleted=false'
     };
 
-    // query for all documents in the collection
-    client.queryDocuments(collLink, docsQuerySpec).toArray(function (err, docs) {
+    // Query for all documents in the collection
+    client
+        .queryDocuments(collLink, docsQuerySpec)
+        .toArrayAsync()
+        .then(function (docs) {
 
-        // return all documents to the client as JSON 
-        res.json(docs);
+            // Return all documents to the client as JSON 
+            res.json(docs.feed);
 
-    });
+        })
+        .fail(function (error) {
+            console.error(error);
+        });
 
 });
 
 /* GET assessment */
 router.get('/:id', passport.authenticate('oauth-bearer', { session: false }), function (req, res) {
 
-    // define a link to the document
+    // Define a link to the document
     var docLink = 'dbs/' + config.database + '/colls/' + 'Assessments' + '/docs/' + req.params.id;
 
-    // read document
-    client.readDocument(docLink, function (err, doc) {
+    // Read document
+    client
+        .readDocumentAsync(docLink)
+        .then(function (doc) {
 
-        if (err) {
-            console.log('There was an error retrieving the document ' + req.params.id);
-        }
-        else {
-            // return all documents to the client as JSON 
-            res.send(doc);
-        }
+            // Return document 
+            res.send(doc.resource);
 
-    });
+        })
+        .fail(function (error) {
+            console.error(error);
+        });
 
 });
 
 /* POST my assessments */
 router.post('/my', passport.authenticate('oauth-bearer', { session: false }), function (req, res) {
 
-    // define a link to the collection
+    // Define a link to the collection
     var collLink = 'dbs/' + config.database + '/colls/' + 'Assessments';
 
-    // create a query
+    // Create a query
     var docsQuerySpec = {
         query: 'SELECT * FROM r  WHERE r.deleted=false AND r.author.upn = "' + req.body.upn + '"'
     };
 
-    // query for all documents in the collection matching the given user name
-    client.queryDocuments(collLink, docsQuerySpec).toArray(function (err, docs) {
+    // Query for all documents in the collection matching the given user name
+    client
+        .queryDocuments(collLink, docsQuerySpec)
+        .toArrayAsync()
+        .then(function (docs) {
 
-        // return all documents to the client as JSON 
-        res.json(docs);
+            // return all documents to the client as JSON 
+            res.json(docs.feed);
 
-    });
+        })
+        .fail(function (error) {
+            console.error(error);
+        });
 
 });
 
@@ -76,57 +88,64 @@ router.post('/', passport.authenticate('oauth-bearer', { session: false }), func
 
     var documentData = req.body;
 
-    // define a link to the collection
+    // Define a link to the collection
     var collLink = 'dbs/' + config.database + '/colls/' + 'Assessments';
 
+    // Create a new document
+    client
+        .createDocumentAsync(collLink, documentData)
+        .then(function (result) {
 
-    // create a new document
-    client.createDocument(collLink, documentData, function (err, result) {
+            // return the document back to the client 
+            res.json(result.resource);
 
-        // return the document back to the client 
-        res.json(result);
-
-    });
+        })
+        .fail(function (error) {
+            console.error(error);
+        });
 
 });
 
-/* Delete assessment */
+/* DELETE assessment */
 router.delete('/:id', passport.authenticate('oauth-bearer', { session: false }), function (req, res) {
+
+    // This is a "soft delete" where the document is not physically deleted from the server
+    // But instead has the field "deleted" toggled to true
 
     // define a link to the document
     var colLink = 'dbs/' + config.database + '/colls/' + 'Assessments';
     var docLink = 'dbs/' + config.database + '/colls/' + 'Assessments' + '/docs/' + req.params.id;
 
-    // read document
-    client.readDocument(docLink, function (err, doc) {
+    // Read document
+    client
+        .readDocumentAsync(docLink)
+        .then(function (doc) {
 
-        if (err) {
-            console.log('There was an error retrieving the document ' + req.params.id);
-        }
-        else {
+            // Copy original document
+            var updatedDoc = doc.resource;
 
-            // copy original document
-            var updatedDoc = doc;
-
-            // update document's deleted attribute
+            // Update document's deleted attribute
             updatedDoc.deleted = true;
 
-            client.upsertDocument(colLink, updatedDoc, function (err, doc) {
+            client
+                .upsertDocumentAsync(colLink, updatedDoc)
+                .then(function (doc) {
 
-                if (err) {
-                    console.log('There was an error with the upsert on ' + req.params.id);
-                    res.send(false);
-                }
-                else {
+                    // Successfully upserted document
                     console.log('Successfully upserted ' + req.params.id);
                     res.send(true);
-                }
 
-            });
+                })
+                .fail(function (error) {
+                    console.log('There was an error with the upsert on ' + req.params.id);
+                    console.error(error);
+                    res.send(false);
+                });
 
-        }
-
-    });
+        })
+        .fail(function (error) {
+            console.error(error);
+        });
 
 });
 

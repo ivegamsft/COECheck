@@ -20,21 +20,22 @@ router.get('/', passport.authenticate('oauth-bearer', { session: false }), funct
         query: 'SELECT TOP 1 * FROM c ORDER BY c.version DESC'
     };
 
-    // query DocDB for the schema
-    client.queryDocuments(collLink, querySpec).toArray(function (err, result) {
-        if (err) {
-            console.error(err);
-        }
-        else {
+    // Query DocDB for the latest schema
+    client
+        .queryDocuments(collLink, querySpec)
+        .toArrayAsync()
+        .then(function (result) {
 
-            // log the schema version
-            console.info('Using schema version ' + result[0].version);
+            // Log the schema version
+            console.info('Using schema version ' + result.feed[0].version);
 
-            // return schema value
-            res.json(result[0]);
+            // Return schema value
+            res.json(result.feed[0]);
 
-        }
-    });
+        })
+        .fail(function (error) {
+            console.log(error);
+        });
 
 });
 

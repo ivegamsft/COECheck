@@ -12,120 +12,97 @@ var config = {
 /* GET Groups. */
 router.get('/', passport.authenticate('oauth-bearer', { session: false }), function (req, res) {
 
-    var querySpec = {
-        query: 'SELECT * FROM root r WHERE r.id=@id',
-        parameters: [{
-            name: '@id',
-            value: config.database
-        }]
+    // Define a query 
+    var docsQuerySpec = {
+        query: 'SELECT * FROM r'
     };
 
-    // query for all databases
-    client.queryDatabases(querySpec).toArray(function (error, database) {
+    // Define collection link
+    var collLink = 'dbs/' + config.database + '/colls/' + 'Groups';
 
-        if (error) return console.error(error);
+    // Query for all documents in the collection
+    client
+        .queryDocuments(collLink, docsQuerySpec)
+        .toArrayAsync()
+        .then(function (docs) {
 
-        var collectionsQuerySpec = {
-            query: 'SELECT * FROM root r WHERE r.id=@id',
-            parameters: [{
-                name: '@id',
-                value: 'Groups'
-            }]
-        };
+            // return all documents to the client as JSON 
+            res.json(docs.feed);
 
-        // query for all collections in the database
-        client.queryCollections(database[0]._self, collectionsQuerySpec).toArray(function (error, collections) {
-
-            if (error) return console.error(error);
-
-            var docsQuerySpec = {
-                query: 'SELECT * FROM r'
-            };
-
-            // query for all documents in the collection
-            client.queryDocuments(collections[0]._self, docsQuerySpec).toArray(function (error, docs) {
-
-                if (error) return console.error(error);
-
-                // return all documents to the client as JSON 
-                res.json(docs);
-
-            });
-
+        })
+        .fail(function (error) {
+            console.error(error);
         });
-
-    });
 
 });
 
 /* POST new Group*/
 router.post('/', passport.authenticate('oauth-bearer', { session: false }), function (req, res) {
 
-    // definie database and column links
-    var dbLink = 'dbs/' + config.database;
-    var collLink = dbLink + '/colls/' + 'Groups';
+    // Define collection link
+    var collLink = 'dbs/' + config.database + '/colls/' + 'Groups';
 
-    // create a document to upload
+    // Create a document to upload
     var documentDefinition = {
         "title": req.body.groupName,
         "type": "Group"
     };
 
-    // upload new document to DocDB via SDK
-    client.createDocument(collLink, documentDefinition, function (error, doc) {
-        
-        if (error) {
-            console.log(error);
-        }
-        else {
+    // Upload new document to DocDB via SDK
+    client
+        .createDocumentAsync(collLink, documentDefinition)
+        .then(function (doc) {
+
             // return new document back
-            res.send(doc);
-        }
-        
-    });
+            res.send(doc.resource);
+
+        })
+        .fail(function (error) {
+            console.error(error);
+        });
 
 });
 
 /* EDIT a group*/
 router.put('/', passport.authenticate('oauth-bearer', { session: false }), function (req, res) {
 
-    // define a link to the document
+    // Define a link to the document
     var colLink = 'dbs/' + config.database + '/colls/' + 'Groups';
 
-    // pass updated document to the upsert method
-    client.upsertDocument(colLink, req.body, function (error, doc) {
+    // Pass updated document to the upsert method
+    client
+        .upsertDocumentAsync(colLink, req.body)
+        .then(function (doc) {
 
-        if (error) {
-            console.log('There was an error with the upsert on ' + req.body.id);
-            res.send(false);
-        }
-        else {
             console.log('Successfully upserted ' + req.body.id);
-            res.send(doc);
-        }
+            res.send(doc.resource);
 
-    });
+        })
+        .fail(function (error) {
+            console.error(error);
+        });
 
 });
 
 /* DELETE a Group */
 router.delete('/', passport.authenticate('oauth-bearer', { session: false }), function (req, res) {
 
-    // define document link
+    // Define document link
     var docLink = 'dbs/' + config.database + '/colls/' + 'Groups' + '/docs/' + req.body.id;
 
-    // delete document
-    client.deleteDocument(docLink, function (error, doc) {
-        if (error) {
-            console.log(error);
-            // return false for a failed delete
+    // Delete document
+    client
+        .deleteDocumentAsync(docLink)
+        .then(function (doc) {
+
+            // Return true for a successful delete
+            res.send(true.resource);
+
+        })
+        .fail(function (error) {
+            console.error(error);
             res.send(false);
-        }
-        else {
-            // return true for a successful delete
-            res.send(true);
-        }
-    });
+        });
 
 });
 
@@ -141,20 +118,22 @@ router.get('/:name/assessments', passport.authenticate('oauth-bearer', { session
         }]
     };
 
-    // define collection link
+    // Define collection link
     var colLink = 'dbs/' + config.database + '/colls/' + 'Assessments';
 
-    // query for documents
-    client.queryDocuments(colLink, querySpec).toArray(function (error, docs) {
+    // Query for documents
+    client
+        .queryDocuments(colLink, querySpec)
+        .toArrayAsync()
+        .then(function (docs) {
 
-        if (error) {
-            res.send(false);
-        }
-        else {
-            res.send(docs);
-        }
+            // Return documents
+            res.send(docs.feed);
 
-    });
+        })
+        .fail(function (error) {
+            console.error(error);
+        });
 
 });
 

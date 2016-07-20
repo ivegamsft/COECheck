@@ -24,6 +24,7 @@ module.exports = {
 
             // DocDB is already setup
             // Return the client
+            console.log('Returning DocumentDB client');
             return client;
 
         }
@@ -34,6 +35,7 @@ module.exports = {
             console.log('Setting up DocumentDB database');
             this.docDbSetup = true;
             setupDocDb(this.db);
+            return client;
 
         }
 
