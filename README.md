@@ -4,7 +4,7 @@
 
 The COECheck tool was created to aid in the regular evaluation of Azure practices at solutions integrators around the world. It is a web application that when deployed to Azure will allow an evaluator to complete regular snapshots of a given practice's maturity level.
 
-![COECheck Screenshot](media/coecheck-screenshot-02.png)
+![COECheck Screenshot](https://github.com/GSIAzureCOE/COECheck/raw/master/media/coecheck-screenshot-02.png)
 
 # Setup
 
