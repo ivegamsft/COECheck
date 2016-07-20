@@ -4,6 +4,8 @@
 
 The COECheck tool was created to aid in the regular evaluation of Azure practices at solutions integrators around the world. It is a web application that when deployed to Azure will allow an evaluator to complete regular snapshots of a given practice's maturity level.
 
+![COECheck Screenshot](media/coecheck-screenshot-02.png)
+
 # Setup
 
 ## Step 1: Create an application in Azure AD
@@ -45,8 +47,16 @@ Once deployed, add the web app's URL (for example `https://coecheckz3c.azurewebs
 
 1. The ARM Template failed upon deployment
 
-    [Response]
+    Re-deploy the ARM Template a second time to see if that clears up the issue. May times a re-deployment will correct any initial errors, and since deployments are idempotent future deployments will not duplicate or change existing resources.
 
 2. The app did not deploy from github
 
-    [Response]
+    While the deployment wires up deployment between the Azure Web Application at this GitHub repository, there may be an issue with the initial deployment.  If this is the case, open your Azure Web App from the [Azure Portal](https://portal.azure.com) and in the settings blade, select "Deployment Source".  Then select "Sync" from the blade's top toolbar.  This will re-sync the repository and the Web App.
+
+    In the future, if you wish to update to a newer version of COECheck, you can do this same operation.  Since the application is configured using enviromental variables, you can safely update application code without impacting specific configurations.
+
+3. Error: "The reply address 'http://coecheckz3c.azurewebsites.net/' does not match the reply addresses configured for the application: 00000000-0000-0000-0000-000000000000."
+
+    In the [Classic Portal](https://manage.azure.com) open up AzureAD -> Your Directory -> Applications -> Your Custom Application (from Step 1 above) and ensure that the Reply URL value under the Single Sign On Section includes the URL for your Azure Web App (ex. "https://coecheckz3c.azurewebsites.net"). You must register any URL that is used with AzureAD authentication. 
+
+    > Tip: If you are developing locally, add `http://localhost:1337` to enable authentication
