@@ -1,3 +1,5 @@
+<img src="https://gsiazurecoe.visualstudio.com/_apis/public/build/definitions/78166623-1028-4630-b951-f6618d607f05/11/badge" />
+
 # COECheck 
 
 ## A tool for evaluating the maturity of an Azure practice
