@@ -47,6 +47,7 @@
                 })
                 .when('/help', {
                     templateUrl: 'app/help/help.html',
+                    controller: 'HelpController',
                     requireADLogin: true
                 })
                 .otherwise({

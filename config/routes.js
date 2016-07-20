@@ -5,6 +5,7 @@ module.exports = function (app) {
     app.use('/api/groups', require('../routes/groups'));
     app.use('/api/schema', require('../routes/schema'));
     app.use('/api/environment', require('../routes/environment'));
+    app.use('/api/documentation', require('../routes/documentation'));
 
     // 404
     app.use(function (req, res, next) {

@@ -1,31 +1,39 @@
 <!DOCTYPE html>
+
+<style>
+    .container-fluid img {
+        max-width: 100%;
+    }
+</style>
+
 <div class="container-fluid">
 
     <h1>Help</h1>
-    <hr>
-    
-    <div class="row">
 
-        <div class="col-sm-6">
+    <p>Please also see <a href="https://github.com/GSIAzureCOE/COECheck" target="_blank">https://github.com/GSIAzureCOE/COECheck</a>        for more details</a>
 
-            <p>Documentation coming soon</p>
+        <hr>
 
-            <p>To contact the Azure GSI CoE please shoot us an <a href="mailto:GSIAzureCOE@microsoft.com">email</a></p>
+        <div class="row">
 
-            <p>For technical assistance with the tool please contact <a href="mailto:steven.follis@microsoft.com">Steven Follis</a></p>
-        </div>
+            <div class="col-sm-6">
 
-        <div class="col-sm-6">
+                <div ng-bind-html="helpContent"></div>
 
-            <h2>Tutorial Video</h2>
-            <i class="glyphicon glyphicon-info-sign"></i> Coming Soon
+            </div>
 
-            <div class="embed-responsive embed-responsive-16by9">
-                <iframe src="//aka.ms/azuremediaplayeriframe?url=%2F%2Famssamples.streaming.mediaservices.windows.net%2F91492735-c523-432b-ba01-faba6c2206a2%2FAzureMediaServicesPromo.ism%2Fmanifest&autoplay=false" name="azuremediaplayer" scrolling="no" frameborder="no" align="center" height="280px" width="500px" allowfullscreen></iframe>
+            <div class="col-sm-6">
+
+                <h2>Tutorial Video</h2>
+                <i class="glyphicon glyphicon-info-sign"></i> Coming Soon
+
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe src="//aka.ms/azuremediaplayeriframe?url=%2F%2Famssamples.streaming.mediaservices.windows.net%2F91492735-c523-432b-ba01-faba6c2206a2%2FAzureMediaServicesPromo.ism%2Fmanifest&autoplay=false"
+                        name="azuremediaplayer" scrolling="no" frameborder="no" align="center" height="280px" width="500px" allowfullscreen></iframe>
+                </div>
+
             </div>
 
         </div>
-
-    </div>
 
 </div>

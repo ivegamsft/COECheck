@@ -26,6 +26,7 @@
 			// Angular Modules
 			'ngAnimate',
 			'ngRoute',
+			'ngSanitize',
 
 			// Vendor Modules
 			'AdalAngular',
