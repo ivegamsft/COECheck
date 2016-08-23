@@ -303,3 +303,4 @@ jspm_packages
 # Custom
 _package
 azuredeploy.parameters.json
+lib

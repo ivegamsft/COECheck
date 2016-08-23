@@ -3,7 +3,6 @@ var concat = require('gulp-concat');
 var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
 var uglify = require('gulp-uglify');
-var zip = require('gulp-zip');
 var imagemin = require('gulp-imagemin');
 var jshint = require('gulp-jshint');
 
@@ -56,32 +55,6 @@ var knownOptions = {
 
 var options = minimist(process.argv.slice(2), knownOptions);
 
-gulp.task('zip', ['imagemin', 'sass', 'scripts'], function () {
-
-    var packagePaths = ['**',
-        '!**/_package/**',
-        '!**/typings/**',
-        '!typings',
-        '!_package',
-        '!gulpfile.js'];
-
-    //add exclusion patterns for all dev dependencies
-    var packageJSON = JSON.parse(fs.readFileSync(path.join(__dirname, 'package.json'), 'utf8'));
-    var devDeps = packageJSON.devDependencies;
-
-    for (var propName in devDeps) {
-        var excludePattern1 = "!**/node_modules/" + propName + "/**";
-        var excludePattern2 = "!**/node_modules/" + propName;
-        packagePaths.push(excludePattern1);
-        packagePaths.push(excludePattern2);
-    }
-
-    return gulp.src(packagePaths)
-        .pipe(zip(options.packageName))
-        .pipe(gulp.dest(options.packagePath));
-
-});
-
 gulp.task('sass', function () {
     return gulp.src('public/stylesheets/main.scss')
         .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
@@ -97,4 +70,4 @@ gulp.task('imagemin', function () {
 });
 
 // The default task (called when you run `gulp` from cli)
-gulp.task('default', ['imagemin', 'sass', 'scripts', 'zip']);
+gulp.task('default', ['imagemin', 'sass', 'scripts']);
