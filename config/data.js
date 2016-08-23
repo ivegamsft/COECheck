@@ -41,7 +41,7 @@ module.exports = {
 
     },
 
-    db: 'COECheck'  // Name for the DocDB database
+    db: process.env.DOCUMENTDB_DATABASE  // Name for the DocDB database
 
 };
 
