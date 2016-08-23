@@ -28,8 +28,6 @@
             // get all Groups
             DocumentationFactory.getHelp().then(function (results) {
 
-                console.log(results);
-
                 // store data in scope
                 $scope.helpContent = results;
 
