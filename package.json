@@ -41,6 +41,6 @@
   },
   "devDependencies": {},
   "engines": {
-    "node": "5.4.0"
+    "node": "6.7.0"
   }
 }
