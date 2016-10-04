@@ -69,6 +69,7 @@
             "AAD_CLIENT_ID": "[parameters('aadClientId')]",
             "DOCUMENTDB_ENDPOINT": "[reference(concat('Microsoft.DocumentDb/databaseAccounts/', variables('appName'))).documentEndpoint]",
             "DOCUMENTDB_PRIMARY_KEY": "[listKeys(resourceId('Microsoft.DocumentDb/databaseAccounts', variables('appName')), '2015-04-08').primaryMasterKey]",
+            "DOCUMENTDB_DATABASE": "coecheck",
             "APPINSIGHTS_INSTRUMENTATIONKEY": "[reference(resourceId('Microsoft.Insights/components', variables('appName')), '2014-04-01').InstrumentationKey]"
           }
         },
