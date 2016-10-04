@@ -21,8 +21,9 @@ module.exports = function (app) {
     passport.use(new OIDCBearerStrategy({
         "identityMetadata": config.identityMetadata,
         "audience": config.audience,
+        "clientID": process.env.AAD_CLIENT_ID,
         "validateIssuer": false,
-    }, function (token, done) {
+    }, function (req, token, done) {
         return done(null, token, null);
     }));
 
