@@ -1,4 +1,4 @@
-﻿{
+{
   "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
   "contentVersion": "1.0.0.0",
   "parameters": {
@@ -16,7 +16,7 @@
   },
   "variables": {
     "appName": "[concat(parameters('appName'), substring(uniqueString(resourceGroup().id), 0, 3))]",
-    "repoURL": "https://github.com/GSIAzureCOE/COECheck.git",
+    "repoUrl": "https://github.com/GSIAzureCOE/COECheck.git",
     "repoBranch": "master"
   },
   "resources": [
@@ -111,7 +111,7 @@
             "[resourceId('Microsoft.Web/Sites', variables('appName'))]"
           ],
           "properties": {
-            "RepoUrl": "[variables('repoURL')]",
+            "repoUrl": "[variables('repoUrl')]",
             "branch": "[variables('repoBranch')]",
             "IsManualIntegration": true
           },
