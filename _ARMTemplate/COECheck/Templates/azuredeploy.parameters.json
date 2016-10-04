@@ -3,10 +3,10 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "appName": {
-            "value": "coecheck10"
+            "value": "coechecktest5"
         },
         "aadClientId": {
-            "value": "00000000-0000-0000-0000-000000000000"
+            "value": "c7290bfe-453e-4f7d-88a4-65960008721e"
         }
     }
 }
