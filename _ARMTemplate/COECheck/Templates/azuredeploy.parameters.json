@@ -1,12 +1,18 @@
 ﻿{
     "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
     "contentVersion": "1.0.0.0",
-    "parameters": {
-        "appName": {
-            "value": "coechecktest5"
-        },
-        "aadClientId": {
-            "value": "c7290bfe-453e-4f7d-88a4-65960008721e"
-        }
+  "parameters": {
+    "appName": {
+      "value": "coechecktest5"
+    },
+    "aadClientId": {
+      "value": "00000000-0000-0000-0000-000000000000"
+    },
+    "svcPlanSize": {
+      "value": "F1"
+    },
+    "svcPlanSku": {
+      "value": "Basic"
     }
+  }
 }

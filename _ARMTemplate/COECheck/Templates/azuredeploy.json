@@ -1,10 +1,32 @@
 {
-  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
   "contentVersion": "1.0.0.0",
   "parameters": {
     "appName": {
       "type": "string",
-      "minLength": 1
+      "minLength": 3,
+      "maxLength": 15
+    },
+    "svcPlanSize": {
+      "type": "string",
+      "defaultValue": "F1",
+      "metadata": {
+        "description": "The instance size of the App Service Plan."
+      }
+    },
+    "svcPlanSku": {
+      "type": "string",
+      "allowedValues": [
+        "Free",
+        "Shared",
+        "Basic",
+        "Standard",
+        "Premium"
+      ],
+      "defaultValue": "Free",
+      "metadata": {
+        "description": "The pricing tier of the App Service plan."
+      }
     },
     "aadClientId": {
       "type": "string",
@@ -15,32 +37,37 @@
     }
   },
   "variables": {
-    "appName": "[concat(parameters('appName'), substring(uniqueString(resourceGroup().id), 0, 3))]",
-    "repoUrl": "https://github.com/GSIAzureCOE/COECheck.git",
-    "repoBranch": "master"
+    "appName": "[concat(parameters('appName'), substring(uniqueString(resourceGroup().id), 0, 5))]",
+    "repoUrl": "https://github.com/ivegamsft/COECheck.git",
+    "repoBranch": "master",
+    "documentDbDatabaseName": "coecheck",
+    "documentDbApiVersion": "2020-04-01",
+    "storageApiVersion": "2021-06-01",
+    "insightsApiVersion": "2015-04-01",
+    "insightsComponentsApiVersion": "2020-02-02",
+    "webappsApiVersion": "2021-02-01"
   },
   "resources": [
     {
       "name": "[variables('appName')]",
       "type": "Microsoft.Web/serverfarms",
       "location": "[resourceGroup().location]",
-      "apiVersion": "2014-06-01",
-      "dependsOn": [ ],
+      "apiVersion": "[variables('webappsApiVersion')]",
+      "dependsOn": [],
       "tags": {
         "displayName": "AppServicePlan"
       },
-      "properties": {
-        "name": "[variables('appName')]",
-        "sku": "Basic",
-        "workerSize": "Small",
-        "numberOfWorkers": 1
+      "sku": {
+        "name": "[parameters('svcPlanSize')]",
+        "tier": "[parameters('svcPlanSku')]",
+        "capacity": 1
       }
     },
     {
       "name": "[variables('appName')]",
       "type": "Microsoft.Web/sites",
       "location": "[resourceGroup().location]",
-      "apiVersion": "2015-08-01",
+      "apiVersion": "[variables('webappsApiVersion')]",
       "dependsOn": [
         "[concat('Microsoft.Web/serverfarms/', variables('appName'))]"
       ],
@@ -56,7 +83,7 @@
         {
           "name": "appsettings",
           "type": "config",
-          "apiVersion": "2015-08-01",
+          "apiVersion": "[variables('webappsApiVersion')]",
           "dependsOn": [
             "[concat('Microsoft.Web/sites/', variables('appName'))]",
             "[concat('Microsoft.Storage/storageAccounts/', variables('appName'))]",
@@ -68,13 +95,13 @@
           "properties": {
             "AAD_CLIENT_ID": "[parameters('aadClientId')]",
             "DOCUMENTDB_ENDPOINT": "[reference(concat('Microsoft.DocumentDb/databaseAccounts/', variables('appName'))).documentEndpoint]",
-            "DOCUMENTDB_PRIMARY_KEY": "[listKeys(resourceId('Microsoft.DocumentDb/databaseAccounts', variables('appName')), '2015-04-08').primaryMasterKey]",
-            "DOCUMENTDB_DATABASE": "coecheck",
-            "APPINSIGHTS_INSTRUMENTATIONKEY": "[reference(resourceId('Microsoft.Insights/components', variables('appName')), '2014-04-01').InstrumentationKey]"
+            "DOCUMENTDB_PRIMARY_KEY": "[listKeys(resourceId('Microsoft.DocumentDb/databaseAccounts', variables('appName')), variables('documentDbApiVersion')).primaryMasterKey]",
+            "DOCUMENTDB_DATABASE": "[variables('documentDbDatabaseName')]",
+            "APPINSIGHTS_INSTRUMENTATIONKEY": "[reference(resourceId('Microsoft.Insights/components', concat(variables('appName'), '-', 'components')), variables('insightsComponentsApiVersion')).InstrumentationKey]"
           }
         },
         {
-          "apiVersion": "2015-08-01",
+          "apiVersion": "[variables('webappsApiVersion')]",
           "name": "logs",
           "type": "config",
           "dependsOn": [
@@ -104,7 +131,7 @@
           }
         },
         {
-          "apiVersion": "2015-08-01",
+          "apiVersion": "[variables('webappsApiVersion')]",
           "name": "web",
           "type": "sourcecontrols",
           "dependsOn": [
@@ -125,60 +152,62 @@
       "name": "[variables('appName')]",
       "type": "Microsoft.Storage/storageAccounts",
       "location": "[resourceGroup().location]",
-      "apiVersion": "2015-06-15",
-      "dependsOn": [ ],
+      "apiVersion": "[variables('storageApiVersion')]",
+      "dependsOn": [],
       "tags": {
         "displayName": "StorageAccount"
       },
-      "properties": {
-        "accountType": "Standard_LRS"
-      }
+      "sku": {
+        "name": "Standard_LRS"
+      },
+      "kind": "StorageV2",
+      "properties": {}
     },
     {
-      "apiVersion": "2015-04-08",
+      "apiVersion": "[variables('documentDbApiVersion')]",
       "type": "Microsoft.DocumentDB/databaseAccounts",
       "name": "[variables('appName')]",
       "location": "[resourceGroup().location]",
+      "kind": "GlobalDocumentDB",
       "properties": {
-        "name": "[variables('appName')]",
         "databaseAccountOfferType": "Standard",
-        "consistencyPolicy": {
-          "defaultConsistencyLevel": "Session",
-          "maxStalenessPrefix": 100,
-          "maxIntervalInSeconds": 5
-        }
+        "locations": [
+          {
+            "locationName": "[resourceGroup().location]"
+          }
+        ]
       },
       "tags": {
         "displayName": "DocumentDB"
       }
     },
     {
-      "name": "[concat(variables('appName'), '-', resourceGroup().name)]",
+      "name": "[concat(variables('appName'), '-', 'autoscale')]",
       "type": "Microsoft.Insights/autoscalesettings",
       "location": "[resourceGroup().location]",
-      "apiVersion": "2014-04-01",
+      "apiVersion": "[variables('insightsApiVersion')]",
       "dependsOn": [
-        "[concat('Microsoft.Web/serverfarms/', variables('appName'))]"
+        "[resourceId('Microsoft.Web/serverfarms', variables('appName'))]"
       ],
       "tags": {
-        "[concat('hidden-link:', resourceGroup().id, '/providers/Microsoft.Web/serverfarms/', variables('appName'))]": "Resource",
-        "displayName": "AppInsights AutoScale"
+        "[concat('hidden-link:', resourceId('Microsoft.Web/serverfarms', variables('appName')))]": "Resource",
+        "displayName": "AutoScaleSettings"
       },
       "properties": {
-        "name": "[concat(variables('appName'), '-', resourceGroup().name)]",
+        "name": "[concat(variables('appName'), '-', 'autoscale')]",
         "profiles": [
           {
             "name": "Default",
             "capacity": {
-              "minimum": 1,
-              "maximum": 2,
-              "default": 1
+              "minimum": "1",
+              "maximum": "2",
+              "default": "1"
             },
             "rules": [
               {
                 "metricTrigger": {
                   "metricName": "CpuPercentage",
-                  "metricResourceUri": "[concat(resourceGroup().id, '/providers/Microsoft.Web/serverfarms/', variables('appName'))]",
+                  "metricResourceUri": "[resourceId('Microsoft.Web/serverfarms', variables('appName'))]",
                   "timeGrain": "PT1M",
                   "statistic": "Average",
                   "timeWindow": "PT10M",
@@ -196,7 +225,7 @@
               {
                 "metricTrigger": {
                   "metricName": "CpuPercentage",
-                  "metricResourceUri": "[concat(resourceGroup().id, '/providers/Microsoft.Web/serverfarms/', variables('appName'))]",
+                  "metricResourceUri": "[resourceId('Microsoft.Web/serverfarms', variables('appName'))]",
                   "timeGrain": "PT1M",
                   "statistic": "Average",
                   "timeWindow": "PT1H",
@@ -215,157 +244,22 @@
           }
         ],
         "enabled": false,
-        "targetResourceUri": "[concat(resourceGroup().id, '/providers/Microsoft.Web/serverfarms/', variables('appName'))]"
+        "targetResourceUri": "[resourceId('Microsoft.Web/serverfarms', variables('appName'))]"
       }
     },
     {
-      "name": "[concat('CPUHigh ', variables('appName'))]",
-      "type": "Microsoft.Insights/alertrules",
-      "location": "[resourceGroup().location]",
-      "apiVersion": "2014-04-01",
-      "dependsOn": [
-        "[concat('Microsoft.Web/serverfarms/', variables('appName'))]"
-      ],
-      "tags": {
-        "[concat('hidden-link:', resourceGroup().id, '/providers/Microsoft.Web/serverfarms/', variables('appName'))]": "Resource",
-        "displayName": "CPUHigh AppInsights"
-      },
-      "properties": {
-        "name": "[concat('CPUHigh ', variables('appName'))]",
-        "description": "[concat('The average CPU is high across all the instances of ', variables('appName'))]",
-        "isEnabled": false,
-        "condition": {
-          "odata.type": "Microsoft.Azure.Management.Insights.Models.ThresholdRuleCondition",
-          "dataSource": {
-            "odata.type": "Microsoft.Azure.Management.Insights.Models.RuleMetricDataSource",
-            "resourceUri": "[concat(resourceGroup().id, '/providers/Microsoft.Web/serverfarms/', variables('appName'))]",
-            "metricName": "CpuPercentage"
-          },
-          "operator": "GreaterThan",
-          "threshold": 90,
-          "windowSize": "PT15M"
-        },
-        "action": {
-          "odata.type": "Microsoft.Azure.Management.Insights.Models.RuleEmailAction",
-          "sendToServiceOwners": true,
-          "customEmails": [ ]
-        }
-      }
-    },
-    {
-      "name": "[concat('LongHttpQueue ', variables('appName'))]",
-      "type": "Microsoft.Insights/alertrules",
-      "location": "[resourceGroup().location]",
-      "apiVersion": "2014-04-01",
-      "dependsOn": [
-        "[concat('Microsoft.Web/serverfarms/', variables('appName'))]"
-      ],
-      "tags": {
-        "[concat('hidden-link:', resourceGroup().id, '/providers/Microsoft.Web/serverfarms/', variables('appName'))]": "Resource",
-        "displayName": "LongHttpQueue AppInsights"
-      },
-      "properties": {
-        "name": "[concat('LongHttpQueue ', variables('appName'))]",
-        "description": "[concat('The HTTP queue for the instances of ', variables('appName'), ' has a large number of pending requests.')]",
-        "isEnabled": false,
-        "condition": {
-          "odata.type": "Microsoft.Azure.Management.Insights.Models.ThresholdRuleCondition",
-          "dataSource": {
-            "odata.type": "Microsoft.Azure.Management.Insights.Models.RuleMetricDataSource",
-            "resourceUri": "[concat(resourceGroup().id, '/providers/Microsoft.Web/serverfarms/', variables('appName'))]",
-            "metricName": "HttpQueueLength"
-          },
-          "operator": "GreaterThan",
-          "threshold": 100,
-          "windowSize": "PT5M"
-        },
-        "action": {
-          "odata.type": "Microsoft.Azure.Management.Insights.Models.RuleEmailAction",
-          "sendToServiceOwners": true,
-          "customEmails": [ ]
-        }
-      }
-    },
-    {
-      "name": "[concat('ServerErrors ', 'AppInsights')]",
-      "type": "Microsoft.Insights/alertrules",
-      "location": "[resourceGroup().location]",
-      "apiVersion": "2014-04-01",
-      "dependsOn": [
-        "[concat('Microsoft.Web/sites/', variables('appName'))]"
-      ],
-      "tags": {
-        "[concat('hidden-link:', resourceGroup().id, '/providers/Microsoft.Web/sites/', variables('appName'))]": "Resource",
-        "displayName": "ServerErrors AppInsights"
-      },
-      "properties": {
-        "name": "[concat('ServerErrors ', variables('appName'))]",
-        "description": "[concat(variables('appName'), ' has some server errors, status code 5xx.')]",
-        "isEnabled": false,
-        "condition": {
-          "odata.type": "Microsoft.Azure.Management.Insights.Models.ThresholdRuleCondition",
-          "dataSource": {
-            "odata.type": "Microsoft.Azure.Management.Insights.Models.RuleMetricDataSource",
-            "resourceUri": "[concat(resourceGroup().id, '/providers/Microsoft.Web/sites/', variables('appName'))]",
-            "metricName": "Http5xx"
-          },
-          "operator": "GreaterThan",
-          "threshold": 0,
-          "windowSize": "PT5M"
-        },
-        "action": {
-          "odata.type": "Microsoft.Azure.Management.Insights.Models.RuleEmailAction",
-          "sendToServiceOwners": true,
-          "customEmails": [ ]
-        }
-      }
-    },
-    {
-      "name": "[concat('ForbiddenRequests ', 'AppInsights')]",
-      "type": "Microsoft.Insights/alertrules",
-      "location": "[resourceGroup().location]",
-      "apiVersion": "2014-04-01",
-      "dependsOn": [
-        "[concat('Microsoft.Web/sites/', variables('appName'))]"
-      ],
-      "tags": {
-        "displayName": "ForbiddenRequests AppInsights"
-      },
-      "properties": {
-        "name": "[concat('ForbiddenRequests ', variables('appName'))]",
-        "description": "[concat(variables('appName'), ' has some requests that are forbidden, status code 403.')]",
-        "isEnabled": false,
-        "condition": {
-          "odata.type": "Microsoft.Azure.Management.Insights.Models.ThresholdRuleCondition",
-          "dataSource": {
-            "odata.type": "Microsoft.Azure.Management.Insights.Models.RuleMetricDataSource",
-            "resourceUri": "[concat(resourceGroup().id, '/providers/Microsoft.Web/sites/', variables('appName'))]",
-            "metricName": "Http403"
-          },
-          "operator": "GreaterThan",
-          "threshold": 0,
-          "windowSize": "PT5M"
-        },
-        "action": {
-          "odata.type": "Microsoft.Azure.Management.Insights.Models.RuleEmailAction",
-          "sendToServiceOwners": true,
-          "customEmails": [ ]
-        }
-      }
-    },
-    {
-      "name": "[variables('appName')]",
+      "name": "[concat(variables('appName'), '-', 'components')]",
       "type": "Microsoft.Insights/components",
-      "location": "Central US",
-      "apiVersion": "2014-04-01",
+      "location": "[resourceGroup().location]",
+      "apiVersion": "[variables('insightsComponentsApiVersion')]",
       "dependsOn": [
-        "[concat('Microsoft.Web/sites/', variables('appName'))]"
+        "[resourceId('Microsoft.Web/sites', variables('appName'))]"
       ],
       "tags": {
-        "displayName": "Component AppInsights"
+        "displayName": "AppInsights-Component"
       },
       "properties": {
-        "applicationId": "[variables('appName')]"
+        "applicationId": "[resourceId('Microsoft.Web/sites', variables('appName'))]"
       }
     }
   ],
