@@ -10,14 +10,14 @@
 
 The COECheck tool was created to aid in the regular evaluation of Azure practices at solutions integrators around the world. It is a web application that when deployed to Azure will allow an evaluator to complete regular snapshots of a given practice's maturity level.
 
-![COECheck Screenshot](https://github.com/GSIAzureCOE/COECheck/raw/master/media/coecheck-screenshot-02.png)
+![COECheck Screenshot](https://github.com/ivegamsft/COECheck/raw/master/media/coecheck-screenshot-02.png)
 
 # Setup
 
-<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FGSIAzureCOE%2FCOECheck%2Fmaster%2F_ARMTemplate%2FCOECheck%2FTemplates%2Fazuredeploy.json" target="_blank">
+<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fivegamsft%2FCOECheck%2Fmaster%2F_ARMTemplate%2FCOECheck%2FTemplates%2Fazuredeploy.json" target="_blank">
     <img src="http://azuredeploy.net/deploybutton.png"/>
 </a>
-<a href="http://armviz.io/#/?load=https%3A%2F%2Fraw.githubusercontent.com%2FGSIAzureCOE%2FCOECheck%2Fmaster%2F_ARMTemplate%2FCOECheck%2FTemplates%2Fazuredeploy.json" target="_blank">
+<a href="http://armviz.io/#/?load=https%3A%2F%2Fraw.githubusercontent.com%2FGSIAzureCOE%2Fivegamsft%2Fmaster%2F_ARMTemplate%2FCOECheck%2FTemplates%2Fazuredeploy.json" target="_blank">
     <img src="http://armviz.io/visualizebutton.png"/>
 </a>
 
