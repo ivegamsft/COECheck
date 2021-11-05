@@ -303,3 +303,5 @@ jspm_packages
 # Custom
 _package
 lib
+
+**/package-lock.json
