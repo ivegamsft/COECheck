@@ -1,6 +1,6 @@
 ﻿var gulp = require('gulp');
 var concat = require('gulp-concat');
-var sass = require('gulp-sass');
+var sass = require('gulp-sass')(require('sass'));
 var sourcemaps = require('gulp-sourcemaps');
 var uglify = require('gulp-uglify');
 var imagemin = require('gulp-imagemin');
@@ -13,7 +13,6 @@ var path = require('path');
 
 var paths = {
     scripts: [
-        'public/node_modules/angular-applicationinsights/build/angular-applicationinsights.min.js',
         'public/app/app.js',
         'public/app/app.routes.js',
         'public/app/app.auth.js',
@@ -26,7 +25,7 @@ var paths = {
 
 // Scripts
 gulp.task('scripts', function () {
-    
+
     // Minify and copy all JavaScript (except vendor scripts)
     // with sourcemaps all the way down
     return gulp.src(paths.scripts)
@@ -37,7 +36,7 @@ gulp.task('scripts', function () {
         .pipe(concat('app.js'))
         .pipe(sourcemaps.write())
         .pipe(gulp.dest('./public/lib/js'));
-        
+
 });
 
 // Rerun the task when a file changes
@@ -70,4 +69,4 @@ gulp.task('imagemin', function () {
 });
 
 // The default task (called when you run `gulp` from cli)
-gulp.task('default', ['imagemin', 'sass', 'scripts']);
+gulp.task('default', gulp.series('imagemin', 'sass', 'scripts'));
